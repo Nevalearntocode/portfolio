@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Read(//c/Users/MSI/Documents/GitHub/landing-page/**)",
+      "Bash(for f in \"C:/Users/MSI/Documents/GitHub/landing-page/app/plan-6/plan6.css\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/AboutCard.tsx\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/AvailabilityCard.tsx\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/BentoGrid.tsx\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/ContactCard.tsx\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/CtaRow.tsx\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/HeroCard.tsx\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/Navbar.tsx\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/SkillsCard.tsx\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/TestimonialCard.tsx\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/TiltCard.tsx\" \"C:/Users/MSI/Documents/GitHub/landing-page/components/plan-6/WorksCard.tsx\")",
+      "Bash(do)",
+      "Bash(echo \"===== $f =====\")",
+      "Read(//c/Users/MSI/Documents/GitHub/Portfolio/**)",
+      "Bash(__NEW_LINE_29c1d8ca9b7503c3__ done)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)"
     ]
   }
 }
