@@ -17,7 +17,7 @@ npm run lint      # eslint
 **This is a personal portfolio site** — not a multi-page app with shared state. Pages are mostly independent. The Works section links *out* to separately deployed scaffold projects; nothing is embedded here.
 
 **Two distinct pages:**
-- `/` — Homepage (bento grid, plan-6 design). Professional face: showcases work, skills, CTAs.
+- `/` — Homepage (bento grid). Professional face: showcases work, skills, CTAs.
 - `/about` — Personal page for TikTok funnel traffic. Separate vibe from homepage — personal, not business.
 
 **Homepage design:** `plans/plan-6.md` is the spec. Pre-built components live in the `landing-page` repo at `components/plan-6/` and `app/plan-6/`. When copying them here, all paths must be under `src/` — the `@/` alias maps to `./src/`, not the project root.

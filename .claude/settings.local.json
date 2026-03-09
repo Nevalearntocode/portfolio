@@ -9,7 +9,21 @@
       "Read(//c/Users/MSI/Documents/GitHub/Portfolio/**)",
       "Bash(__NEW_LINE_29c1d8ca9b7503c3__ done)",
       "Bash(mkdir:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(npm run:*)",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "Bash(npm install:*)",
+      "Bash(cp:*)",
+      "Read(//c/Users/MSI/.claude/skills/**)",
+      "Read(//c/Users/MSI/.claude/commands/**)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "shadcn",
+    "next-devtools",
+    "tailwindcss-server"
+  ]
 }

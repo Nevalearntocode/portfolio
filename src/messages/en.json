@@ -1,0 +1,185 @@
+{
+  "nav": {
+    "home": "Home",
+    "works": "Projects",
+    "about": "About"
+  },
+  "metadata": {
+    "home": {
+      "title": "Minh Tâm — Web Developer",
+      "description": "Modern websites for local businesses."
+    },
+    "about": {
+      "title": "About — The Room",
+      "description": "A personal archive of games, creators, food, and tools I care about."
+    }
+  },
+  "hero": {
+    "badge": "Web Development",
+    "title": "Hi, I'm {name}",
+    "subtitle": "I build websites that help local businesses grow.",
+    "description": "From flower shops to salons, from repair shops to bakeries — I turn your business into a website that customers trust and visit every day.",
+    "cta_works": "View projects",
+    "cta_contact": "Contact now"
+  },
+  "about": {
+    "badge": "About",
+    "title": "Who I am",
+    "p1": "I am a local web designer. I work with small business owners — not big corporations — to build clean, easy-to-use websites that actually attract customers.",
+    "p2": "No confusing jargon, no hassle. You'll always know exactly what you're getting and why.",
+    "footer": "Local operations · Helped 5+ businesses"
+  },
+  "availability": {
+    "status": "Taking on new clients",
+    "subtext": "Available now · Finished in 2–3 weeks"
+  },
+  "skills": {
+    "badge": "Capabilities",
+    "title": "Features I can build",
+    "capabilities": {
+      "booking": "Book appointments",
+      "shop": "Online shop",
+      "mobile": "Mobile friendly",
+      "seo": "Google optimized",
+      "speed": "Fast loading",
+      "updates": "Easy to update",
+      "reviews": "Display reviews",
+      "online": "Always online"
+    }
+  },
+  "works": {
+    "badge": "Demo Projects",
+    "title": "What I can build for you",
+    "hint": "Demo sites — click for a preview",
+    "dialog": {
+      "visit": "Visit live →",
+      "close": "Close"
+    },
+    "items": [
+      {
+        "id": "1",
+        "businessType": "Flower Shop",
+        "businessName": "Bloom & Co.",
+        "description": "A demo site showing online ordering, seasonal catalogs, and delivery scheduling for a flower shop.",
+        "tag": "Retail"
+      },
+      {
+        "id": "2",
+        "businessType": "Hair Salon",
+        "businessName": "The Cut Studio",
+        "description": "A demo site showing appointment booking, stylist profiles, and service menus for a salon.",
+        "tag": "Booking"
+      },
+      {
+        "id": "3",
+        "businessType": "Phone Repair",
+        "businessName": "FixIt Fast",
+        "description": "A demo site showing repair request tracking, parts management, and customer notifications.",
+        "tag": "Operations"
+      },
+      {
+        "id": "4",
+        "businessType": "Bakery",
+        "businessName": "Sweet Origins",
+        "description": "A demo site showing custom cake orders, portfolio showcase, and pickup scheduling.",
+        "tag": "Retail"
+      },
+      {
+        "id": "5",
+        "businessType": "Auto Detailing",
+        "businessName": "Shine & Drive",
+        "description": "A demo site showing service packages, before/after gallery, and online booking.",
+        "tag": "Booking"
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Reviews",
+    "items": [
+      {
+        "id": "1",
+        "name": "Maria Santos",
+        "business": "Bloom & Co.",
+        "quote": "Online orders doubled in the first month. Customers love how easy it is to order."
+      },
+      {
+        "id": "2",
+        "name": "James Park",
+        "business": "FixIt Fast",
+        "quote": "The repair tracking system saved us from endless back-and-forth messages. Truly efficient."
+      },
+      {
+        "id": "3",
+        "name": "Aisha Nguyen",
+        "business": "The Cut Studio",
+        "quote": "Booking used to be a mess. Now it runs itself, and our no-show rate dropped to nearly zero."
+      }
+    ]
+  },
+  "process": {
+    "badge": "How it works",
+    "steps": [
+      { "n": "01", "title": "Consult", "desc": "Tell me about your business. I'll map out exactly what you need." },
+      { "n": "02", "title": "Build", "desc": "I design and develop your site. You review and approve each step." },
+      { "n": "03", "title": "Launch", "desc": "Your site goes live. I handle hosting, domain, and setup." }
+    ]
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "Websites for local businesses."
+  },
+  "cta": {
+    "title": "Ready to grow your\nbusiness online?",
+    "button": "Let's talk →"
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Get in touch",
+    "email_label": "Email",
+    "social_label": "Social",
+    "phone_label": "Phone",
+    "copied": "Copied!"
+  },
+  "worksPage": {
+    "title": "Our Work",
+    "subtitle": "Websites built for local businesses across Vietnam"
+  },
+  "workingOn": {
+    "badge": "Active",
+    "title": "Currently building",
+    "demo": "View demo →",
+    "phase": {
+      "design": "Design",
+      "integration": "Integration",
+      "review": "Review",
+      "finishing": "Finishing"
+    }
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title": "Pick a package",
+    "recommended": "Popular",
+    "cta": "Get started →",
+    "packages": [
+      {
+        "id": "starter",
+        "name": "Starter",
+        "price": "Get a quote",
+        "features": ["Facebook Fanpage setup", "1-page website", "Shared hosting", "Mobile-friendly", "Basic SEO"]
+      },
+      {
+        "id": "growth",
+        "name": "Growth",
+        "price": "Get a quote",
+        "recommended": true,
+        "features": ["Everything in Starter", "Up to 5 pages", "Booking or menu feature", "1-year hosting", "Google Analytics"]
+      },
+      {
+        "id": "premium",
+        "name": "Premium",
+        "price": "Custom quote",
+        "features": ["Everything in Growth", "Custom features", "Priority support", "Dedicated hosting", "Ongoing updates"]
+      }
+    ]
+  }
+}

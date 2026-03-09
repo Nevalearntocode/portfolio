@@ -1,0 +1,248 @@
+{
+  "categories": [
+    {
+      "id": "games",
+      "label": "GAMES",
+      "accent": "#7DA0FA",
+      "items": [
+        {
+          "id": "disco-elysium",
+          "title": "Disco Elysium",
+          "cover": "/about-room/games/games-disco-elysium.jpg",
+          "rating": "10/10",
+          "tags": ["immersive sim", "detective noir", "skill-check heavy"],
+          "note": "The only game that made me feel genuinely ashamed of my character choices.",
+          "meta": { "playMode": "Solo", "era": "2019" }
+        },
+        {
+          "id": "outer-wilds",
+          "title": "Outer Wilds",
+          "cover": "/about-room/games/games-outer-wilds.jpg",
+          "rating": "10/10",
+          "tags": ["exploration", "mystery-box", "no combat"],
+          "note": "Finished it twice and cried both times for completely different reasons.",
+          "meta": { "playMode": "Solo", "era": "2019" }
+        },
+        {
+          "id": "hollow-knight",
+          "title": "Hollow Knight",
+          "cover": "/about-room/games/games-hollow-knight.jpg",
+          "rating": "9.4/10",
+          "tags": ["metroidvania", "build-heavy", "punishing"],
+          "note": "World design so dense I still find new rooms on replays.",
+          "meta": { "playMode": "Solo", "era": "2017" }
+        },
+        {
+          "id": "hades",
+          "title": "Hades",
+          "cover": "/about-room/games/games-hades.jpg",
+          "rating": "9.1/10",
+          "tags": ["roguelite", "build-heavy", "narrative loop"],
+          "note": "The only roguelite where I cared about every failed run.",
+          "meta": { "playMode": "Solo", "era": "2020" }
+        },
+        {
+          "id": "inside",
+          "title": "Inside",
+          "cover": "/about-room/games/games-inside.jpg",
+          "rating": "9.6/10",
+          "tags": ["atmospheric", "linear", "no UI"],
+          "note": "Two hours of pure dread. No text, no tutorial, no hand-holding.",
+          "meta": { "playMode": "Solo", "era": "2016" }
+        },
+        {
+          "id": "celeste",
+          "title": "Celeste",
+          "cover": "/about-room/games/games-celeste.jpg",
+          "rating": "9.3/10",
+          "tags": ["precision platformer", "assist mode", "narrative-driven"],
+          "note": "Hard enough to feel earned. Gentle enough to actually finish.",
+          "meta": { "playMode": "Solo", "era": "2018" }
+        },
+        {
+          "id": "stardew-valley",
+          "title": "Stardew Valley",
+          "cover": "/about-room/games/games-stardew-valley.jpg",
+          "rating": "8.8/10",
+          "tags": ["co-op chaos", "farming sim", "open-ended"],
+          "note": "The only game I've played 40 hours of without once feeling rushed.",
+          "meta": { "playMode": "Solo / Co-op", "era": "2016" }
+        }
+      ]
+    },
+    {
+      "id": "creators",
+      "label": "CREATORS",
+      "accent": "#F48FB1",
+      "items": [
+        {
+          "id": "cgp-grey",
+          "title": "CGP Grey",
+          "cover": "/about-room/creators/creators-cgp-grey.jpg",
+          "rating": "9.8/10",
+          "tags": ["essay", "systems thinking", "rare uploads"],
+          "note": "Takes years between videos. Worth every wait.",
+          "meta": { "format": "YouTube essay", "energy": "Dense / Quiet" }
+        },
+        {
+          "id": "tom-scott",
+          "title": "Tom Scott",
+          "cover": "/about-room/creators/creators-tom-scott.jpg",
+          "rating": "9.2/10",
+          "tags": ["documentary", "place-driven", "solo"],
+          "note": "Turns unremarkable locations into genuinely interesting stories.",
+          "meta": { "format": "YouTube short-doc", "energy": "Curious / Calm" }
+        },
+        {
+          "id": "jacob-collier",
+          "title": "Jacob Collier",
+          "cover": "/about-room/creators/creators-jacob-collier.jpg",
+          "rating": "9.5/10",
+          "tags": ["music", "theory-heavy", "live sessions"],
+          "note": "Makes music theory feel like a playground not a textbook.",
+          "meta": { "format": "Music / Live", "energy": "Joyful / Intense" }
+        },
+        {
+          "id": "kurzgesagt",
+          "title": "Kurzgesagt",
+          "cover": "/about-room/creators/creators-kurzgesagt.jpg",
+          "rating": "8.9/10",
+          "tags": ["animation", "science", "dread-optimism"],
+          "note": "Finds a way to end videos about existential collapse on a hopeful note.",
+          "meta": { "format": "Animated essay", "energy": "Epic / Anxious" }
+        },
+        {
+          "id": "mkbhd",
+          "title": "MKBHD",
+          "cover": "/about-room/creators/creators-mkbhd.jpg",
+          "rating": "8.5/10",
+          "tags": ["tech review", "production value", "weekly"],
+          "note": "The benchmark for how long-form tech content should look.",
+          "meta": { "format": "YouTube review", "energy": "Polished / Reliable" }
+        },
+        {
+          "id": "mark-rober",
+          "title": "Mark Rober",
+          "cover": "/about-room/creators/creators-mark-rober.jpg",
+          "rating": "8.7/10",
+          "tags": ["engineering", "spectacle", "practical jokes"],
+          "note": "Glitter bombs as peak engineering. I respect it.",
+          "meta": { "format": "YouTube build", "energy": "Fun / Overwhelming" }
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "label": "FOOD",
+      "accent": "#E8A75A",
+      "items": [
+        {
+          "id": "pho",
+          "title": "Phở bò tái",
+          "cover": "/about-room/food/food-pho.jpg",
+          "rating": "10/10",
+          "tags": ["comfort food", "everyday"],
+          "note": "The baseline everything else gets measured against. Non-negotiable.",
+          "meta": { "craving": "Always", "context": "morning" }
+        },
+        {
+          "id": "banh-mi",
+          "title": "Bánh mì thịt",
+          "cover": "/about-room/food/food-banh-mi.jpg",
+          "rating": "9.8/10",
+          "tags": ["street food", "quick bite"],
+          "note": "Best food-to-price ratio in the known universe. Objectively.",
+          "meta": { "craving": "Midday", "context": "on the go" }
+        },
+        {
+          "id": "matcha-latte",
+          "title": "Matcha latte",
+          "cover": "/about-room/food/food-matcha-latte.jpg",
+          "rating": "9.0/10",
+          "tags": ["drink", "daily ritual"],
+          "note": "Replaced coffee. Never going back.",
+          "meta": { "craving": "Morning", "context": "work session" }
+        },
+        {
+          "id": "ramen",
+          "title": "Tonkotsu ramen",
+          "cover": "/about-room/food/food-ramen.jpg",
+          "rating": "9.4/10",
+          "tags": ["occasion food", "broth-forward"],
+          "note": "Worth queuing 40 minutes if the broth has been simmering 18 hours.",
+          "meta": { "craving": "Rainy days", "context": "weekend only" }
+        },
+        {
+          "id": "croissant",
+          "title": "Butter croissant",
+          "cover": "/about-room/food/food-croissant.jpg",
+          "rating": "8.8/10",
+          "tags": ["pastry", "weekend treat"],
+          "note": "Needs to be eaten within 20 minutes of leaving the oven. No exceptions.",
+          "meta": { "craving": "Weekend morning", "context": "slow day" }
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "label": "WORK",
+      "accent": "#86C9A6",
+      "items": [
+        {
+          "id": "figma",
+          "title": "Figma",
+          "cover": "/about-room/work/work-figma.jpg",
+          "rating": "9.5/10",
+          "tags": ["design", "collaboration", "daily driver"],
+          "note": "The tool that made me stop sketching on paper. My entire spatial memory lives here.",
+          "meta": { "mode": "Design / Prototype", "reason": "Fastest path from idea to shareable artifact" }
+        },
+        {
+          "id": "cursor",
+          "title": "Cursor",
+          "cover": "/about-room/work/work-cursor.jpg",
+          "rating": "9.3/10",
+          "tags": ["ai editor", "daily driver", "pair programming"],
+          "note": "Changed how I think about writing code. I describe, it drafts, I correct.",
+          "meta": { "mode": "Code editor", "reason": "Turns intent into syntax faster than I can type" }
+        },
+        {
+          "id": "linear",
+          "title": "Linear",
+          "cover": "/about-room/work/work-linear.jpg",
+          "rating": "9.0/10",
+          "tags": ["project tracking", "fast UI", "minimal"],
+          "note": "The only task manager that doesn't feel like admin work to maintain.",
+          "meta": { "mode": "Project management", "reason": "Keyboard-first. Everything else is noise." }
+        },
+        {
+          "id": "terminal",
+          "title": "Terminal",
+          "cover": "/about-room/work/work-terminal.jpg",
+          "rating": "8.9/10",
+          "tags": ["cli", "always open", "zen mode"],
+          "note": "A blank black rectangle that can do anything. There's comfort in that.",
+          "meta": { "mode": "Shell / CLI", "reason": "Precise, fast, and never needs a GUI update" }
+        },
+        {
+          "id": "obsidian",
+          "title": "Obsidian",
+          "cover": "/about-room/work/work-obsidian.jpg",
+          "rating": "8.7/10",
+          "tags": ["note-taking", "linked thinking", "local-first"],
+          "note": "All my thinking lives here. Markdown files on disk. No vendor lock-in.",
+          "meta": { "mode": "Knowledge base", "reason": "Local-first with a graph view that actually helps" }
+        },
+        {
+          "id": "claude",
+          "title": "Claude",
+          "cover": "/about-room/work/work-claude.jpg",
+          "rating": "9.6/10",
+          "tags": ["ai assistant", "writing partner", "rubber duck"],
+          "note": "Best thinking partner I have. Especially useful when I'm wrong and know it.",
+          "meta": { "mode": "AI assistant", "reason": "Actually reads long context. Doesn't hallucinate on details I can verify." }
+        }
+      ]
+    }
+  ]
+}

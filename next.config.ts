@@ -1,8 +1,12 @@
-import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const withNextIntl = createNextIntlPlugin("./i18n.config.ts");
+
+export default withNextIntl({
   reactCompiler: true,
-};
-
-export default nextConfig;
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "picsum.photos" },
+    ],
+  },
+});

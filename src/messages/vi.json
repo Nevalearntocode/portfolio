@@ -1,0 +1,185 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "works": "Dự án",
+    "about": "Về tôi"
+  },
+  "metadata": {
+    "home": {
+      "title": "Minh Tâm — Lập Trình Viên Web",
+      "description": "Website hiện đại cho doanh nghiệp địa phương."
+    },
+    "about": {
+      "title": "Về Tôi — Căn Phòng",
+      "description": "Lưu trữ cá nhân về game, sáng tạo nội dung, ẩm thực và công cụ tôi yêu thích."
+    }
+  },
+  "hero": {
+    "badge": "Thiết kế Website",
+    "title": "Xin chào, tôi là {name}.",
+    "subtitle": "Tôi xây dựng website giúp doanh nghiệp địa phương phát triển.",
+    "description": "Từ tiệm hoa đến salon, từ tiệm sửa chữa đến cửa hàng bánh — tôi biến doanh nghiệp của bạn thành một website mà khách hàng tin tưởng và ghé thăm mỗi ngày.",
+    "cta_works": "Xem dự án",
+    "cta_contact": "Liên hệ ngay"
+  },
+  "about": {
+    "badge": "Giới thiệu",
+    "title": "Tôi là ai",
+    "p1": "Tôi là nhà thiết kế website địa phương. Tôi làm việc với các chủ doanh nghiệp nhỏ — không phải tập đoàn lớn — để xây dựng website gọn gàng, dễ dùng và thực sự thu hút khách hàng.",
+    "p2": "Không thuật ngữ khó hiểu, không rắc rối. Bạn sẽ luôn biết rõ mình nhận được gì và tại sao.",
+    "footer": "Hoạt động địa phương · Đã hỗ trợ 5+ doanh nghiệp"
+  },
+  "availability": {
+    "status": "Đang nhận khách hàng mới",
+    "subtext": "Sẵn sàng ngay · Hoàn thiện trong 2–3 tuần"
+  },
+  "skills": {
+    "badge": "Tính năng",
+    "title": "Những gì tôi có thể xây dựng",
+    "capabilities": {
+      "booking": "Đặt lịch hẹn",
+      "shop": "Cửa hàng online",
+      "mobile": "Thân thiện mobile",
+      "seo": "Tối ưu Google",
+      "speed": "Tải trang nhanh",
+      "updates": "Dễ cập nhật",
+      "reviews": "Hiển thị đánh giá",
+      "online": "Luôn trực tuyến"
+    }
+  },
+  "works": {
+    "badge": "Dự án Demo",
+    "title": "Những gì tôi có thể xây dựng",
+    "hint": "Website demo — nhấn để xem chi tiết",
+    "dialog": {
+      "visit": "Xem thực tế →",
+      "close": "Đóng"
+    },
+    "items": [
+      {
+        "id": "1",
+        "businessType": "Cửa hàng hoa",
+        "businessName": "Bloom & Co.",
+        "description": "Website demo cho cửa hàng hoa: đặt hàng online, danh mục theo mùa và lên lịch giao hàng.",
+        "tag": "Bán lẻ"
+      },
+      {
+        "id": "2",
+        "businessType": "Salon tóc",
+        "businessName": "The Cut Studio",
+        "description": "Website demo cho salon: đặt lịch hẹn, hồ sơ thợ và bảng giá dịch vụ.",
+        "tag": "Đặt lịch"
+      },
+      {
+        "id": "3",
+        "businessType": "Sửa chữa điện thoại",
+        "businessName": "FixIt Fast",
+        "description": "Website demo cho tiệm sửa chữa: theo dõi yêu cầu, quản lý linh kiện và thông báo tự động.",
+        "tag": "Vận hành"
+      },
+      {
+        "id": "4",
+        "businessType": "Tiệm bánh",
+        "businessName": "Sweet Origins",
+        "description": "Website demo cho tiệm bánh: đặt bánh theo yêu cầu, trưng bày tác phẩm và lịch nhận hàng.",
+        "tag": "Bán lẻ"
+      },
+      {
+        "id": "5",
+        "businessType": "Chăm sóc xe hơi",
+        "businessName": "Shine & Drive",
+        "description": "Website demo cho dịch vụ xe hơi: gói dịch vụ, thư viện ảnh trước/sau và đặt lịch online.",
+        "tag": "Đặt lịch"
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Đánh giá",
+    "items": [
+      {
+        "id": "1",
+        "name": "Maria Santos",
+        "business": "Bloom & Co.",
+        "quote": "Đơn hàng online tăng gấp đôi ngay trong tháng đầu. Khách hàng rất thích vì đặt hàng quá dễ."
+      },
+      {
+        "id": "2",
+        "name": "James Park",
+        "business": "FixIt Fast",
+        "quote": "Hệ thống theo dõi sửa chữa giúp chúng tôi bớt hẳn việc nhắn tin qua lại với khách. Thực sự hiệu quả."
+      },
+      {
+        "id": "3",
+        "name": "Aisha Nguyen",
+        "business": "The Cut Studio",
+        "quote": "Trước đây đặt lịch rất lộn xộn. Giờ thì mọi thứ tự chạy, và tỷ lệ khách hủy giảm gần về không."
+      }
+    ]
+  },
+  "process": {
+    "badge": "Quy trình",
+    "steps": [
+      { "n": "01", "title": "Tư vấn", "desc": "Kể tôi nghe về doanh nghiệp của bạn. Tôi sẽ đề xuất những gì bạn cần." },
+      { "n": "02", "title": "Xây dựng", "desc": "Tôi thiết kế và lập trình. Bạn xem xét và phê duyệt từng bước." },
+      { "n": "03", "title": "Ra mắt", "desc": "Website của bạn lên sóng. Tôi lo toàn bộ hosting, domain và cài đặt." }
+    ]
+  },
+  "footer": {
+    "rights": "Bảo lưu mọi quyền.",
+    "tagline": "Website cho doanh nghiệp địa phương."
+  },
+  "cta": {
+    "title": "Sẵn sàng phát triển\ndoanh nghiệp trực tuyến?",
+    "button": "Nói chuyện thôi →"
+  },
+  "contact": {
+    "badge": "Liên hệ",
+    "title": "Kết nối",
+    "email_label": "Email",
+    "social_label": "Mạng xã hội",
+    "phone_label": "Số điện thoại",
+    "copied": "Đã sao chép!"
+  },
+  "worksPage": {
+    "title": "Dự Án",
+    "subtitle": "Websites được xây dựng cho doanh nghiệp địa phương trên cả nước"
+  },
+  "workingOn": {
+    "badge": "Đang làm",
+    "title": "Đang xây dựng",
+    "demo": "Xem demo →",
+    "phase": {
+      "design": "Thiết kế",
+      "integration": "Tích hợp",
+      "review": "Duyệt",
+      "finishing": "Hoàn thiện"
+    }
+  },
+  "pricing": {
+    "badge": "Bảng giá",
+    "title": "Chọn gói phù hợp",
+    "recommended": "Phổ biến",
+    "cta": "Bắt đầu ngay →",
+    "packages": [
+      {
+        "id": "starter",
+        "name": "Cơ bản",
+        "price": "Báo giá",
+        "features": ["Thiết lập Facebook Fanpage", "Website 1 trang", "Hosting chia sẻ", "Thân thiện mobile", "SEO cơ bản"]
+      },
+      {
+        "id": "growth",
+        "name": "Phát triển",
+        "price": "Báo giá",
+        "recommended": true,
+        "features": ["Tất cả trong Cơ bản", "Đến 5 trang", "Tính năng đặt lịch hoặc thực đơn", "Hosting 1 năm", "Google Analytics"]
+      },
+      {
+        "id": "premium",
+        "name": "Chuyên nghiệp",
+        "price": "Báo giá riêng",
+        "features": ["Tất cả trong Phát triển", "Tính năng tuỳ chỉnh", "Hỗ trợ ưu tiên", "Hosting riêng", "Cập nhật liên tục"]
+      }
+    ]
+  }
+}
