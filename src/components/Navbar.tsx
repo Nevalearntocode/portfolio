@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import type { Transition } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -12,9 +13,32 @@ const pillShimmerVariants = {
   hover: { x: "250%", transition: { duration: 0.6, ease: "easeOut" as const } },
 };
 
+function useActiveUsers() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    async function fetchCount() {
+      try {
+        const res = await fetch("/api/active-users");
+        const data = await res.json();
+        setCount(data.activeUsers ?? 0);
+      } catch {
+        setCount(0);
+      }
+    }
+
+    fetchCount();
+    const interval = setInterval(fetchCount, 60_000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return count;
+}
+
 export function Navbar() {
   const t = useTranslations("nav");
   const pathname = usePathname();
+  const activeUsers = useActiveUsers();
 
   const isHome = pathname === "/";
   const isWorks = pathname === "/works";
@@ -42,7 +66,9 @@ export function Navbar() {
           }}
         />
 
-        <span className="relative z-10 w-2 h-2 rounded-full bg-[#a3b899] shrink-0" />
+        {activeUsers >= 2 && (
+          <span className="relative z-10 w-2 h-2 rounded-full bg-[#a3b899] shrink-0 animate-pulse" />
+        )}
 
         {/* Home link */}
         <span className="relative z-10 flex items-center gap-1.5">
