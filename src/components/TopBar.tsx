@@ -3,7 +3,8 @@ import { owner } from "@/data/owner";
 
 export function TopBar() {
   return (
-    <div className="w-full bg-white/90 dark:bg-[#111] text-[#111] dark:text-white backdrop-blur-sm border-b border-black/[0.06] dark:border-transparent text-xs py-2 px-4 sm:px-6 flex items-center justify-between">
+    <div className="w-full bg-white/90 dark:bg-[#111] text-[#111] dark:text-white backdrop-blur-sm border-b border-black/6 dark:border-transparent text-xs py-2 px-4 sm:px-6">
+      <div className="max-w-screen-2xl mx-auto flex items-center justify-between">
       {/* Left: phone + email */}
       <div className="flex items-center gap-4">
         <a
@@ -48,6 +49,7 @@ export function TopBar() {
         >
           <Image src="/zalo.svg" alt="Zalo" width={28} height={10} className="dark:brightness-0 dark:invert" />
         </a>
+      </div>
       </div>
     </div>
   );

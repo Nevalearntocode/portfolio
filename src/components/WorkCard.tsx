@@ -23,7 +23,7 @@ export function WorkCard({ work, index }: { work: WorkMeta; index: number }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" as const, delay: 0.2 + index * 0.06 }}
       whileHover={isComingSoon ? undefined : "hover"}
-      className={`relative block rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-white/60 dark:bg-white/[0.04] overflow-hidden shadow-sm transition-[box-shadow,transform] duration-200 ${
+      className={`relative block rounded-2xl border border-black/8 dark:border-white/8 bg-white/60 dark:bg-white/4 overflow-hidden shadow-sm transition-[box-shadow,transform] duration-200 ${
         isComingSoon ? "cursor-default" : "hover:shadow-md hover:-translate-y-1"
       }`}
     >

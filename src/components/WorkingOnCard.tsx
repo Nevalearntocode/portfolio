@@ -26,7 +26,7 @@ function ProjectMiniCard({ project }: { project: ActiveProject }) {
   const t = useTranslations("workingOn");
 
   return (
-    <div className="flex flex-col gap-3 rounded-xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.03] overflow-hidden">
+    <div className="flex flex-col gap-3 rounded-xl border border-black/6 dark:border-white/6 bg-black/2 dark:bg-white/3 overflow-hidden">
       {/* Thumbnail */}
       <div className="relative aspect-video w-full overflow-hidden">
         <Image
@@ -128,12 +128,12 @@ export function WorkingOnCard() {
   const t = useTranslations("workingOn");
 
   return (
-    <TiltCard className="rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-white/60 dark:bg-white/[0.04] backdrop-blur-sm p-6 flex flex-col gap-5">
+    <TiltCard className="rounded-2xl border border-black/8 dark:border-white/8 bg-white/60 dark:bg-white/4 backdrop-blur-sm p-6 flex flex-col gap-5">
       <div>
         <p className="text-xs font-semibold text-[#111]/40 dark:text-white/40 uppercase tracking-widest mb-1">
           {t("badge")}
         </p>
-        <p className="text-lg font-semibold text-[#111] dark:text-white">{t("title")}</p>
+        <p className="text-xl font-semibold text-[#111] dark:text-white">{t("title")}</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start gap-4">
@@ -141,7 +141,7 @@ export function WorkingOnCard() {
           <ProjectMiniCard key={project.id} project={project} />
         ))}
         {/* Open slot */}
-        <div className="flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-black/[0.08] dark:border-white/[0.08] aspect-[4/3] text-center px-4">
+        <div className="flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-black/8 dark:border-white/8 aspect-4/3 text-center px-4">
           <p className="text-xs font-semibold text-[#a3b899]">{t("openSlot.label")}</p>
           <p className="text-[11px] text-[#111]/40 dark:text-white/40">{t("openSlot.sub")}</p>
         </div>

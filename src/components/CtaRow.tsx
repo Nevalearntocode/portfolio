@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { owner } from "@/data/owner";
+import { useMessengerUrl } from "@/hooks/use-mobile";
 
 export function CtaRow() {
   const t = useTranslations("cta");
+  const messengerUrl = useMessengerUrl();
 
   return (
     <motion.div
@@ -19,7 +21,9 @@ export function CtaRow() {
         {t("title")}
       </h2>
       <a
-        href={`mailto:${owner.email}`}
+        href={messengerUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         className="shrink-0 px-7 py-3.5 rounded-xl bg-[#a3b899] text-white font-semibold text-sm hover:bg-[#7a9470] hover:scale-105 transition-all duration-150"
       >
         {t("button")}

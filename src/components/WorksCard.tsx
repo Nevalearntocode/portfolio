@@ -36,22 +36,31 @@ const baseWorks = [
 function WorkMiniCard({ work, onClick }: { work: WorkItem; onClick: () => void }) {
   return (
     <button
-      onClick={onClick}
-      className="shrink-0 w-48 rounded-xl overflow-hidden border border-black/[0.08] dark:border-white/[0.08] bg-white/80 dark:bg-white/[0.06] hover:bg-white dark:hover:bg-white/10 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 text-left group"
+      onClick={work.comingSoon ? undefined : onClick}
+      disabled={work.comingSoon}
+      className={`shrink-0 w-48 rounded-xl overflow-hidden border border-black/8 dark:border-white/8 bg-white/80 dark:bg-white/6 transition-all duration-200 text-left group ${work.comingSoon ? "cursor-default opacity-70" : "hover:bg-white dark:hover:bg-white/10 hover:shadow-md hover:-translate-y-0.5"}`}
     >
       <div className="relative w-full h-24 overflow-hidden">
         <Image
           src={work.image}
           alt={work.businessName}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          className={`object-cover group-hover:scale-105 transition-transform duration-300 ${work.comingSoon ? "blur-sm scale-105" : ""}`}
           unoptimized
         />
-        <div className="absolute top-2 right-2">
-          <span className="px-2 py-0.5 rounded-full bg-black/60 text-white text-[10px] font-semibold backdrop-blur-sm">
-            {work.tag}
-          </span>
-        </div>
+        {work.comingSoon ? (
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+            <span className="px-2 py-0.5 rounded-full bg-white/90 text-[#111] text-[10px] font-semibold">
+              Coming Soon
+            </span>
+          </div>
+        ) : (
+          <div className="absolute top-2 right-2">
+            <span className="px-2 py-0.5 rounded-full bg-black/60 text-white text-[10px] font-semibold backdrop-blur-sm">
+              {work.tag}
+            </span>
+          </div>
+        )}
       </div>
       <div className="p-3">
         <p className="text-xs font-semibold text-[#111] dark:text-white">{work.businessName}</p>
@@ -109,13 +118,13 @@ export function WorksCard() {
     <>
       <TiltCard
         id="works"
-        className="rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-white/60 dark:bg-white/[0.04] backdrop-blur-sm p-6 flex flex-col gap-4"
+        className="rounded-2xl border border-black/8 dark:border-white/8 bg-white/60 dark:bg-white/4 backdrop-blur-sm p-6 flex flex-col gap-4"
       >
         <div>
           <p className="text-xs font-semibold text-[#111]/40 dark:text-white/40 uppercase tracking-widest mb-1">
             {t("badge")}
           </p>
-          <h2 className="text-base font-bold text-[#111] dark:text-white">{t("title")}</h2>
+          <h2 className="text-lg font-bold text-[#111] dark:text-white">{t("title")}</h2>
         </div>
 
         <div
@@ -154,7 +163,7 @@ export function WorksCard() {
                   className="object-cover"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-5">
                   <span className="px-2 py-1 rounded-full bg-[#a3b899] text-white text-xs font-semibold">
                     {selected.tag}

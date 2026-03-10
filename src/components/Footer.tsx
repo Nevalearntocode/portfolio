@@ -4,10 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { owner } from "@/data/owner";
+import { useMessengerUrl } from "@/hooks/use-mobile";
 
 export function Footer() {
   const tCta = useTranslations("cta");
   const tFooter = useTranslations("footer");
+  const messengerUrl = useMessengerUrl();
   const year = new Date().getFullYear();
 
   return (
@@ -18,22 +20,27 @@ export function Footer() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="bg-[#f5f4f0] dark:bg-[#111] px-8 sm:px-12 py-12 flex flex-col sm:flex-row items-center justify-between gap-6"
+        className="bg-[#f5f4f0] dark:bg-[#111] px-8 sm:px-12 py-12"
       >
+        <div className="max-w-screen-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <h2 className="text-3xl sm:text-4xl font-bold italic text-[#111] dark:text-white leading-tight whitespace-pre-line text-center sm:text-left">
           {tCta("title")}
         </h2>
 
         <a
-          href={`mailto:${owner.email}`}
+          href={messengerUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="shrink-0 px-7 py-3.5 rounded-xl bg-[#a3b899] text-white font-semibold text-sm hover:bg-[#7a9470] hover:scale-105 transition-all duration-150"
         >
           {tCta("button")}
         </a>
+        </div>
       </motion.div>
 
       {/* Footer bar */}
-      <div className="bg-[#eeecea] dark:bg-[#1a1a1a] px-8 sm:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[#111]/50 dark:text-white/50 text-xs">
+      <div className="bg-[#eeecea] dark:bg-[#1a1a1a] px-8 sm:px-12 py-5 text-[#111]/50 dark:text-white/50 text-xs">
+        <div className="max-w-screen-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
         <span>© {year} {owner.name}. {tFooter("rights")}</span>
 
         <span className="hidden sm:block">{tFooter("tagline")}</span>
@@ -71,6 +78,7 @@ export function Footer() {
               <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" />
             </svg>
           </a>
+        </div>
         </div>
       </div>
     </footer>

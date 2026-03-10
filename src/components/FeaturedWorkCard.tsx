@@ -20,7 +20,7 @@ export function FeaturedWorkCard({ work }: { work: WorkMeta }) {
     <Wrapper
       {...(wrapperProps as any)}
       whileHover={isComingSoon ? undefined : "hover"}
-      className={`relative block rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-white/60 dark:bg-white/[0.04] overflow-hidden shadow-sm transition-[box-shadow,transform] duration-200 ${
+      className={`relative block rounded-2xl border border-black/8 dark:border-white/8 bg-white/60 dark:bg-white/4 overflow-hidden shadow-sm transition-[box-shadow,transform] duration-200 ${
         isComingSoon ? "cursor-default" : "hover:shadow-lg hover:-translate-y-1"
       }`}
     >
@@ -36,7 +36,7 @@ export function FeaturedWorkCard({ work }: { work: WorkMeta }) {
         />
       )}
 
-      <div className="relative w-full aspect-video sm:aspect-[16/7] overflow-hidden">
+      <div className="relative w-full aspect-video sm:aspect-16/7 overflow-hidden">
         <Image
           src={work.thumbnail}
           alt={work.title}

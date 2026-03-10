@@ -25,7 +25,7 @@ export function TestimonialCard() {
   const current = items[index];
 
   return (
-    <TiltCard className="rounded-2xl border border-black/[0.08] bg-white/60 backdrop-blur-sm p-6 flex flex-col justify-between gap-4 h-full overflow-hidden">
+    <TiltCard className="rounded-2xl border border-black/8 bg-white/60 backdrop-blur-sm p-6 flex flex-col justify-between gap-4 h-full overflow-hidden">
       <p className="text-xs font-semibold text-[#111]/40 uppercase tracking-widest">{t("badge")}</p>
 
       <AnimatePresence mode="wait">

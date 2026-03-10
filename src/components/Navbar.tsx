@@ -54,7 +54,7 @@ export function Navbar() {
       <motion.nav
         {...motionProps}
         whileHover="hover"
-        className="relative flex items-center gap-5 px-5 py-2.5 rounded-full bg-white/70 dark:bg-[#111]/80 backdrop-blur-md border border-black/[0.08] dark:border-white/[0.08] shadow-sm overflow-hidden"
+        className="relative flex items-center gap-5 px-5 py-2.5 rounded-full bg-white/70 dark:bg-[#111]/80 backdrop-blur-md border border-black/8 dark:border-white/8 shadow-sm overflow-hidden"
       >
         {/* Pill shimmer */}
         <motion.div
