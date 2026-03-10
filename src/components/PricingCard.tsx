@@ -25,13 +25,13 @@ export function PricingCard() {
         <p className="text-lg font-semibold text-[#111] dark:text-white">{t("title")}</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 items-start gap-4">
         {packages.map((pkg) => (
           <div
             key={pkg.id}
             className={`relative flex flex-col gap-4 rounded-xl p-4 border transition-colors ${
               pkg.recommended
-                ? "border-[#a3b899] bg-[#a3b899]/5"
+                ? "border-[#a3b899] bg-[#a3b899]/5 sm:-mt-4"
                 : "border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.03]"
             }`}
           >
@@ -68,6 +68,10 @@ export function PricingCard() {
           </div>
         ))}
       </div>
+
+      <p className="text-[11px] text-[#111]/40 dark:text-white/40 leading-snug">
+        ⓘ All plans require a domain (~£10/yr) and monthly hosting. Included from Growth onwards.
+      </p>
     </TiltCard>
   );
 }

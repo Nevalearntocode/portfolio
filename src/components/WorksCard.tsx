@@ -21,15 +21,16 @@ type WorkItem = {
   tag: string;
   image: string;
   liveUrl: string;
+  comingSoon?: boolean;
 };
 
 // Map of fixed data that doesn't need localization (images/URLs)
 const baseWorks = [
-  { id: "1", image: "https://picsum.photos/seed/flower/800/500", liveUrl: "#" },
-  { id: "2", image: "https://picsum.photos/seed/salon/800/500", liveUrl: "#" },
-  { id: "3", image: "https://picsum.photos/seed/repair/800/500", liveUrl: "#" },
-  { id: "4", image: "https://picsum.photos/seed/bakery/800/500", liveUrl: "#" },
-  { id: "5", image: "https://picsum.photos/seed/auto/800/500", liveUrl: "#" },
+  { id: "1", image: "/works/card-shop.jpg", liveUrl: "https://scaffolds.hmtam110501.workers.dev/card-shop" },
+  { id: "2", image: "/works/food-shop.jpg", liveUrl: "https://scaffolds.hmtam110501.workers.dev/food-shop" },
+  { id: "3", image: "/works/hair-salon-men.jpg", liveUrl: "https://scaffolds.hmtam110501.workers.dev/hair-salon-men" },
+  { id: "4", image: "https://picsum.photos/seed/bakery/800/500", liveUrl: "#", comingSoon: true },
+  { id: "5", image: "https://picsum.photos/seed/auto/800/500", liveUrl: "#", comingSoon: true },
 ];
 
 function WorkMiniCard({ work, onClick }: { work: WorkItem; onClick: () => void }) {
@@ -173,12 +174,16 @@ export function WorksCard() {
                 </DialogHeader>
 
                 <div className="mt-6 flex gap-3">
-                  <a
-                    href={selected.liveUrl}
-                    className="px-5 py-2 rounded-full bg-[#111] text-white text-sm font-medium hover:bg-[#333] transition-colors"
-                  >
-                    {t("dialog.visit")}
-                  </a>
+                  {!selected.comingSoon && (
+                    <a
+                      href={selected.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 rounded-full bg-[#111] text-white text-sm font-medium hover:bg-[#333] transition-colors"
+                    >
+                      {t("dialog.visit")}
+                    </a>
+                  )}
                   <button
                     onClick={() => setSelectedId(null)}
                     className="px-5 py-2 rounded-full border border-black/10 dark:border-white/20 text-[#111] dark:text-white text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 transition-colors"

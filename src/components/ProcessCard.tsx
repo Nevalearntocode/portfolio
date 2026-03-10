@@ -8,7 +8,7 @@ export function ProcessCard() {
   const steps = t.raw("steps") as Array<{ n: string; title: string; desc: string }>;
 
   return (
-    <TiltCard className="rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-white/60 dark:bg-white/[0.04] backdrop-blur-sm p-6 flex flex-col gap-5 h-full">
+    <TiltCard className="rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-white/60 dark:bg-white/[0.04] backdrop-blur-sm p-6 flex flex-col gap-5">
       <p className="text-xs font-semibold text-[#111]/40 dark:text-white/40 uppercase tracking-widest">{t("badge")}</p>
 
       <div className="flex flex-col gap-4 flex-1">

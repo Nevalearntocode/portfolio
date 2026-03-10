@@ -5,32 +5,33 @@ export type WorkMeta = {
   tag: string
   thumbnail: string
   url: string
+  comingSoon?: boolean
 }
 
 export const works: WorkMeta[] = [
   {
     id: "1",
-    title: "Hoa Tươi Minh Châu",
-    description: "Website đặt hoa tươi online cho tiệm hoa tại TP.HCM",
-    tag: "Hoa tươi",
-    thumbnail: "https://picsum.photos/seed/flower/800/500",
-    url: "#",
+    title: "Thiệp Cưới Đình Toàn",
+    description: "Cửa hàng thiệp cưới & thiệp chúc cao cấp — xem thiệp 3D, đặt theo yêu cầu qua Zalo",
+    tag: "Thiệp cưới",
+    thumbnail: "/works/card-shop.jpg",
+    url: "https://scaffolds.hmtam110501.workers.dev/card-shop",
   },
   {
     id: "2",
-    title: "Salon Tóc Ngọc Ánh",
-    description: "Website booking lịch hẹn cho salon tóc chuyên nghiệp",
-    tag: "Làm đẹp",
-    thumbnail: "https://picsum.photos/seed/salon/800/500",
-    url: "#",
+    title: "DUSK",
+    description: "Tiệm nước đặc biệt phong cách tối giản — thực đơn thức uống cao cấp và đặt hàng online",
+    tag: "F&B",
+    thumbnail: "/works/food-shop.jpg",
+    url: "https://scaffolds.hmtam110501.workers.dev/food-shop",
   },
   {
     id: "3",
-    title: "Điện Máy Phước Thịnh",
-    description: "Cửa hàng sửa chữa điện máy gia dụng với đặt lịch online",
-    tag: "Sửa chữa",
-    thumbnail: "https://picsum.photos/seed/repair/800/500",
-    url: "#",
+    title: "Barber District",
+    description: "Barbershop cao cấp dành cho phái mạnh — đặt lịch, hồ sơ thợ, thư viện phong cách",
+    tag: "Barber",
+    thumbnail: "/works/hair-salon-men.jpg",
+    url: "https://scaffolds.hmtam110501.workers.dev/hair-salon-men",
   },
   {
     id: "4",
@@ -39,6 +40,7 @@ export const works: WorkMeta[] = [
     tag: "F&B",
     thumbnail: "https://picsum.photos/seed/bakery/800/500",
     url: "#",
+    comingSoon: true,
   },
   {
     id: "5",
@@ -47,6 +49,7 @@ export const works: WorkMeta[] = [
     tag: "Ô tô",
     thumbnail: "https://picsum.photos/seed/auto/800/500",
     url: "#",
+    comingSoon: true,
   },
   {
     id: "6",
@@ -55,5 +58,6 @@ export const works: WorkMeta[] = [
     tag: "Spa & Wellness",
     thumbnail: "https://picsum.photos/seed/spa/800/500",
     url: "#",
+    comingSoon: true,
   },
 ]

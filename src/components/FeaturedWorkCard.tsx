@@ -10,32 +10,49 @@ const shimmerVariants = {
 };
 
 export function FeaturedWorkCard({ work }: { work: WorkMeta }) {
+  const isComingSoon = !!work.comingSoon;
+  const Wrapper = isComingSoon ? motion.div : motion.a;
+  const wrapperProps = isComingSoon
+    ? {}
+    : { href: work.url, target: "_blank", rel: "noopener noreferrer" };
+
   return (
-    <motion.a
-      href={work.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover="hover"
-      className="relative block rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-white/60 dark:bg-white/[0.04] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-[box-shadow,transform] duration-200"
+    <Wrapper
+      {...(wrapperProps as any)}
+      whileHover={isComingSoon ? undefined : "hover"}
+      className={`relative block rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-white/60 dark:bg-white/[0.04] overflow-hidden shadow-sm transition-[box-shadow,transform] duration-200 ${
+        isComingSoon ? "cursor-default" : "hover:shadow-lg hover:-translate-y-1"
+      }`}
     >
       {/* Glass shimmer */}
-      <motion.div
-        variants={shimmerVariants}
-        initial="rest"
-        className="absolute inset-y-0 w-1/2 pointer-events-none z-10"
-        style={{
-          background: "linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
-        }}
-      />
+      {!isComingSoon && (
+        <motion.div
+          variants={shimmerVariants}
+          initial="rest"
+          className="absolute inset-y-0 w-1/2 pointer-events-none z-10"
+          style={{
+            background: "linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
+          }}
+        />
+      )}
 
       <div className="relative w-full aspect-video sm:aspect-[16/7] overflow-hidden">
         <Image
           src={work.thumbnail}
           alt={work.title}
           fill
-          className="object-cover transition-transform duration-300 hover:scale-[1.03]"
+          className={`object-cover transition-transform duration-300 hover:scale-[1.03] ${
+            isComingSoon ? "grayscale opacity-60" : ""
+          }`}
           unoptimized
         />
+        {isComingSoon && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-black/60 text-white backdrop-blur-sm">
+              Coming Soon
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="p-4 flex items-center gap-3">
@@ -48,10 +65,14 @@ export function FeaturedWorkCard({ work }: { work: WorkMeta }) {
             {work.description}
           </p>
         </div>
-        <span className="text-sm font-medium text-[#a3b899] hover:text-[#7a9470] shrink-0 ml-auto">
-          Visit →
-        </span>
+        {isComingSoon ? (
+          <span className="text-sm italic text-[#111]/40 dark:text-white/40 shrink-0 ml-auto">Coming Soon</span>
+        ) : (
+          <span className="text-sm font-medium text-[#a3b899] hover:text-[#7a9470] shrink-0 ml-auto">
+            Visit →
+          </span>
+        )}
       </div>
-    </motion.a>
+    </Wrapper>
   );
 }

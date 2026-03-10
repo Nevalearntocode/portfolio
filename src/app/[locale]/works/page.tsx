@@ -1,58 +1,38 @@
-"use client";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { WorksPageContent } from "@/components/WorksPageContent";
 
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { TopBar } from "@/components/TopBar";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { FeaturedWorkCard } from "@/components/FeaturedWorkCard";
-import { WorkCard } from "@/components/WorkCard";
-import { works } from "@/data/works";
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://minhtam.dev'
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata.works" });
+  const pageUrl = locale === 'en' ? `${BASE}/works` : `${BASE}/vi/works`
+
+  return {
+    metadataBase: new URL(BASE),
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: pageUrl,
+      languages: { en: `${BASE}/works`, vi: `${BASE}/vi/works` },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: pageUrl,
+      siteName: 'Minh Tâm',
+      locale: locale === 'vi' ? 'vi_VN' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t("title"),
+      description: t("description"),
+    },
+  };
+}
 
 export default function WorksPage() {
-  const t = useTranslations("worksPage");
-  const [g1, g2, g3, featured, ...bottom] = works;
-
-  return (
-    <>
-      <TopBar />
-      <Navbar />
-      <main className="min-h-screen bg-[#fafaf7] dark:bg-[#111] px-4 sm:px-6 pt-28 pb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="mb-8"
-        >
-          <h1 className="text-3xl font-bold text-[#111] dark:text-white">{t("title")}</h1>
-          <p className="text-sm text-[#111]/60 dark:text-white/60 mt-1">{t("subtitle")}</p>
-        </motion.div>
-
-        {/* 3-col grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-          {[g1, g2, g3].map((work, i) => (
-            <WorkCard key={work.id} work={work} index={i} />
-          ))}
-        </div>
-
-        {/* Full-width featured */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut", delay: 0.15 }}
-          className="mb-4"
-        >
-          <FeaturedWorkCard work={featured} />
-        </motion.div>
-
-        {/* 2-col grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {bottom.map((work, i) => (
-            <WorkCard key={work.id} work={work} index={i + 4} />
-          ))}
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+  return <WorksPageContent />;
 }

@@ -1,4 +1,4 @@
-export type CategoryId = "games" | "creators" | "food" | "work";
+export type CategoryId = "games" | "creators" | "food" | "tools" | "film" | "novel";
 
 export interface AboutItem {
   id: string;

@@ -58,7 +58,7 @@ export function Footer() {
             title="Zalo"
             className="hover:opacity-100 opacity-60 transition-opacity"
           >
-            <Image src="/zalo.svg" alt="Zalo" width={28} height={10} className="dark:invert opacity-70" />
+            <Image src="/zalo.svg" alt="Zalo" width={28} height={10} className="dark:brightness-0 dark:invert" />
           </a>
           <a
             href={owner.socials.tiktok}

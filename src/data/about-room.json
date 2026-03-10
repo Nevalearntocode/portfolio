@@ -3,244 +3,283 @@
     {
       "id": "games",
       "label": "GAMES",
-      "accent": "#7DA0FA",
+      "accent": "#9B7FD4",
       "items": [
         {
-          "id": "disco-elysium",
-          "title": "Disco Elysium",
-          "cover": "/about-room/games/games-disco-elysium.jpg",
+          "id": "witcher-3",
+          "title": "The Witcher 3",
+          "cover": "/about-room/games/games-witcher-3.jpg",
           "rating": "10/10",
-          "tags": ["immersive sim", "detective noir", "skill-check heavy"],
-          "note": "The only game that made me feel genuinely ashamed of my character choices.",
-          "meta": { "playMode": "Solo", "era": "2019" }
+          "tags": ["open world", "narrative rpg", "choices matter"],
+          "note": "The benchmark I measure every RPG against. Geralt's expression when he makes a bad call is the whole game.",
+          "meta": { "playMode": "Solo", "hours": "200+" }
         },
         {
-          "id": "outer-wilds",
-          "title": "Outer Wilds",
-          "cover": "/about-room/games/games-outer-wilds.jpg",
-          "rating": "10/10",
-          "tags": ["exploration", "mystery-box", "no combat"],
-          "note": "Finished it twice and cried both times for completely different reasons.",
-          "meta": { "playMode": "Solo", "era": "2019" }
+          "id": "skyrim",
+          "title": "Elder Scrolls V: Skyrim",
+          "cover": "/about-room/games/games-skyrim.jpg",
+          "rating": "9.5/10",
+          "tags": ["open world", "moddable", "evergreen"],
+          "note": "Still installing mods 13 years later. At this point the modding is the game.",
+          "meta": { "playMode": "Solo", "era": "2011" }
         },
         {
-          "id": "hollow-knight",
-          "title": "Hollow Knight",
-          "cover": "/about-room/games/games-hollow-knight.jpg",
-          "rating": "9.4/10",
-          "tags": ["metroidvania", "build-heavy", "punishing"],
-          "note": "World design so dense I still find new rooms on replays.",
-          "meta": { "playMode": "Solo", "era": "2017" }
+          "id": "baldurs-gate-3",
+          "title": "Baldur's Gate 3",
+          "cover": "/about-room/games/games-baldurs-gate-3.jpg",
+          "rating": "9.8/10",
+          "tags": ["crpg", "turn-based", "co-op"],
+          "note": "First CRPG that made me actually read all the dialogue. 200 hours in and still finding new things.",
+          "meta": { "playMode": "Solo / Co-op", "hours": "200+" }
         },
         {
-          "id": "hades",
-          "title": "Hades",
-          "cover": "/about-room/games/games-hades.jpg",
-          "rating": "9.1/10",
-          "tags": ["roguelite", "build-heavy", "narrative loop"],
-          "note": "The only roguelite where I cared about every failed run.",
-          "meta": { "playMode": "Solo", "era": "2020" }
+          "id": "pathfinder-wotr",
+          "title": "Pathfinder: WotR",
+          "cover": "/about-room/games/games-pathfinder-wotr.jpg",
+          "rating": "9.2/10",
+          "tags": ["crpg", "mythic paths", "brutal"],
+          "note": "Harder, meaner, and twice as long as BG3. Finished the Lich path. Felt evil the entire time.",
+          "meta": { "playMode": "Solo", "path": "Lich" }
         },
         {
-          "id": "inside",
-          "title": "Inside",
-          "cover": "/about-room/games/games-inside.jpg",
-          "rating": "9.6/10",
-          "tags": ["atmospheric", "linear", "no UI"],
-          "note": "Two hours of pure dread. No text, no tutorial, no hand-holding.",
-          "meta": { "playMode": "Solo", "era": "2016" }
+          "id": "league-of-legends",
+          "title": "League of Legends",
+          "cover": "/about-room/games/games-league-of-legends.jpg",
+          "rating": "7/10",
+          "tags": ["moba", "team game", "long-term"],
+          "note": "Six years. Probably net negative for my mental health. Still queuing up.",
+          "meta": { "playMode": "Online", "status": "Active" }
         },
         {
-          "id": "celeste",
-          "title": "Celeste",
-          "cover": "/about-room/games/games-celeste.jpg",
-          "rating": "9.3/10",
-          "tags": ["precision platformer", "assist mode", "narrative-driven"],
-          "note": "Hard enough to feel earned. Gentle enough to actually finish.",
-          "meta": { "playMode": "Solo", "era": "2018" }
+          "id": "tft",
+          "title": "Teamfight Tactics",
+          "cover": "/about-room/games/games-tft.jpg",
+          "rating": "7.5/10",
+          "tags": ["auto-battler", "set-based", "strategy"],
+          "note": "The version of League I play when I want to lose slowly and feel smart about it.",
+          "meta": { "playMode": "Online", "status": "Active" }
         },
         {
-          "id": "stardew-valley",
-          "title": "Stardew Valley",
-          "cover": "/about-room/games/games-stardew-valley.jpg",
-          "rating": "8.8/10",
-          "tags": ["co-op chaos", "farming sim", "open-ended"],
-          "note": "The only game I've played 40 hours of without once feeling rushed.",
-          "meta": { "playMode": "Solo / Co-op", "era": "2016" }
+          "id": "expedition-33",
+          "title": "Clair Obscur: E33",
+          "cover": "/about-room/games/games-expedition-33.jpg",
+          "rating": "—",
+          "tags": ["jrpg", "never played", "know everything"],
+          "note": "Watched every cutscene, read every lore thread, know the OST by heart. Never touched the controller. Still counts.",
+          "meta": { "playMode": "Spectator", "status": "Someday" }
         }
       ]
     },
     {
       "id": "creators",
       "label": "CREATORS",
-      "accent": "#F48FB1",
+      "accent": "#F4A456",
       "items": [
         {
-          "id": "cgp-grey",
-          "title": "CGP Grey",
-          "cover": "/about-room/creators/creators-cgp-grey.jpg",
-          "rating": "9.8/10",
-          "tags": ["essay", "systems thinking", "rare uploads"],
-          "note": "Takes years between videos. Worth every wait.",
-          "meta": { "format": "YouTube essay", "energy": "Dense / Quiet" }
+          "id": "asmongold",
+          "title": "Asmongold",
+          "cover": "/about-room/creators/creators-asmongold.jpg",
+          "tags": ["react content", "mmo", "gaming commentary"],
+          "note": "Loud, unfiltered, weirdly right about the gaming industry more often than he should be.",
+          "meta": { "format": "Live / React", "platform": "Twitch / YouTube" }
         },
         {
-          "id": "tom-scott",
-          "title": "Tom Scott",
-          "cover": "/about-room/creators/creators-tom-scott.jpg",
-          "rating": "9.2/10",
-          "tags": ["documentary", "place-driven", "solo"],
-          "note": "Turns unremarkable locations into genuinely interesting stories.",
-          "meta": { "format": "YouTube short-doc", "energy": "Curious / Calm" }
+          "id": "sodapoppin",
+          "title": "Sodapoppin",
+          "cover": "/about-room/creators/creators-sodapoppin.jpg",
+          "tags": ["variety", "long-form", "chaos"],
+          "note": "Has been entertaining me for a decade. I don't think about why, it just works.",
+          "meta": { "format": "Variety stream", "platform": "Twitch" }
         },
         {
-          "id": "jacob-collier",
-          "title": "Jacob Collier",
-          "cover": "/about-room/creators/creators-jacob-collier.jpg",
-          "rating": "9.5/10",
-          "tags": ["music", "theory-heavy", "live sessions"],
-          "note": "Makes music theory feel like a playground not a textbook.",
-          "meta": { "format": "Music / Live", "energy": "Joyful / Intense" }
+          "id": "moonmoon",
+          "title": "Moonmoon",
+          "cover": "/about-room/creators/creators-moonmoon.jpg",
+          "tags": ["variety", "dry humor", "underrated"],
+          "note": "The exact energy of a guy who's too good at everything but acts like he isn't.",
+          "meta": { "format": "Variety stream", "platform": "Twitch" }
         },
         {
-          "id": "kurzgesagt",
-          "title": "Kurzgesagt",
-          "cover": "/about-room/creators/creators-kurzgesagt.jpg",
-          "rating": "8.9/10",
-          "tags": ["animation", "science", "dread-optimism"],
-          "note": "Finds a way to end videos about existential collapse on a hopeful note.",
-          "meta": { "format": "Animated essay", "energy": "Epic / Anxious" }
+          "id": "mortismal-gaming",
+          "title": "Mortismal Gaming",
+          "cover": "/about-room/creators/creators-mortismal-gaming.jpg",
+          "tags": ["crpg reviews", "100% completions", "deep cuts"],
+          "note": "The only reviewer I trust for CRPGs. If he says it's good, it's good.",
+          "meta": { "format": "Reviews / Essays", "platform": "YouTube" }
         },
         {
-          "id": "mkbhd",
-          "title": "MKBHD",
-          "cover": "/about-room/creators/creators-mkbhd.jpg",
-          "rating": "8.5/10",
-          "tags": ["tech review", "production value", "weekly"],
-          "note": "The benchmark for how long-form tech content should look.",
-          "meta": { "format": "YouTube review", "energy": "Polished / Reliable" }
-        },
-        {
-          "id": "mark-rober",
-          "title": "Mark Rober",
-          "cover": "/about-room/creators/creators-mark-rober.jpg",
-          "rating": "8.7/10",
-          "tags": ["engineering", "spectacle", "practical jokes"],
-          "note": "Glitter bombs as peak engineering. I respect it.",
-          "meta": { "format": "YouTube build", "energy": "Fun / Overwhelming" }
+          "id": "lirik",
+          "title": "Lirik",
+          "cover": "/about-room/creators/creators-lirik.jpg",
+          "tags": ["variety", "chill", "background-friendly"],
+          "note": "For when I need background noise that occasionally becomes genuinely funny.",
+          "meta": { "format": "Variety stream", "platform": "Twitch" }
         }
       ]
     },
     {
       "id": "food",
       "label": "FOOD",
-      "accent": "#E8A75A",
+      "accent": "#E8734A",
       "items": [
         {
-          "id": "pho",
-          "title": "Phở bò tái",
-          "cover": "/about-room/food/food-pho.jpg",
+          "id": "com-tam",
+          "title": "Cơm Tấm",
+          "cover": "/about-room/food/food-com-tam.jpg",
           "rating": "10/10",
-          "tags": ["comfort food", "everyday"],
-          "note": "The baseline everything else gets measured against. Non-negotiable.",
-          "meta": { "craving": "Always", "context": "morning" }
+          "tags": ["everyday", "comfort food", "home"],
+          "note": "Broken rice, grilled pork, fried egg, pickles. The math of a perfect meal.",
+          "meta": { "craving": "Always", "context": "Any time of day" }
+        },
+        {
+          "id": "ca-phe-den",
+          "title": "Cà Phê Đen",
+          "cover": "/about-room/food/food-ca-phe-den.jpg",
+          "rating": "10/10",
+          "tags": ["daily ritual", "no sugar", "no milk"],
+          "note": "Black, no sugar, no ice. If it needs anything else it wasn't coffee to begin with.",
+          "meta": { "craving": "Morning", "context": "Work session" }
         },
         {
           "id": "banh-mi",
-          "title": "Bánh mì thịt",
+          "title": "Bánh Mì",
           "cover": "/about-room/food/food-banh-mi.jpg",
           "rating": "9.8/10",
-          "tags": ["street food", "quick bite"],
-          "note": "Best food-to-price ratio in the known universe. Objectively.",
-          "meta": { "craving": "Midday", "context": "on the go" }
+          "tags": ["street food", "fast", "unbeatable value"],
+          "note": "Best food-to-price ratio in existence. This is not up for debate.",
+          "meta": { "craving": "Midday", "context": "On the go" }
         },
         {
-          "id": "matcha-latte",
-          "title": "Matcha latte",
-          "cover": "/about-room/food/food-matcha-latte.jpg",
-          "rating": "9.0/10",
-          "tags": ["drink", "daily ritual"],
-          "note": "Replaced coffee. Never going back.",
-          "meta": { "craving": "Morning", "context": "work session" }
+          "id": "bun-rieu",
+          "title": "Bún Riêu",
+          "cover": "/about-room/food/food-bun-rieu.jpg",
+          "rating": "9.3/10",
+          "tags": ["crab broth", "noodle soup", "underrated"],
+          "note": "The underrated one. Crab broth, tomato, tofu. Most people sleep on it.",
+          "meta": { "craving": "Morning", "context": "Slow days" }
         },
         {
-          "id": "ramen",
-          "title": "Tonkotsu ramen",
-          "cover": "/about-room/food/food-ramen.jpg",
-          "rating": "9.4/10",
-          "tags": ["occasion food", "broth-forward"],
-          "note": "Worth queuing 40 minutes if the broth has been simmering 18 hours.",
-          "meta": { "craving": "Rainy days", "context": "weekend only" }
-        },
-        {
-          "id": "croissant",
-          "title": "Butter croissant",
-          "cover": "/about-room/food/food-croissant.jpg",
-          "rating": "8.8/10",
-          "tags": ["pastry", "weekend treat"],
-          "note": "Needs to be eaten within 20 minutes of leaving the oven. No exceptions.",
-          "meta": { "craving": "Weekend morning", "context": "slow day" }
+          "id": "bun-dau",
+          "title": "Bún Đậu Mắm Tôm",
+          "cover": "/about-room/food/food-bun-dau.jpg",
+          "rating": "9.5/10",
+          "tags": ["shrimp paste", "polarising", "deeply local"],
+          "note": "Not for everyone. That's exactly why it's for me.",
+          "meta": {
+            "craving": "Afternoon",
+            "context": "With people who get it"
+          }
         }
       ]
     },
     {
-      "id": "work",
-      "label": "WORK",
+      "id": "tools",
+      "label": "TOOLS",
       "accent": "#86C9A6",
       "items": [
         {
-          "id": "figma",
-          "title": "Figma",
-          "cover": "/about-room/work/work-figma.jpg",
-          "rating": "9.5/10",
-          "tags": ["design", "collaboration", "daily driver"],
-          "note": "The tool that made me stop sketching on paper. My entire spatial memory lives here.",
-          "meta": { "mode": "Design / Prototype", "reason": "Fastest path from idea to shareable artifact" }
-        },
-        {
-          "id": "cursor",
-          "title": "Cursor",
-          "cover": "/about-room/work/work-cursor.jpg",
-          "rating": "9.3/10",
-          "tags": ["ai editor", "daily driver", "pair programming"],
-          "note": "Changed how I think about writing code. I describe, it drafts, I correct.",
-          "meta": { "mode": "Code editor", "reason": "Turns intent into syntax faster than I can type" }
-        },
-        {
-          "id": "linear",
-          "title": "Linear",
-          "cover": "/about-room/work/work-linear.jpg",
-          "rating": "9.0/10",
-          "tags": ["project tracking", "fast UI", "minimal"],
-          "note": "The only task manager that doesn't feel like admin work to maintain.",
-          "meta": { "mode": "Project management", "reason": "Keyboard-first. Everything else is noise." }
-        },
-        {
-          "id": "terminal",
-          "title": "Terminal",
-          "cover": "/about-room/work/work-terminal.jpg",
-          "rating": "8.9/10",
-          "tags": ["cli", "always open", "zen mode"],
-          "note": "A blank black rectangle that can do anything. There's comfort in that.",
-          "meta": { "mode": "Shell / CLI", "reason": "Precise, fast, and never needs a GUI update" }
+          "id": "claude-code",
+          "title": "Claude Code",
+          "cover": "/about-room/tools/tools-claude-code.jpg",
+          "rating": "9.8/10",
+          "tags": ["ai", "terminal", "daily driver"],
+          "note": "Runs in my terminal. Does things I'd spend hours on in seconds. Bit unsettling.",
+          "meta": {
+            "mode": "CLI / Agent",
+            "reason": "Thinks in context, not just completions"
+          }
         },
         {
           "id": "obsidian",
           "title": "Obsidian",
-          "cover": "/about-room/work/work-obsidian.jpg",
-          "rating": "8.7/10",
-          "tags": ["note-taking", "linked thinking", "local-first"],
-          "note": "All my thinking lives here. Markdown files on disk. No vendor lock-in.",
-          "meta": { "mode": "Knowledge base", "reason": "Local-first with a graph view that actually helps" }
+          "cover": "/about-room/tools/tools-obsidian.jpg",
+          "rating": "9.2/10",
+          "tags": ["note-taking", "local-first", "linked thinking"],
+          "note": "Everything I've ever thought is in here somewhere. Local files, no subscription, no excuses.",
+          "meta": {
+            "mode": "Knowledge base",
+            "reason": "My brain, but searchable"
+          }
         },
         {
-          "id": "claude",
-          "title": "Claude",
-          "cover": "/about-room/work/work-claude.jpg",
-          "rating": "9.6/10",
-          "tags": ["ai assistant", "writing partner", "rubber duck"],
-          "note": "Best thinking partner I have. Especially useful when I'm wrong and know it.",
-          "meta": { "mode": "AI assistant", "reason": "Actually reads long context. Doesn't hallucinate on details I can verify." }
+          "id": "vscode",
+          "title": "VS Code",
+          "cover": "/about-room/tools/tools-vscode.jpg",
+          "rating": "8.8/10",
+          "tags": ["editor", "extensible", "baseline"],
+          "note": "Still the baseline. Extensions do the rest.",
+          "meta": {
+            "mode": "Code editor",
+            "reason": "Everything else is built on top of this"
+          }
+        }
+      ]
+    },
+    {
+      "id": "film",
+      "label": "CINE",
+      "accent": "#E05C5C",
+      "items": [
+        {
+          "id": "marvel-p1-3",
+          "title": "Marvel Phase 1–3",
+          "cover": "/about-room/film/film-marvel.jpg",
+          "rating": "9/10",
+          "tags": ["superhero", "connected universe", "event cinema"],
+          "note": "Phase 1–3 was a genuine cultural event. Watching Endgame opening night was something I won't forget.",
+          "meta": { "format": "Film franchise", "era": "2008–2019" }
+        },
+        {
+          "id": "game-of-thrones",
+          "title": "Game of Thrones",
+          "cover": "/about-room/film/film-got.jpg",
+          "rating": "9.5/10",
+          "tags": ["fantasy", "political", "peak tv"],
+          "note": "The first 6 seasons are some of the best television ever made. I've decided to stop there.",
+          "meta": { "format": "Series", "seasons": "S1–S6 only" }
+        },
+        {
+          "id": "the-boys",
+          "title": "The Boys",
+          "cover": "/about-room/film/film-the-boys.jpg",
+          "rating": "9.1/10",
+          "tags": ["superhero satire", "dark comedy", "corporate horror"],
+          "note": "Superheroes as a corporate PR problem. Makes me laugh and feel bad about laughing.",
+          "meta": { "format": "Series", "platform": "Prime Video" }
+        },
+        {
+          "id": "hotd",
+          "title": "House of the Dragon",
+          "cover": "/about-room/film/film-hotd.jpg",
+          "rating": "8.7/10",
+          "tags": ["Targaryen", "Dragons", "medieval politics"],
+          "note": "The dragons are cool and all, but it's the Targaryen family drama that hooks me. Also, Rhaenyra is a queen and you can't convince me otherwise.",
+          "meta": { "format": "Series", "platform": "Prime Video" }
+        }
+      ]
+    },
+    {
+      "id": "novel",
+      "label": "NOVELS",
+      "accent": "#D4A843",
+      "items": [
+        {
+          "id": "pham-nhan-tu-tien",
+          "title": "Phàm Nhân Tu Tiên",
+          "cover": "/about-room/novel/novel-pham-nhan-tu-tien.jpg",
+          "rating": "10/10",
+          "tags": ["cultivation", "xianxia", "part 1 only"],
+          "note": "The one that made me understand why people read cultivation novels. Part 1 is perfect — earned power, real stakes, no inflation.",
+          "meta": { "origin": "Chinese web novel", "read": "Part 1" }
+        },
+        {
+          "id": "dai-dao-trieu-thien",
+          "title": "Đại Đạo Triều Thiên",
+          "cover": "/about-room/novel/novel-dai-dao-trieu-thien.jpg",
+          "rating": "9.5/10",
+          "tags": ["cultivation", "logical system", "long-form"],
+          "note": "The more I read, the more I need the logic to hold. This one holds.",
+          "meta": { "origin": "Chinese web novel", "status": "Ongoing" }
         }
       ]
     }

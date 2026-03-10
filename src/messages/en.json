@@ -7,44 +7,47 @@
   "metadata": {
     "home": {
       "title": "Minh Tâm — Web Developer",
-      "description": "Modern websites for local businesses."
+      "description": "Websites designed and built for anyone who needs one."
     },
     "about": {
       "title": "About — The Room",
       "description": "A personal archive of games, creators, food, and tools I care about."
+    },
+    "works": {
+      "title": "Works — Minh Tâm",
+      "description": "Demo websites built for local businesses — flower shops, salons, bakeries, and more."
     }
   },
   "hero": {
     "badge": "Web Development",
     "title": "Hi, I'm {name}",
-    "subtitle": "I build websites that help local businesses grow.",
-    "description": "From flower shops to salons, from repair shops to bakeries — I turn your business into a website that customers trust and visit every day.",
+    "subtitle": "I design websites that make a real impression.",
+    "description": "Clean layouts, thoughtful features, and nothing you don't need.",
     "cta_works": "View projects",
     "cta_contact": "Contact now"
   },
   "about": {
     "badge": "About",
     "title": "Who I am",
-    "p1": "I am a local web designer. I work with small business owners — not big corporations — to build clean, easy-to-use websites that actually attract customers.",
-    "p2": "No confusing jargon, no hassle. You'll always know exactly what you're getting and why.",
-    "footer": "Local operations · Helped 5+ businesses"
+    "p1": "I design and build websites — for personal presence, business growth, or whatever you're building.",
+    "footer": "In-person available · An Giang based"
   },
   "availability": {
     "status": "Taking on new clients",
     "subtext": "Available now · Finished in 2–3 weeks"
   },
   "skills": {
-    "badge": "Capabilities",
-    "title": "Features I can build",
+    "badge": "What I do",
+    "title": "What goes into your site",
     "capabilities": {
       "booking": "Book appointments",
       "shop": "Online shop",
       "mobile": "Mobile friendly",
       "seo": "Google optimized",
-      "speed": "Fast loading",
-      "updates": "Easy to update",
-      "reviews": "Display reviews",
-      "online": "Always online"
+      "content": "Manage your content",
+      "designs": "Custom designs",
+      "multilingual": "Multilingual support",
+      "gallery": "Photo gallery"
     }
   },
   "works": {
@@ -58,24 +61,24 @@
     "items": [
       {
         "id": "1",
-        "businessType": "Flower Shop",
-        "businessName": "Bloom & Co.",
-        "description": "A demo site showing online ordering, seasonal catalogs, and delivery scheduling for a flower shop.",
-        "tag": "Retail"
+        "businessType": "Wedding Cards",
+        "businessName": "Thiệp Cưới Đình Toàn",
+        "description": "Premium wedding & greeting card shop — 3D card viewer, custom orders via Zalo.",
+        "tag": "Wedding Cards"
       },
       {
         "id": "2",
-        "businessType": "Hair Salon",
-        "businessName": "The Cut Studio",
-        "description": "A demo site showing appointment booking, stylist profiles, and service menus for a salon.",
-        "tag": "Booking"
+        "businessType": "F&B",
+        "businessName": "DUSK",
+        "description": "Minimalist specialty drinks shop — premium drink menu and online ordering.",
+        "tag": "F&B"
       },
       {
         "id": "3",
-        "businessType": "Phone Repair",
-        "businessName": "FixIt Fast",
-        "description": "A demo site showing repair request tracking, parts management, and customer notifications.",
-        "tag": "Operations"
+        "businessType": "Barbershop",
+        "businessName": "Barber District",
+        "description": "Premium men's barbershop — online booking, barber profiles, and style gallery.",
+        "tag": "Barber"
       },
       {
         "id": "4",
@@ -126,10 +129,10 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "tagline": "Websites for local businesses."
+    "tagline": "Built right, first time."
   },
   "cta": {
-    "title": "Ready to grow your\nbusiness online?",
+    "title": "Let's build something\nworth visiting.",
     "button": "Let's talk →"
   },
   "contact": {
@@ -148,6 +151,10 @@
     "badge": "Active",
     "title": "Currently building",
     "demo": "View demo →",
+    "openSlot": {
+      "label": "1 slot open",
+      "sub": "Taking on new clients"
+    },
     "phase": {
       "design": "Design",
       "integration": "Integration",
@@ -162,23 +169,42 @@
     "cta": "Get started →",
     "packages": [
       {
-        "id": "starter",
-        "name": "Starter",
+        "id": "essential",
+        "name": "Essential",
         "price": "Get a quote",
-        "features": ["Facebook Fanpage setup", "1-page website", "Shared hosting", "Mobile-friendly", "Basic SEO"]
+        "features": [
+          "Landing page (UI-only)",
+          "1–2 product or service pages",
+          "Staff / team page",
+          "Mobile-friendly",
+          "Basic SEO"
+        ]
       },
       {
         "id": "growth",
         "name": "Growth",
         "price": "Get a quote",
         "recommended": true,
-        "features": ["Everything in Starter", "Up to 5 pages", "Booking or menu feature", "1-year hosting", "Google Analytics"]
+        "features": [
+          "Everything in Essential",
+          "Backend features (booking, menu, simple CMS)",
+          "Up to 8 pages",
+          "Google Business or Facebook management",
+          "Weekly social posts (×2/wk)",
+          "Review management + growth strategy"
+        ]
       },
       {
-        "id": "premium",
-        "name": "Premium",
+        "id": "studio",
+        "name": "Studio",
         "price": "Custom quote",
-        "features": ["Everything in Growth", "Custom features", "Priority support", "Dedicated hosting", "Ongoing updates"]
+        "features": [
+          "Everything in Growth",
+          "User login, cart & checkout",
+          "Full CMS — products, orders, bookings",
+          "Custom integrations & dashboard",
+          "Priority support + ongoing updates"
+        ]
       }
     ]
   }

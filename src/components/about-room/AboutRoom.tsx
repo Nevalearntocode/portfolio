@@ -65,6 +65,25 @@ export function AboutRoom({ categories }: AboutRoomProps) {
       {/* Back exit */}
       <BackExit />
 
+      {/* Page title */}
+      <p
+        style={{
+          position: "fixed",
+          top: 28,
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: 20,
+          fontFamily: "var(--font-space-grotesk, 'Space Grotesk', sans-serif)",
+          fontSize: "1rem",
+          letterSpacing: "0.08em",
+          color: "#f4f1e8",
+          opacity: 1,
+          whiteSpace: "nowrap",
+          pointerEvents: "none",
+        }}
+      >
+        Things i do for dopamine
+      </p>
       {/* Decorative scene badge — desktop only */}
       {!isMobile && <SceneBadge label={activeCategory.label} />}
 
@@ -102,6 +121,51 @@ export function AboutRoom({ categories }: AboutRoomProps) {
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* Sarcastic footer — desktop only */}
+      {!isMobile && (
+        <div
+          style={{
+            position: "fixed",
+            bottom: 150,
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 20,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 4,
+            pointerEvents: "none",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-space-grotesk, 'Space Grotesk', sans-serif)",
+              fontSize: "0.65rem",
+              letterSpacing: "0.06em",
+              color: "#f4f1e8",
+              opacity: 1,
+              whiteSpace: "nowrap",
+              margin: 0,
+            }}
+          >
+            People have opinions on everything nowadays huh?
+          </p>
+          <p
+            style={{
+              fontFamily: "var(--font-space-grotesk, 'Space Grotesk', sans-serif)",
+              fontSize: "0.65rem",
+              letterSpacing: "0.06em",
+              color: "#f4f1e8",
+              opacity: 1,
+              whiteSpace: "nowrap",
+              margin: 0,
+            }}
+          >
+            So i might as well...
+          </p>
+        </div>
+      )}
 
       {/* Bottom navigation */}
       <BottomNav

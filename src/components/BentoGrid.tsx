@@ -52,7 +52,7 @@ export function BentoGrid() {
       </div>
 
       {/* Row 2 */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
         <Cell className="md:col-span-3">
           <AboutCard />
         </Cell>

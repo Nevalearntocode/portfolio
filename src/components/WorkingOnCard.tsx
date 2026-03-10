@@ -14,6 +14,14 @@ function ZaloIcon({ className }: { className?: string }) {
   );
 }
 
+function TikTokIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.27 8.27 0 0 0 4.84 1.55V6.79a4.85 4.85 0 0 1-1.07-.1z" />
+    </svg>
+  );
+}
+
 function ProjectMiniCard({ project }: { project: ActiveProject }) {
   const t = useTranslations("workingOn");
 
@@ -63,10 +71,26 @@ function ProjectMiniCard({ project }: { project: ActiveProject }) {
               className="text-[#111]/40 hover:text-[#111]/70 dark:text-white/40 dark:hover:text-white/70 transition-colors"
               aria-label="Zalo"
             >
-              <ZaloIcon className="opacity-40 hover:opacity-70" />
+              <ZaloIcon className="opacity-40 hover:opacity-70 dark:brightness-0 dark:invert" />
+            </a>
+          )}
+          {project.clientSocials?.tiktok && (
+            <a
+              href={project.clientSocials.tiktok}
+              className="text-[#111]/40 hover:text-[#111]/70 dark:text-white/40 dark:hover:text-white/70 transition-colors"
+              aria-label="TikTok"
+            >
+              <TikTokIcon />
             </a>
           )}
         </div>
+
+        {/* Credibility */}
+        {project.credibility && (
+          <p className="text-[10px] text-[#111]/40 dark:text-white/40 leading-snug">
+            {project.credibility}
+          </p>
+        )}
 
         {/* Phase pills */}
         <div className="flex items-center gap-1 flex-wrap">
@@ -112,10 +136,15 @@ export function WorkingOnCard() {
         <p className="text-lg font-semibold text-[#111] dark:text-white">{t("title")}</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start gap-4">
         {activeProjects.map((project) => (
           <ProjectMiniCard key={project.id} project={project} />
         ))}
+        {/* Open slot */}
+        <div className="flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-black/[0.08] dark:border-white/[0.08] aspect-[4/3] text-center px-4">
+          <p className="text-xs font-semibold text-[#a3b899]">{t("openSlot.label")}</p>
+          <p className="text-[11px] text-[#111]/40 dark:text-white/40">{t("openSlot.sub")}</p>
+        </div>
       </div>
     </TiltCard>
   );

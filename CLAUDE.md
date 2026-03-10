@@ -26,6 +26,34 @@ npm run lint      # eslint
 
 **Tailwind 4** — no `tailwind.config.js`. All CSS custom properties and theme overrides go in `src/app/globals.css`. The plan-6 design tokens (e.g. `--accent: #a3b899` sage green) belong there too.
 
+## Project Structure
+
+```text
+src/
+├── app/
+│   └── [locale]/
+│       ├── about/page.tsx      # Personal immersive archive route
+│       ├── works/page.tsx      # Dedicated works/projects route
+│       ├── layout.tsx          # Root layout with i18n & ThemeProvider
+│       ├── page.tsx            # Homepage (Bento Grid)
+│       └── portfolio.css       # Homepage-specific styles
+├── components/                 # React components
+│   ├── about-room/             # Immersive archive specific components
+│   ├── ui/                     # shadcn/ui (radix-nova style)
+│   ├── HeroCard.tsx            # Sage green intro block
+│   ├── WorksCard.tsx           # Project grid with dialog previews
+│   ├── SkillsCard.tsx          # Capabilities grid
+│   ├── ContactCard.tsx         # Unified email/social/phone footer
+│   ├── BentoGrid.tsx           # Layout Orchestrator
+│   └── *.tsx                   # CtaRow, Pricing, Process, etc.
+├── data/                       # Localized data (owner.ts, about-room.json)
+├── hooks/                      # use-mobile.ts, etc.
+├── i18n/                       # routing.ts, request.ts
+├── lib/                        # placeholder-vi.ts (mock project data)
+├── messages/                   # en.json, vi.json (next-intl messages)
+└── types/                      # about-room.ts, etc.
+```
+
 ## Learned
 
 ### Context

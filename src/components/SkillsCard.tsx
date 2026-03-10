@@ -7,10 +7,10 @@ import {
   ShoppingBag,
   Smartphone,
   Search,
-  Zap,
-  Pencil,
-  Star,
-  Globe,
+  LayoutDashboard,
+  Palette,
+  Languages,
+  Images,
 } from "lucide-react";
 import { TiltCard } from "./TiltCard";
 
@@ -19,10 +19,10 @@ const capabilityConfig = [
   { icon: ShoppingBag, key: "shop" },
   { icon: Smartphone, key: "mobile" },
   { icon: Search, key: "seo" },
-  { icon: Zap, key: "speed" },
-  { icon: Pencil, key: "updates" },
-  { icon: Star, key: "reviews" },
-  { icon: Globe, key: "online" },
+  { icon: LayoutDashboard, key: "content" },
+  { icon: Palette, key: "designs" },
+  { icon: Languages, key: "multilingual" },
+  { icon: Images, key: "gallery" },
 ];
 
 export function SkillsCard() {

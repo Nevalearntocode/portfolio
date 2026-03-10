@@ -2,10 +2,12 @@ export type ActiveProject = {
   id: string
   clientName: string
   clientCategory: string
+  credibility?: string
   clientSocials?: {
     facebook?: string
     instagram?: string
     zalo?: string
+    tiktok?: string
   }
   projectType: string
   phase: "design" | "integration" | "review" | "finishing"
@@ -16,32 +18,31 @@ export type ActiveProject = {
 export const activeProjects: ActiveProject[] = [
   {
     id: "1",
-    clientName: "Phở Bà Lan",
-    clientCategory: "Nhà hàng",
-    clientSocials: { facebook: "#", instagram: "#" },
-    projectType: "Website đặt bàn & menu",
-    phase: "design",
-    demoUrl: "#",
-    thumbnail: "https://picsum.photos/seed/pho/800/500",
+    clientName: "Cam Giang Shop",
+    clientCategory: "Đặc sản khô",
+    credibility: "700k+ followers trên các nền tảng",
+    clientSocials: {
+      facebook: "https://www.facebook.com/hi.camgiang",
+      zalo: "https://zalo.me/0909313165",
+      tiktok: "https://www.tiktok.com/@cam_giang_nguyen_97",
+    },
+    projectType: "Cửa hàng online",
+    phase: "integration",
+    demoUrl: "https://cam-giang-shop.vercel.app",
+    thumbnail: "/about-room/tools/cam-giang-thumb.jpg",
   },
   {
     id: "2",
-    clientName: "Nail Studio Lily",
-    clientCategory: "Làm đẹp",
-    clientSocials: { facebook: "#", zalo: "#" },
-    projectType: "Website đặt lịch",
-    phase: "review",
-    demoUrl: "#",
-    thumbnail: "https://picsum.photos/seed/nail/800/500",
-  },
-  {
-    id: "3",
-    clientName: "Café Góc Nhỏ",
-    clientCategory: "F&B",
-    clientSocials: { instagram: "#" },
-    projectType: "Website thực đơn & order",
+    clientName: "Trần Lại Mobile",
+    clientCategory: "Cửa hàng điện thoại",
+    credibility: "Hơn 10 năm kinh nghiệm tại địa phương",
+    clientSocials: {
+      facebook: "https://www.facebook.com/lai.tran.5454",
+      zalo: "https://zalo.me/0944900899",
+    },
+    projectType: "Website bán lẻ & sửa chữa",
     phase: "finishing",
-    demoUrl: "#",
-    thumbnail: "https://picsum.photos/seed/cafe/800/500",
+    demoUrl: "https://tran-lai-mobile.vercel.app",
+    thumbnail: "/about-room/tools/tran-lai-thumb.jpg",
   },
 ]

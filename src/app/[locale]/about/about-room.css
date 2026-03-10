@@ -273,14 +273,11 @@
 .ar-card-note {
   font-size: var(--text-sm);
   color: var(--text-muted);
-  line-height: 1.5;
-  background: var(--surface);
-  padding: var(--space-3);
-  border-radius: var(--note-radius);
+  line-height: 1.6;
   flex: 1;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
 }
 
@@ -478,5 +475,14 @@
 
   .ar-nav-cats::-webkit-scrollbar {
     display: none;
+  }
+
+  .ar-card-title {
+    font-size: 1.25rem;
+  }
+
+  .ar-card-note {
+    font-size: 1rem;
+    -webkit-line-clamp: 12;
   }
 }

@@ -46,7 +46,7 @@ export function TopBar() {
           title="Zalo"
           className="hover:opacity-70 transition-opacity"
         >
-          <Image src="/zalo.svg" alt="Zalo" width={28} height={10} className="dark:invert" />
+          <Image src="/zalo.svg" alt="Zalo" width={28} height={10} className="dark:brightness-0 dark:invert" />
         </a>
       </div>
     </div>
