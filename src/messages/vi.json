@@ -1,0 +1,223 @@
+{
+  "nav": {
+    "home": "Home",
+    "works": "Dự án",
+    "about": "Fun stuffs"
+  },
+  "metadata": {
+    "home": {
+      "title": "Minh Tâm — Lập Trình Web",
+      "description": "Website thiết kế và xây dựng cho bất kỳ ai cần."
+    },
+    "about": {
+      "title": "Fun stuffs — The Room",
+      "description": "Chỗ mình lưu lại mấy thứ hay ho: game, creator, đồ ăn, tool xịn."
+    },
+    "works": {
+      "title": "Dự Án — Minh Tâm",
+      "description": "Website demo cho các tiệm kinh doanh — tiệm hoa, tiệm tóc, tiệm bánh, và nhiều hơn nữa."
+    }
+  },
+  "hero": {
+    "badge": "Lập Trình Web",
+    "title": "Chào, mình là {name}",
+    "subtitle": "Mình làm website đẹp, gọn, và đáng nhớ.",
+    "description": "Giao diện gọn, tính năng đúng chỗ, không có gì thừa.",
+    "cta_works": "Xem dự án",
+    "cta_contact": "Liên hệ ngay"
+  },
+  "about": {
+    "badge": "Về mình",
+    "title": "Mình là ai",
+    "p1": "Mình thiết kế và xây dựng website — cho thương hiệu cá nhân, phát triển kinh doanh, hay bất cứ thứ gì bạn đang xây.",
+    "footer": "Gặp trực tiếp được · Ở An Giang"
+  },
+  "availability": {
+    "status": "Đang nhận khách mới",
+    "subtext": "Sẵn sàng ngay · Hoàn thiện trong 2–3 tuần"
+  },
+  "skills": {
+    "badge": "Mình làm gì",
+    "title": "Những thứ có trong website của bạn",
+    "capabilities": {
+      "booking": "Đặt lịch hẹn",
+      "shop": "Cửa hàng online",
+      "mobile": "Dùng tốt trên điện thoại",
+      "seo": "Tối ưu Google",
+      "content": "Tự quản lý nội dung",
+      "designs": "Thiết kế riêng",
+      "multilingual": "Đa ngôn ngữ",
+      "gallery": "Thư viện ảnh"
+    }
+  },
+  "works": {
+    "badge": "Demo Dự Án",
+    "title": "Mình có thể làm gì cho bạn",
+    "hint": "Website demo — bấm để xem thử",
+    "dialog": {
+      "visit": "Xem live →",
+      "close": "Đóng"
+    },
+    "items": [
+      {
+        "id": "1",
+        "businessType": "Thiệp Cưới",
+        "businessName": "Thiệp Cưới Đình Toàn",
+        "description": "Cửa hàng thiệp cưới & thiệp chúc cao cấp — xem thiệp 3D, đặt theo yêu cầu qua Zalo.",
+        "tag": "Thiệp cưới"
+      },
+      {
+        "id": "2",
+        "businessType": "F&B",
+        "businessName": "DUSK",
+        "description": "Tiệm nước đặc biệt phong cách tối giản — thực đơn thức uống cao cấp và đặt hàng online.",
+        "tag": "F&B"
+      },
+      {
+        "id": "3",
+        "businessType": "Barbershop",
+        "businessName": "Barber District",
+        "description": "Barbershop cao cấp dành cho phái mạnh — đặt lịch, hồ sơ thợ, thư viện phong cách.",
+        "tag": "Barber"
+      },
+      {
+        "id": "4",
+        "businessType": "Tiệm Bánh",
+        "businessName": "Sweet Origins",
+        "description": "Demo website đặt bánh theo yêu cầu, portfolio, và lịch lấy hàng.",
+        "tag": "Bán lẻ"
+      },
+      {
+        "id": "5",
+        "businessType": "Rửa Xe & Chăm Sóc Xe",
+        "businessName": "Shine & Drive",
+        "description": "Demo website gói dịch vụ, gallery trước/sau, và đặt lịch online.",
+        "tag": "Đặt lịch"
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Đánh giá",
+    "items": [
+      {
+        "id": "1",
+        "name": "Maria Santos",
+        "business": "Bloom & Co.",
+        "quote": "Đơn hàng online tăng gấp đôi trong tháng đầu. Khách nói đặt dễ lắm."
+      },
+      {
+        "id": "2",
+        "name": "James Park",
+        "business": "FixIt Fast",
+        "quote": "Hệ thống theo dõi đơn sửa giúp tụi mình không còn phải nhắn qua nhắn lại nữa. Tiết kiệm thời gian hẳn."
+      },
+      {
+        "id": "3",
+        "name": "Aisha Nguyen",
+        "business": "The Cut Studio",
+        "quote": "Trước đặt lịch là cả mớ hỗn độn. Giờ nó chạy tự động, khách vắng mặt cũng gần như bằng không."
+      }
+    ]
+  },
+  "process": {
+    "badge": "Quy trình",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Tư vấn",
+        "desc": "Kể mình nghe về tiệm của bạn. Mình sẽ vạch ra đúng thứ bạn cần."
+      },
+      {
+        "n": "02",
+        "title": "Xây dựng",
+        "desc": "Mình thiết kế và code. Bạn xem và duyệt từng bước."
+      },
+      {
+        "n": "03",
+        "title": "Ra mắt",
+        "desc": "Website lên sóng. Mình lo hết hosting, domain, và cài đặt."
+      }
+    ]
+  },
+  "footer": {
+    "rights": "Tất cả quyền được bảo lưu.",
+    "tagline": "Làm đúng ngay từ đầu."
+  },
+  "cta": {
+    "title": "Cùng làm gì đó\nđáng ghé thăm.",
+    "button": "Nói chuyện thôi →"
+  },
+  "contact": {
+    "badge": "Liên hệ",
+    "title": "Nhắn mình nha",
+    "email_label": "Email",
+    "social_label": "Mạng xã hội",
+    "phone_label": "Điện thoại",
+    "copied": "Đã copy!"
+  },
+  "worksPage": {
+    "title": "Dự Án",
+    "subtitle": "Website mình đã làm cho các tiệm, quán ở Việt Nam"
+  },
+  "workingOn": {
+    "badge": "Đang làm",
+    "title": "Dự án hiện tại",
+    "demo": "Xem demo →",
+    "openSlot": {
+      "label": "Còn 1 slot trống",
+      "sub": "Đang nhận dự án mới"
+    },
+    "phase": {
+      "design": "Thiết kế",
+      "integration": "Tích hợp",
+      "review": "Duyệt",
+      "finishing": "Hoàn thiện"
+    }
+  },
+  "pricing": {
+    "badge": "Bảng giá",
+    "title": "Chọn gói phù hợp",
+    "recommended": "Phổ biến",
+    "cta": "Bắt đầu →",
+    "packages": [
+      {
+        "id": "essential",
+        "name": "Cơ Bản",
+        "price": "Báo giá",
+        "features": [
+          "Trang chủ (giao diện)",
+          "1–2 trang sản phẩm hoặc dịch vụ",
+          "Trang giới thiệu nhân sự",
+          "Tương thích điện thoại",
+          "SEO cơ bản"
+        ]
+      },
+      {
+        "id": "growth",
+        "name": "Phát Triển",
+        "price": "Báo giá",
+        "recommended": true,
+        "features": [
+          "Tất cả trong gói Cơ Bản",
+          "Tính năng backend (đặt lịch, menu, CMS đơn giản)",
+          "Đến 8 trang",
+          "Quản lý Google Business hoặc Facebook",
+          "Đăng bài mạng xã hội hàng tuần (×2/tuần)",
+          "Quản lý đánh giá + chiến lược tăng trưởng"
+        ]
+      },
+      {
+        "id": "studio",
+        "name": "Chuyên Nghiệp",
+        "price": "Báo giá riêng",
+        "features": [
+          "Tất cả trong gói Phát Triển",
+          "Đăng nhập, giỏ hàng & thanh toán",
+          "CMS đầy đủ — sản phẩm, đơn hàng, đặt lịch",
+          "Tích hợp tùy chỉnh & dashboard",
+          "Hỗ trợ ưu tiên + cập nhật liên tục"
+        ]
+      }
+    ]
+  }
+}

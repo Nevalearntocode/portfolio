@@ -1,0 +1,287 @@
+{
+  "categories": [
+    {
+      "id": "games",
+      "label": "GAMES",
+      "accent": "#9B7FD4",
+      "items": [
+        {
+          "id": "witcher-3",
+          "title": "The Witcher 3",
+          "cover": "/about-room/games/games-witcher-3.jpg",
+          "rating": "10/10",
+          "tags": ["open world", "narrative rpg", "choices matter"],
+          "note": "The benchmark I measure every RPG against. Geralt's expression when he makes a bad call is the whole game.",
+          "meta": { "playMode": "Solo", "hours": "200+" }
+        },
+        {
+          "id": "skyrim",
+          "title": "Elder Scrolls V: Skyrim",
+          "cover": "/about-room/games/games-skyrim.jpg",
+          "rating": "9.5/10",
+          "tags": ["open world", "moddable", "evergreen"],
+          "note": "Still installing mods 13 years later. At this point the modding is the game.",
+          "meta": { "playMode": "Solo", "era": "2011" }
+        },
+        {
+          "id": "baldurs-gate-3",
+          "title": "Baldur's Gate 3",
+          "cover": "/about-room/games/games-baldurs-gate-3.jpg",
+          "rating": "9.8/10",
+          "tags": ["crpg", "turn-based", "co-op"],
+          "note": "First CRPG that made me actually read all the dialogue. 200 hours in and still finding new things.",
+          "meta": { "playMode": "Solo / Co-op", "hours": "200+" }
+        },
+        {
+          "id": "pathfinder-wotr",
+          "title": "Pathfinder: WotR",
+          "cover": "/about-room/games/games-pathfinder-wotr.jpg",
+          "rating": "9.2/10",
+          "tags": ["crpg", "mythic paths", "brutal"],
+          "note": "Harder, meaner, and twice as long as BG3. Finished the Lich path. Felt evil the entire time.",
+          "meta": { "playMode": "Solo", "path": "Lich" }
+        },
+        {
+          "id": "league-of-legends",
+          "title": "League of Legends",
+          "cover": "/about-room/games/games-league-of-legends.jpg",
+          "rating": "7/10",
+          "tags": ["moba", "team game", "long-term"],
+          "note": "Six years. Probably net negative for my mental health. Still queuing up.",
+          "meta": { "playMode": "Online", "status": "Active" }
+        },
+        {
+          "id": "tft",
+          "title": "Teamfight Tactics",
+          "cover": "/about-room/games/games-tft.jpg",
+          "rating": "7.5/10",
+          "tags": ["auto-battler", "set-based", "strategy"],
+          "note": "The version of League I play when I want to lose slowly and feel smart about it.",
+          "meta": { "playMode": "Online", "status": "Active" }
+        },
+        {
+          "id": "expedition-33",
+          "title": "Clair Obscur: E33",
+          "cover": "/about-room/games/games-expedition-33.jpg",
+          "rating": "—",
+          "tags": ["jrpg", "never played", "know everything"],
+          "note": "Watched every cutscene, read every lore thread, know the OST by heart. Never touched the controller. Still counts.",
+          "meta": { "playMode": "Spectator", "status": "Someday" }
+        }
+      ]
+    },
+    {
+      "id": "creators",
+      "label": "CREATORS",
+      "accent": "#F4A456",
+      "items": [
+        {
+          "id": "asmongold",
+          "title": "Asmongold",
+          "cover": "/about-room/creators/creators-asmongold.jpg",
+          "tags": ["react content", "mmo", "gaming commentary"],
+          "note": "Loud, unfiltered, weirdly right about the gaming industry more often than he should be.",
+          "meta": { "format": "Live / React", "platform": "Twitch / YouTube" }
+        },
+        {
+          "id": "sodapoppin",
+          "title": "Sodapoppin",
+          "cover": "/about-room/creators/creators-sodapoppin.jpg",
+          "tags": ["variety", "long-form", "chaos"],
+          "note": "Has been entertaining me for a decade. I don't think about why, it just works.",
+          "meta": { "format": "Variety stream", "platform": "Twitch" }
+        },
+        {
+          "id": "moonmoon",
+          "title": "Moonmoon",
+          "cover": "/about-room/creators/creators-moonmoon.jpg",
+          "tags": ["variety", "dry humor", "underrated"],
+          "note": "The exact energy of a guy who's too good at everything but acts like he isn't.",
+          "meta": { "format": "Variety stream", "platform": "Twitch" }
+        },
+        {
+          "id": "mortismal-gaming",
+          "title": "Mortismal Gaming",
+          "cover": "/about-room/creators/creators-mortismal-gaming.jpg",
+          "tags": ["crpg reviews", "100% completions", "deep cuts"],
+          "note": "The only reviewer I trust for CRPGs. If he says it's good, it's good.",
+          "meta": { "format": "Reviews / Essays", "platform": "YouTube" }
+        },
+        {
+          "id": "lirik",
+          "title": "Lirik",
+          "cover": "/about-room/creators/creators-lirik.jpg",
+          "tags": ["variety", "chill", "background-friendly"],
+          "note": "For when I need background noise that occasionally becomes genuinely funny.",
+          "meta": { "format": "Variety stream", "platform": "Twitch" }
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "label": "FOOD",
+      "accent": "#E8734A",
+      "items": [
+        {
+          "id": "com-tam",
+          "title": "Cơm Tấm",
+          "cover": "/about-room/food/food-com-tam.jpg",
+          "rating": "10/10",
+          "tags": ["everyday", "comfort food", "home"],
+          "note": "Broken rice, grilled pork, fried egg, pickles. The math of a perfect meal.",
+          "meta": { "craving": "Always", "context": "Any time of day" }
+        },
+        {
+          "id": "ca-phe-den",
+          "title": "Cà Phê Đen",
+          "cover": "/about-room/food/food-ca-phe-den.jpg",
+          "rating": "10/10",
+          "tags": ["daily ritual", "no sugar", "no milk"],
+          "note": "Black, no sugar, no ice. If it needs anything else it wasn't coffee to begin with.",
+          "meta": { "craving": "Morning", "context": "Work session" }
+        },
+        {
+          "id": "banh-mi",
+          "title": "Bánh Mì",
+          "cover": "/about-room/food/food-banh-mi.jpg",
+          "rating": "9.8/10",
+          "tags": ["street food", "fast", "unbeatable value"],
+          "note": "Best food-to-price ratio in existence. This is not up for debate.",
+          "meta": { "craving": "Midday", "context": "On the go" }
+        },
+        {
+          "id": "bun-rieu",
+          "title": "Bún Riêu",
+          "cover": "/about-room/food/food-bun-rieu.jpg",
+          "rating": "9.3/10",
+          "tags": ["crab broth", "noodle soup", "underrated"],
+          "note": "The underrated one. Crab broth, tomato, tofu. Most people sleep on it.",
+          "meta": { "craving": "Morning", "context": "Slow days" }
+        },
+        {
+          "id": "bun-dau",
+          "title": "Bún Đậu Mắm Tôm",
+          "cover": "/about-room/food/food-bun-dau.jpg",
+          "rating": "9.5/10",
+          "tags": ["shrimp paste", "polarising", "deeply local"],
+          "note": "Not for everyone. That's exactly why it's for me.",
+          "meta": {
+            "craving": "Afternoon",
+            "context": "With people who get it"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "TOOLS",
+      "accent": "#86C9A6",
+      "items": [
+        {
+          "id": "claude-code",
+          "title": "Claude Code",
+          "cover": "/about-room/tools/tools-claude-code.jpg",
+          "rating": "9.8/10",
+          "tags": ["ai", "terminal", "daily driver"],
+          "note": "Runs in my terminal. Does things I'd spend hours on in seconds. Bit unsettling.",
+          "meta": {
+            "mode": "CLI / Agent",
+            "reason": "Thinks in context, not just completions"
+          }
+        },
+        {
+          "id": "obsidian",
+          "title": "Obsidian",
+          "cover": "/about-room/tools/tools-obsidian.jpg",
+          "rating": "9.2/10",
+          "tags": ["note-taking", "local-first", "linked thinking"],
+          "note": "Everything I've ever thought is in here somewhere. Local files, no subscription, no excuses.",
+          "meta": {
+            "mode": "Knowledge base",
+            "reason": "My brain, but searchable"
+          }
+        },
+        {
+          "id": "vscode",
+          "title": "VS Code",
+          "cover": "/about-room/tools/tools-vscode.jpg",
+          "rating": "8.8/10",
+          "tags": ["editor", "extensible", "baseline"],
+          "note": "Still the baseline. Extensions do the rest.",
+          "meta": {
+            "mode": "Code editor",
+            "reason": "Everything else is built on top of this"
+          }
+        }
+      ]
+    },
+    {
+      "id": "film",
+      "label": "CINE",
+      "accent": "#E05C5C",
+      "items": [
+        {
+          "id": "marvel-p1-3",
+          "title": "Marvel Phase 1–3",
+          "cover": "/about-room/film/film-marvel.jpg",
+          "rating": "9/10",
+          "tags": ["superhero", "connected universe", "event cinema"],
+          "note": "Phase 1–3 was a genuine cultural event. Watching Endgame opening night was something I won't forget.",
+          "meta": { "format": "Film franchise", "era": "2008–2019" }
+        },
+        {
+          "id": "game-of-thrones",
+          "title": "Game of Thrones",
+          "cover": "/about-room/film/film-got.jpg",
+          "rating": "9.5/10",
+          "tags": ["fantasy", "political", "peak tv"],
+          "note": "The first 6 seasons are some of the best television ever made. I've decided to stop there.",
+          "meta": { "format": "Series", "seasons": "S1–S6 only" }
+        },
+        {
+          "id": "the-boys",
+          "title": "The Boys",
+          "cover": "/about-room/film/film-the-boys.jpg",
+          "rating": "9.1/10",
+          "tags": ["superhero satire", "dark comedy", "corporate horror"],
+          "note": "Superheroes as a corporate PR problem. Makes me laugh and feel bad about laughing.",
+          "meta": { "format": "Series", "platform": "Prime Video" }
+        },
+        {
+          "id": "hotd",
+          "title": "House of the Dragon",
+          "cover": "/about-room/film/film-hotd.jpg",
+          "rating": "8.7/10",
+          "tags": ["Targaryen", "Dragons", "medieval politics"],
+          "note": "The dragons are cool and all, but it's the Targaryen family drama that hooks me. Also, Rhaenyra is a queen and you can't convince me otherwise.",
+          "meta": { "format": "Series", "platform": "Prime Video" }
+        }
+      ]
+    },
+    {
+      "id": "novel",
+      "label": "NOVELS",
+      "accent": "#D4A843",
+      "items": [
+        {
+          "id": "pham-nhan-tu-tien",
+          "title": "Phàm Nhân Tu Tiên",
+          "cover": "/about-room/novel/novel-pham-nhan-tu-tien.jpg",
+          "rating": "10/10",
+          "tags": ["cultivation", "xianxia", "part 1 only"],
+          "note": "The one that made me understand why people read cultivation novels. Part 1 is perfect — earned power, real stakes, no inflation.",
+          "meta": { "origin": "Chinese web novel", "read": "Part 1" }
+        },
+        {
+          "id": "dai-dao-trieu-thien",
+          "title": "Đại Đạo Triều Thiên",
+          "cover": "/about-room/novel/novel-dai-dao-trieu-thien.jpg",
+          "rating": "9.5/10",
+          "tags": ["cultivation", "logical system", "long-form"],
+          "note": "The more I read, the more I need the logic to hold. This one holds.",
+          "meta": { "origin": "Chinese web novel", "status": "Ongoing" }
+        }
+      ]
+    }
+  ]
+}

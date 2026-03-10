@@ -1,0 +1,211 @@
+{
+  "nav": {
+    "home": "Home",
+    "works": "Projects",
+    "about": "About"
+  },
+  "metadata": {
+    "home": {
+      "title": "Minh Tâm — Web Developer",
+      "description": "Websites designed and built for anyone who needs one."
+    },
+    "about": {
+      "title": "About — The Room",
+      "description": "A personal archive of games, creators, food, and tools I care about."
+    },
+    "works": {
+      "title": "Works — Minh Tâm",
+      "description": "Demo websites built for local businesses — flower shops, salons, bakeries, and more."
+    }
+  },
+  "hero": {
+    "badge": "Web Development",
+    "title": "Hi, I'm {name}",
+    "subtitle": "I design websites that make a real impression.",
+    "description": "Clean layouts, thoughtful features, and nothing you don't need.",
+    "cta_works": "View projects",
+    "cta_contact": "Contact now"
+  },
+  "about": {
+    "badge": "About",
+    "title": "Who I am",
+    "p1": "I design and build websites — for personal presence, business growth, or whatever you're building.",
+    "footer": "In-person available · An Giang based"
+  },
+  "availability": {
+    "status": "Taking on new clients",
+    "subtext": "Available now · Finished in 2–3 weeks"
+  },
+  "skills": {
+    "badge": "What I do",
+    "title": "What goes into your site",
+    "capabilities": {
+      "booking": "Book appointments",
+      "shop": "Online shop",
+      "mobile": "Mobile friendly",
+      "seo": "Google optimized",
+      "content": "Manage your content",
+      "designs": "Custom designs",
+      "multilingual": "Multilingual support",
+      "gallery": "Photo gallery"
+    }
+  },
+  "works": {
+    "badge": "Demo Projects",
+    "title": "What I can build for you",
+    "hint": "Demo sites — click for a preview",
+    "dialog": {
+      "visit": "Visit live →",
+      "close": "Close"
+    },
+    "items": [
+      {
+        "id": "1",
+        "businessType": "Wedding Cards",
+        "businessName": "Thiệp Cưới Đình Toàn",
+        "description": "Premium wedding & greeting card shop — 3D card viewer, custom orders via Zalo.",
+        "tag": "Wedding Cards"
+      },
+      {
+        "id": "2",
+        "businessType": "F&B",
+        "businessName": "DUSK",
+        "description": "Minimalist specialty drinks shop — premium drink menu and online ordering.",
+        "tag": "F&B"
+      },
+      {
+        "id": "3",
+        "businessType": "Barbershop",
+        "businessName": "Barber District",
+        "description": "Premium men's barbershop — online booking, barber profiles, and style gallery.",
+        "tag": "Barber"
+      },
+      {
+        "id": "4",
+        "businessType": "Bakery",
+        "businessName": "Sweet Origins",
+        "description": "A demo site showing custom cake orders, portfolio showcase, and pickup scheduling.",
+        "tag": "Retail"
+      },
+      {
+        "id": "5",
+        "businessType": "Auto Detailing",
+        "businessName": "Shine & Drive",
+        "description": "A demo site showing service packages, before/after gallery, and online booking.",
+        "tag": "Booking"
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Reviews",
+    "items": [
+      {
+        "id": "1",
+        "name": "Maria Santos",
+        "business": "Bloom & Co.",
+        "quote": "Online orders doubled in the first month. Customers love how easy it is to order."
+      },
+      {
+        "id": "2",
+        "name": "James Park",
+        "business": "FixIt Fast",
+        "quote": "The repair tracking system saved us from endless back-and-forth messages. Truly efficient."
+      },
+      {
+        "id": "3",
+        "name": "Aisha Nguyen",
+        "business": "The Cut Studio",
+        "quote": "Booking used to be a mess. Now it runs itself, and our no-show rate dropped to nearly zero."
+      }
+    ]
+  },
+  "process": {
+    "badge": "How it works",
+    "steps": [
+      { "n": "01", "title": "Consult", "desc": "Tell me about your business. I'll map out exactly what you need." },
+      { "n": "02", "title": "Build", "desc": "I design and develop your site. You review and approve each step." },
+      { "n": "03", "title": "Launch", "desc": "Your site goes live. I handle hosting, domain, and setup." }
+    ]
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "Built right, first time."
+  },
+  "cta": {
+    "title": "Let's build something\nworth visiting.",
+    "button": "Let's talk →"
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Get in touch",
+    "email_label": "Email",
+    "social_label": "Social",
+    "phone_label": "Phone",
+    "copied": "Copied!"
+  },
+  "worksPage": {
+    "title": "Our Work",
+    "subtitle": "Websites built for local businesses across Vietnam"
+  },
+  "workingOn": {
+    "badge": "Active",
+    "title": "Currently building",
+    "demo": "View demo →",
+    "openSlot": {
+      "label": "1 slot open",
+      "sub": "Taking on new clients"
+    },
+    "phase": {
+      "design": "Design",
+      "integration": "Integration",
+      "review": "Review",
+      "finishing": "Finishing"
+    }
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title": "Pick a package",
+    "recommended": "Popular",
+    "cta": "Get started →",
+    "packages": [
+      {
+        "id": "essential",
+        "name": "Essential",
+        "price": "Get a quote",
+        "features": [
+          "Landing page (UI-only)",
+          "1–2 product or service pages",
+          "Staff / team page",
+          "Mobile-friendly",
+          "Basic SEO"
+        ]
+      },
+      {
+        "id": "growth",
+        "name": "Growth",
+        "price": "Get a quote",
+        "recommended": true,
+        "features": [
+          "Everything in Essential",
+          "Backend features (booking, menu, simple CMS)",
+          "Up to 8 pages",
+          "Google Business or Facebook management",
+          "Weekly social posts (×2/wk)",
+          "Review management + growth strategy"
+        ]
+      },
+      {
+        "id": "studio",
+        "name": "Studio",
+        "price": "Custom quote",
+        "features": [
+          "Everything in Growth",
+          "User login, cart & checkout",
+          "Full CMS — products, orders, bookings",
+          "Custom integrations & dashboard",
+          "Priority support + ongoing updates"
+        ]
+      }
+    ]
+  }
+}

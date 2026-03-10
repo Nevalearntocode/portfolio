@@ -113,7 +113,7 @@ export const services: Service[] = [
 ];
 
 export const owner = {
-  name: "Alex",
+  name: "Minh Tâm",
   title: "Lập trình viên ứng dụng cho doanh nghiệp địa phương",
   bio: "Tôi thiết kế và xây dựng ứng dụng web tùy chỉnh cho các doanh nghiệp nhỏ — từ tiệm hoa đến tiệm sửa điện thoại. Nhanh, hợp lý và thực sự giúp bạn vận hành tốt hơn.",
   email: "hello@yourname.dev",

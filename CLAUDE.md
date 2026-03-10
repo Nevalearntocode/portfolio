@@ -17,7 +17,7 @@ npm run lint      # eslint
 **This is a personal portfolio site** — not a multi-page app with shared state. Pages are mostly independent. The Works section links *out* to separately deployed scaffold projects; nothing is embedded here.
 
 **Two distinct pages:**
-- `/` — Homepage (bento grid, plan-6 design). Professional face: showcases work, skills, CTAs.
+- `/` — Homepage (bento grid). Professional face: showcases work, skills, CTAs.
 - `/about` — Personal page for TikTok funnel traffic. Separate vibe from homepage — personal, not business.
 
 **Homepage design:** `plans/plan-6.md` is the spec. Pre-built components live in the `landing-page` repo at `components/plan-6/` and `app/plan-6/`. When copying them here, all paths must be under `src/` — the `@/` alias maps to `./src/`, not the project root.
@@ -25,6 +25,34 @@ npm run lint      # eslint
 **shadcn style is `radix-nova`** — not the standard `default` or `new-york`. Don't run `shadcn init` again; it will overwrite the style. Add components with `npx shadcn@latest add <component>` only.
 
 **Tailwind 4** — no `tailwind.config.js`. All CSS custom properties and theme overrides go in `src/app/globals.css`. The plan-6 design tokens (e.g. `--accent: #a3b899` sage green) belong there too.
+
+## Project Structure
+
+```text
+src/
+├── app/
+│   └── [locale]/
+│       ├── about/page.tsx      # Personal immersive archive route
+│       ├── works/page.tsx      # Dedicated works/projects route
+│       ├── layout.tsx          # Root layout with i18n & ThemeProvider
+│       ├── page.tsx            # Homepage (Bento Grid)
+│       └── portfolio.css       # Homepage-specific styles
+├── components/                 # React components
+│   ├── about-room/             # Immersive archive specific components
+│   ├── ui/                     # shadcn/ui (radix-nova style)
+│   ├── HeroCard.tsx            # Sage green intro block
+│   ├── WorksCard.tsx           # Project grid with dialog previews
+│   ├── SkillsCard.tsx          # Capabilities grid
+│   ├── ContactCard.tsx         # Unified email/social/phone footer
+│   ├── BentoGrid.tsx           # Layout Orchestrator
+│   └── *.tsx                   # CtaRow, Pricing, Process, etc.
+├── data/                       # Localized data (owner.ts, about-room.json)
+├── hooks/                      # use-mobile.ts, etc.
+├── i18n/                       # routing.ts, request.ts
+├── lib/                        # placeholder-vi.ts (mock project data)
+├── messages/                   # en.json, vi.json (next-intl messages)
+└── types/                      # about-room.ts, etc.
+```
 
 ## Learned
 

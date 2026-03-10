@@ -7,8 +7,9 @@ import { AvailabilityCard } from "./AvailabilityCard";
 import { ContactCard } from "./ContactCard";
 import { AboutCard } from "./AboutCard";
 import { WorksCard } from "./WorksCard";
-import { TestimonialCard } from "./TestimonialCard";
-import { CtaRow } from "./CtaRow";
+import { ProcessCard } from "./ProcessCard";
+import { WorkingOnCard } from "./WorkingOnCard";
+import { PricingCard } from "./PricingCard";
 
 const container: Variants = {
   hidden: {},
@@ -51,7 +52,7 @@ export function BentoGrid() {
       </div>
 
       {/* Row 2 */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
         <Cell className="md:col-span-3">
           <AboutCard />
         </Cell>
@@ -59,13 +60,18 @@ export function BentoGrid() {
           <WorksCard />
         </Cell>
         <Cell className="md:col-span-3">
-          <TestimonialCard />
+          <ProcessCard />
         </Cell>
       </div>
 
       {/* Row 3 */}
-      <Cell>
-        <CtaRow />
+      <Cell className="col-span-12">
+        <WorkingOnCard />
+      </Cell>
+
+      {/* Row 4 */}
+      <Cell className="col-span-12">
+        <PricingCard />
       </Cell>
     </motion.div>
   );
