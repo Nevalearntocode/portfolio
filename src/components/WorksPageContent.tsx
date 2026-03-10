@@ -18,6 +18,7 @@ export function WorksPageContent() {
       <TopBar />
       <Navbar />
       <main className="min-h-screen bg-[#fafaf7] dark:bg-[#111] px-4 sm:px-6 pt-28 pb-16">
+        <div className="max-w-screen-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,6 +51,7 @@ export function WorksPageContent() {
           {bottom.map((work, i) => (
             <WorkCard key={work.id} work={work} index={i + 4} />
           ))}
+        </div>
         </div>
       </main>
       <Footer />

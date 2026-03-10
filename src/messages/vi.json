@@ -7,43 +7,43 @@
   "metadata": {
     "home": {
       "title": "Minh Tâm — Lập Trình Web",
-      "description": "Website thiết kế và xây dựng cho bất kỳ ai cần."
+      "description": "Thiết kế và xây dựng website đẹp, gọn, và đáng nhớ."
     },
     "about": {
-      "title": "Fun stuffs — The Room",
-      "description": "Chỗ mình lưu lại mấy thứ hay ho: game, creator, đồ ăn, tool xịn."
+      "title": "Fun stuffs",
+      "description": "Chủ yếu là về giải trí. Ai cùng chung sở thích thì có thể tám."
     },
     "works": {
       "title": "Dự Án — Minh Tâm",
-      "description": "Website demo cho các tiệm kinh doanh — tiệm hoa, tiệm tóc, tiệm bánh, và nhiều hơn nữa."
+      "description": "Website demo cho các tiệm kinh doanh - tiệm hoa, tiệm tóc, tiệm bánh, và nhiều hơn nữa."
     }
   },
   "hero": {
     "badge": "Lập Trình Web",
     "title": "Chào, mình là {name}",
-    "subtitle": "Mình làm website đẹp, gọn, và đáng nhớ.",
-    "description": "Giao diện gọn, tính năng đúng chỗ, không có gì thừa.",
+    "subtitle": "Mình làm website cho doanh nghiệp hoặc cá nhân, chỉ cần bạn có ý tưởng, mọi chuyện đều dễ nói",
+    "description": "Giao diện chuyên nghiệp hoặc sáng tạo, tính năng đầy đủ, chỉ cần bạn biết mình muốn gì.",
     "cta_works": "Xem dự án",
     "cta_contact": "Liên hệ ngay"
   },
   "about": {
     "badge": "Về mình",
     "title": "Mình là ai",
-    "p1": "Mình thiết kế và xây dựng website — cho thương hiệu cá nhân, phát triển kinh doanh, hay bất cứ thứ gì bạn đang xây.",
-    "footer": "Gặp trực tiếp được · Ở An Giang"
+    "p1": "Mình thiết kế và xây dựng website - cho thương hiệu cá nhân, phát triển kinh doanh, hay bất cứ thứ gì bạn cần cho một trang web.",
+    "footer": "Có thể làm việc trực tiếp tại An Giang"
   },
   "availability": {
     "status": "Đang nhận khách mới",
     "subtext": "Sẵn sàng ngay · Hoàn thiện trong 2–3 tuần"
   },
   "skills": {
-    "badge": "Mình làm gì",
-    "title": "Những thứ có trong website của bạn",
+    "badge": "Bạn muốn gì?",
+    "title": "Những tính năng đa dụng và phổ biến",
     "capabilities": {
       "booking": "Đặt lịch hẹn",
       "shop": "Cửa hàng online",
-      "mobile": "Dùng tốt trên điện thoại",
-      "seo": "Tối ưu Google",
+      "mobile": "Ưu tiên màn hình điện thoại",
+      "seo": "Tối ưu Google tìm kiếm",
       "content": "Tự quản lý nội dung",
       "designs": "Thiết kế riêng",
       "multilingual": "Đa ngôn ngữ",
@@ -52,7 +52,7 @@
   },
   "works": {
     "badge": "Demo Dự Án",
-    "title": "Mình có thể làm gì cho bạn",
+    "title": "Nhìn xem thử một vài thiết kế.",
     "hint": "Website demo — bấm để xem thử",
     "dialog": {
       "visit": "Xem live →",
@@ -125,26 +125,26 @@
       {
         "n": "01",
         "title": "Tư vấn",
-        "desc": "Kể mình nghe về tiệm của bạn. Mình sẽ vạch ra đúng thứ bạn cần."
+        "desc": "Vì sao bạn lại cần một website? Bạn cần những tính năng gì? Bạn có website rồi nhưng không ưng ý?"
       },
       {
         "n": "02",
-        "title": "Xây dựng",
-        "desc": "Mình thiết kế và code. Bạn xem và duyệt từng bước."
+        "title": "Làm việc",
+        "desc": "Mình thiết kế và xây dựng. Bạn xem và duyệt từng bước."
       },
       {
         "n": "03",
         "title": "Ra mắt",
-        "desc": "Website lên sóng. Mình lo hết hosting, domain, và cài đặt."
+        "desc": "Website lên sóng. Mình sẽ quản lý hosting, domain, etc."
       }
     ]
   },
   "footer": {
-    "rights": "Tất cả quyền được bảo lưu.",
-    "tagline": "Làm đúng ngay từ đầu."
+    "rights": "All rights reserved.",
+    "tagline": "Let's make something meaningful together."
   },
   "cta": {
-    "title": "Cùng làm gì đó\nđáng ghé thăm.",
+    "title": "Có ý tưởng và đang\n cần một website?",
     "button": "Nói chuyện thôi →"
   },
   "contact": {
@@ -188,7 +188,7 @@
           "Trang chủ (giao diện)",
           "1–2 trang sản phẩm hoặc dịch vụ",
           "Trang giới thiệu nhân sự",
-          "Tương thích điện thoại",
+          "Ưu tiên cho màn hình điện thoại",
           "SEO cơ bản"
         ]
       },

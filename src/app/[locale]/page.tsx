@@ -11,7 +11,9 @@ export default function Plan6Page() {
       <TopBar />
       <Navbar />
       <main className="min-h-screen bg-[#fafaf7] dark:bg-[#111] px-4 sm:px-6 pt-28 pb-16">
-        <BentoGrid />
+        <div className="max-w-screen-2xl mx-auto">
+          <BentoGrid />
+        </div>
       </main>
       <FloatingContact />
       <Footer />

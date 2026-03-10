@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mono Font Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Space+Mono:wght@400;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #fafaf7; color: #111; padding: 40px 32px; display: flex; flex-direction: column; gap: 40px; font-family: sans-serif; }
+
+    .card {
+      background: white;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 16px;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .font-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a3b899;
+      font-weight: 600;
+    }
+
+    .divider { height: 1px; background: rgba(0,0,0,0.06); }
+
+    /* Usage context - simulates where mono appears on the site */
+    .context-label { font-size: 11px; color: #aaa; margin-bottom: 4px; }
+
+    .sample-nav {
+      display: flex;
+      gap: 24px;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: #555;
+    }
+
+    .sample-meta {
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 0.04em;
+    }
+
+    .sample-badge {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #a3b899;
+      font-weight: 500;
+    }
+
+    .sample-code {
+      font-size: 13px;
+      background: #f4f4f0;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: #333;
+    }
+
+    .dm-mono      { font-family: 'DM Mono', monospace; }
+    .jetbrains    { font-family: 'JetBrains Mono', monospace; }
+    .ibm-plex     { font-family: 'IBM Plex Mono', monospace; }
+    .space-mono   { font-family: 'Space Mono', monospace; }
+    .fira-code    { font-family: 'Fira Code', monospace; }
+  </style>
+</head>
+<body>
+
+  <div style="font-size:13px; color:#666; max-width:500px; line-height:1.6;">
+    These are shown in contexts where mono is actually used on the site — nav labels, metadata, badges, and code snippets.
+  </div>
+
+  <!-- DM Mono -->
+  <div class="card dm-mono">
+    <span class="font-label" style="font-family:sans-serif">DM Mono (current)</span>
+    <div class="divider"></div>
+    <div class="context-label" style="font-family:sans-serif">Nav labels</div>
+    <div class="sample-nav">
+      <span>Home</span><span>About</span><span>Works</span><span>Contact</span>
+    </div>
+    <div class="context-label" style="font-family:sans-serif">Card metadata</div>
+    <div class="sample-meta">integration · phase 2 of 4 · started Jan 2025</div>
+    <div class="context-label" style="font-family:sans-serif">Section badge</div>
+    <div class="sample-badge">What I Do</div>
+    <div class="context-label" style="font-family:sans-serif">Code snippet</div>
+    <div class="sample-code">npm run dev → localhost:3000</div>
+  </div>
+
+  <!-- JetBrains Mono -->
+  <div class="card jetbrains">
+    <span class="font-label" style="font-family:sans-serif">JetBrains Mono</span>
+    <div class="divider"></div>
+    <div class="context-label" style="font-family:sans-serif">Nav labels</div>
+    <div class="sample-nav">
+      <span>Home</span><span>About</span><span>Works</span><span>Contact</span>
+    </div>
+    <div class="context-label" style="font-family:sans-serif">Card metadata</div>
+    <div class="sample-meta">integration · phase 2 of 4 · started Jan 2025</div>
+    <div class="context-label" style="font-family:sans-serif">Section badge</div>
+    <div class="sample-badge">What I Do</div>
+    <div class="context-label" style="font-family:sans-serif">Code snippet</div>
+    <div class="sample-code">npm run dev → localhost:3000</div>
+  </div>
+
+  <!-- IBM Plex Mono -->
+  <div class="card ibm-plex">
+    <span class="font-label" style="font-family:sans-serif">IBM Plex Mono</span>
+    <div class="divider"></div>
+    <div class="context-label" style="font-family:sans-serif">Nav labels</div>
+    <div class="sample-nav">
+      <span>Home</span><span>About</span><span>Works</span><span>Contact</span>
+    </div>
+    <div class="context-label" style="font-family:sans-serif">Card metadata</div>
+    <div class="sample-meta">integration · phase 2 of 4 · started Jan 2025</div>
+    <div class="context-label" style="font-family:sans-serif">Section badge</div>
+    <div class="sample-badge">What I Do</div>
+    <div class="context-label" style="font-family:sans-serif">Code snippet</div>
+    <div class="sample-code">npm run dev → localhost:3000</div>
+  </div>
+
+  <!-- Space Mono -->
+  <div class="card space-mono">
+    <span class="font-label" style="font-family:sans-serif">Space Mono</span>
+    <div class="divider"></div>
+    <div class="context-label" style="font-family:sans-serif">Nav labels</div>
+    <div class="sample-nav">
+      <span>Home</span><span>About</span><span>Works</span><span>Contact</span>
+    </div>
+    <div class="context-label" style="font-family:sans-serif">Card metadata</div>
+    <div class="sample-meta">integration · phase 2 of 4 · started Jan 2025</div>
+    <div class="context-label" style="font-family:sans-serif">Section badge</div>
+    <div class="sample-badge">What I Do</div>
+    <div class="context-label" style="font-family:sans-serif">Code snippet</div>
+    <div class="sample-code">npm run dev → localhost:3000</div>
+  </div>
+
+  <!-- Fira Code -->
+  <div class="card fira-code">
+    <span class="font-label" style="font-family:sans-serif">Fira Code</span>
+    <div class="divider"></div>
+    <div class="context-label" style="font-family:sans-serif">Nav labels</div>
+    <div class="sample-nav">
+      <span>Home</span><span>About</span><span>Works</span><span>Contact</span>
+    </div>
+    <div class="context-label" style="font-family:sans-serif">Card metadata</div>
+    <div class="sample-meta">integration · phase 2 of 4 · started Jan 2025</div>
+    <div class="context-label" style="font-family:sans-serif">Section badge</div>
+    <div class="sample-badge">What I Do</div>
+    <div class="context-label" style="font-family:sans-serif">Code snippet</div>
+    <div class="sample-code">npm run dev → localhost:3000</div>
+  </div>
+
+</body>
+</html>
