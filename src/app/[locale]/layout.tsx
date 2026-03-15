@@ -21,7 +21,7 @@ const dmMono = DM_Mono({
   weight: ["400", "500"],
 });
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://minhtam.dev'
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://minhtam.tech'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -43,11 +43,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: 'Minh Tâm',
       locale: locale === 'vi' ? 'vi_VN' : 'en_US',
       type: 'website',
+      images: [{ url: '/og-image.png', width: 1366, height: 728 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: t("title"),
       description: t("description"),
+      images: ['/og-image.png'],
     },
   };
 }

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://minhtam.dev'
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://minhtam.tech'
 
 const pages = [
   { path: '',       priority: 1.0, changeFreq: 'monthly' as const },

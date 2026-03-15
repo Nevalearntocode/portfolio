@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# playwright mcp artifacts
+/.playwright-mcp/
+
 # next.js
 /.next/
 /out/
@@ -42,3 +45,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .claude
+
+# recording temp dir
+/public/works/.tmp-rec/

@@ -20,6 +20,9 @@ interface AboutRoomProps {
 }
 
 export function AboutRoom({ categories }: AboutRoomProps) {
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => { setIsMounted(true); }, []);
+
   const [activeCategoryId, setActiveCategoryId] = useState<CategoryId>(
     categories[0].id
   );
@@ -55,6 +58,8 @@ export function AboutRoom({ categories }: AboutRoomProps) {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [activeCategory.items.length]);
+
+  if (!isMounted) return null;
 
   return (
     <RoomFrame>

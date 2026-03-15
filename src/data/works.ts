@@ -5,6 +5,7 @@ export type WorkMeta = {
   tag: string
   thumbnail: string
   url: string
+  video?: string
   comingSoon?: boolean
 }
 
@@ -16,6 +17,7 @@ export const works: WorkMeta[] = [
     tag: "Thiệp cưới",
     thumbnail: "/works/card-shop.jpg",
     url: "https://scaffolds.hmtam110501.workers.dev/card-shop",
+    video: "/works/card-shop.webm",
   },
   {
     id: "2",
@@ -24,6 +26,7 @@ export const works: WorkMeta[] = [
     tag: "F&B",
     thumbnail: "/works/food-shop.jpg",
     url: "https://scaffolds.hmtam110501.workers.dev/food-shop",
+    video: "/works/food-shop.webm",
   },
   {
     id: "3",
@@ -32,6 +35,7 @@ export const works: WorkMeta[] = [
     tag: "Barber",
     thumbnail: "/works/hair-salon-men.jpg",
     url: "https://scaffolds.hmtam110501.workers.dev/hair-salon-men",
+    video: "/works/hair-salon-men.webm",
   },
   {
     id: "4",

@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import type { WorkMeta } from "@/data/works";
+import { owner } from "@/data/owner";
 
 const shimmerVariants = {
   rest: { x: "-150%" },
@@ -15,6 +17,7 @@ export function WorkCard({ work, index }: { work: WorkMeta; index: number }) {
   const wrapperProps = isComingSoon
     ? {}
     : { href: work.url, target: "_blank", rel: "noopener noreferrer" };
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
     <Wrapper
@@ -23,9 +26,16 @@ export function WorkCard({ work, index }: { work: WorkMeta; index: number }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" as const, delay: 0.2 + index * 0.06 }}
       whileHover={isComingSoon ? undefined : "hover"}
-      className={`relative block rounded-2xl border border-black/8 dark:border-white/8 bg-white/60 dark:bg-white/4 overflow-hidden shadow-sm transition-[box-shadow,transform] duration-200 ${
+      className={`group relative block rounded-2xl border border-black/8 dark:border-white/8 bg-white/60 dark:bg-white/4 overflow-hidden shadow-sm transition-[box-shadow,transform] duration-200 ${
         isComingSoon ? "cursor-default" : "hover:shadow-md hover:-translate-y-1"
       }`}
+      onMouseEnter={() => videoRef.current?.play()}
+      onMouseLeave={() => {
+        if (videoRef.current) {
+          videoRef.current.pause();
+          videoRef.current.currentTime = 0;
+        }
+      }}
     >
       {/* Glass shimmer */}
       {!isComingSoon && (
@@ -44,11 +54,22 @@ export function WorkCard({ work, index }: { work: WorkMeta; index: number }) {
           src={work.thumbnail}
           alt={work.title}
           fill
-          className={`object-cover transition-transform duration-300 hover:scale-[1.05] ${
-            isComingSoon ? "grayscale opacity-60" : ""
-          }`}
+          className={`object-cover transition-[transform,opacity] duration-300 hover:scale-[1.05] ${
+            isComingSoon ? "grayscale opacity-60 blur-sm scale-105" : ""
+          } ${work.video ? "group-hover:opacity-0" : ""}`}
           unoptimized
         />
+        {work.video && (
+          <video
+            ref={videoRef}
+            src={work.video}
+            poster={work.thumbnail}
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+        )}
         <div className="absolute top-2 right-2">
           <span className="px-2 py-0.5 rounded-full text-[#5a7a55] text-xs font-semibold backdrop-blur-sm bg-white/80 dark:bg-[#111]/80">
             {work.tag}
@@ -71,7 +92,15 @@ export function WorkCard({ work, index }: { work: WorkMeta; index: number }) {
             {work.tag}
           </span>
           {isComingSoon ? (
-            <span className="text-xs italic text-[#111]/40 dark:text-white/40">Em chờ nhé...</span>
+            <a
+              href={owner.socials.messenger}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-xs text-[#a3b899] hover:underline"
+            >
+              Hợp với bạn? Liên hệ →
+            </a>
           ) : (
             <span className="text-sm text-[#a3b899]">→</span>
           )}
