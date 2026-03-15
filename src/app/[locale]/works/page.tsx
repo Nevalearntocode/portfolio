@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { WorksPageContent } from "@/components/WorksPageContent";
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://minhtam.dev'
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://minhtam.tech'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

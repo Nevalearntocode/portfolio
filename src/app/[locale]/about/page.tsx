@@ -5,7 +5,7 @@ import { AboutRoom } from "@/components/about-room/AboutRoom";
 import data from "@/data/about-room.json";
 import type { AboutCategory } from "@/types/about-room";
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://minhtam.dev'
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://minhtam.tech'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

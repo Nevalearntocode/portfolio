@@ -11,7 +11,7 @@
           "cover": "/about-room/games/games-witcher-3.jpg",
           "rating": "10/10",
           "tags": ["open world", "narrative rpg", "choices matter"],
-          "note": "The benchmark I measure every RPG against. Geralt's expression when he makes a bad call is the whole game.",
+          "note": "The first game I played where I felt like the world would keep going if I walked away. Still the peak of narrative RPGs for me.",
           "meta": { "playMode": "Solo", "hours": "200+" }
         },
         {
@@ -58,6 +58,15 @@
           "tags": ["auto-battler", "set-based", "strategy"],
           "note": "The version of League I play when I want to lose slowly and feel smart about it.",
           "meta": { "playMode": "Online", "status": "Active" }
+        },
+        {
+          "id": "monster-hunter-world",
+          "title": "Monster Hunter: World",
+          "cover": "/about-room/games/games-monster-hunter-world.jpg",
+          "rating": "9/10",
+          "tags": ["action rpg", "co-op", "grind"],
+          "note": "This game's mechanics are overcomplicated for no reason and I love it, 500hrs of bowing and miles away from being decent at it, Alatreon is a bitch (a bad one), story fucking sucks, so do people, that's why I never did Kulve and Safi",
+          "meta": { "playMode": "Solo / Co-op", "hours": "500+" }
         },
         {
           "id": "expedition-33",

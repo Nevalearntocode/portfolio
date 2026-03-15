@@ -11,19 +11,42 @@ import { ProcessCard } from "./ProcessCard";
 import { WorkingOnCard } from "./WorkingOnCard";
 import { PricingCard } from "./PricingCard";
 
-const container: Variants = {
+const row: Variants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
 };
 
-const item: Variants = {
+const cell: Variants = {
   hidden: { opacity: 0, y: 28 },
   show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
 };
 
+function Row({
+  children,
+  className,
+  inView = false,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  inView?: boolean;
+}) {
+  return (
+    <motion.div
+      variants={row}
+      initial="hidden"
+      {...(inView
+        ? { whileInView: "show", viewport: { once: true, margin: "-80px" } }
+        : { animate: "show" })}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 function Cell({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <motion.div variants={item} className={className}>
+    <motion.div variants={cell} className={className}>
       {children}
     </motion.div>
   );
@@ -31,14 +54,9 @@ function Cell({ children, className }: { children: React.ReactNode; className?: 
 
 export function BentoGrid() {
   return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
-      className="flex flex-col gap-3"
-    >
-      {/* Row 1 */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
+    <div className="flex flex-col gap-3">
+      {/* Row 1 — above fold, mount-triggered */}
+      <Row className="grid grid-cols-1 md:grid-cols-12 gap-3">
         <Cell className="md:col-span-5">
           <HeroCard />
         </Cell>
@@ -49,10 +67,10 @@ export function BentoGrid() {
           <AvailabilityCard />
           <ContactCard />
         </Cell>
-      </div>
+      </Row>
 
-      {/* Row 2 */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
+      {/* Row 2 — scroll-triggered */}
+      <Row inView className="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
         <Cell className="md:col-span-3">
           <AboutCard />
         </Cell>
@@ -62,17 +80,21 @@ export function BentoGrid() {
         <Cell className="md:col-span-3">
           <ProcessCard />
         </Cell>
-      </div>
+      </Row>
 
-      {/* Row 3 */}
-      <Cell className="col-span-12">
-        <WorkingOnCard />
-      </Cell>
+      {/* Row 3 — scroll-triggered */}
+      <Row inView>
+        <Cell>
+          <WorkingOnCard />
+        </Cell>
+      </Row>
 
-      {/* Row 4 */}
-      <Cell className="col-span-12">
-        <PricingCard />
-      </Cell>
-    </motion.div>
+      {/* Row 4 — scroll-triggered */}
+      <Row inView>
+        <Cell>
+          <PricingCard />
+        </Cell>
+      </Row>
+    </div>
   );
 }

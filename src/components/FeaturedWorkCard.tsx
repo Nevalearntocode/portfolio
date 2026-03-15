@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import type { WorkMeta } from "@/data/works";
+import { owner } from "@/data/owner";
 
 const shimmerVariants = {
   rest: { x: "-150%" },
@@ -37,15 +38,27 @@ export function FeaturedWorkCard({ work }: { work: WorkMeta }) {
       )}
 
       <div className="relative w-full aspect-video sm:aspect-16/7 overflow-hidden">
-        <Image
-          src={work.thumbnail}
-          alt={work.title}
-          fill
-          className={`object-cover transition-transform duration-300 hover:scale-[1.03] ${
-            isComingSoon ? "grayscale opacity-60" : ""
-          }`}
-          unoptimized
-        />
+        {work.video ? (
+          <video
+            src={work.video}
+            poster={work.thumbnail}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        ) : (
+          <Image
+            src={work.thumbnail}
+            alt={work.title}
+            fill
+            className={`object-cover transition-transform duration-300 hover:scale-[1.03] ${
+              isComingSoon ? "grayscale opacity-60 blur-sm scale-105" : ""
+            }`}
+            unoptimized
+          />
+        )}
         {isComingSoon && (
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="px-3 py-1 rounded-full text-xs font-semibold bg-black/60 text-white backdrop-blur-sm">
@@ -66,7 +79,15 @@ export function FeaturedWorkCard({ work }: { work: WorkMeta }) {
           </p>
         </div>
         {isComingSoon ? (
-          <span className="text-sm italic text-[#111]/40 dark:text-white/40 shrink-0 ml-auto">Coming Soon</span>
+          <a
+            href={owner.socials.messenger}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="text-sm text-[#a3b899] hover:underline shrink-0 ml-auto"
+          >
+            Hợp với bạn? Liên hệ →
+          </a>
         ) : (
           <span className="text-sm font-medium text-[#a3b899] hover:text-[#7a9470] shrink-0 ml-auto">
             Visit →
