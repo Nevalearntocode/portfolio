@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
+import { CustomCursor } from "@/components/CustomCursor";
 import "../globals.css";
 
 const dmSans = DM_Sans({
@@ -69,8 +70,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${dmSans.variable} ${dmMono.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" disableTransitionOnChange>
           <NextIntlClientProvider messages={messages}>
+            <CustomCursor />
             {children}
             <Analytics />
           </NextIntlClientProvider>

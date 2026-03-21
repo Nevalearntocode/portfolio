@@ -17,10 +17,10 @@ npm run lint      # eslint
 **This is a personal portfolio site** — not a multi-page app with shared state. Pages are mostly independent. The Works section links *out* to separately deployed scaffold projects; nothing is embedded here.
 
 **Two distinct pages:**
-- `/` — Homepage (bento grid). Professional face: showcases work, skills, CTAs.
+- `/` — Homepage (editorial, dark-only). Professional face: full-bleed video hero, skills, works, dot grid, process, pricing, CTA.
 - `/about` — Personal page for TikTok funnel traffic. Separate vibe from homepage — personal, not business.
 
-**Homepage design:** `plans/plan-6.md` is the spec. Pre-built components live in the `landing-page` repo at `components/plan-6/` and `app/plan-6/`. When copying them here, all paths must be under `src/` — the `@/` alias maps to `./src/`, not the project root.
+**Homepage design:** `plans/design-discussion.md` is the spec. Dark-only (forcedTheme="dark"). Section-based layout, no bento grid.
 
 **shadcn style is `radix-nova`** — not the standard `default` or `new-york`. Don't run `shadcn init` again; it will overwrite the style. Add components with `npx shadcn@latest add <component>` only.
 
@@ -40,12 +40,18 @@ src/
 ├── components/                 # React components
 │   ├── about-room/             # Immersive archive specific components
 │   ├── ui/                     # shadcn/ui (radix-nova style)
-│   ├── HeroCard.tsx            # Sage green intro block
-│   ├── WorksCard.tsx           # Project grid with dialog previews
-│   ├── SkillsCard.tsx          # Capabilities grid
-│   ├── ContactCard.tsx         # Unified email/social/phone footer
-│   ├── BentoGrid.tsx           # Layout Orchestrator
-│   └── *.tsx                   # CtaRow, Pricing, Process, etc.
+│   ├── HeroSection.tsx         # Full-bleed video hero
+│   ├── SkillsSection.tsx       # Split: capability pills + demo video
+│   ├── WorksSection.tsx        # Project cards with .webm hover
+│   ├── CurrentlyBuildingSection.tsx  # Active projects grid
+│   ├── DotGrid.tsx             # Interactive dot grid (cursor pull)
+│   ├── ProcessSection.tsx      # 3-step process with large numbers
+│   ├── PricingSection.tsx      # 3-tier pricing
+│   ├── CtaSection.tsx          # Full-width CTA
+│   ├── WindingLine.tsx         # SVG scroll-progress winding line
+│   ├── CustomCursor.tsx        # Pulsing ring cursor (desktop only)
+│   ├── Navbar.tsx              # Floating pill, scroll-aware opacity
+│   └── Footer.tsx              # Dark copyright bar
 ├── data/                       # Localized data (owner.ts, about-room.json)
 ├── hooks/                      # use-mobile.ts, etc.
 ├── i18n/                       # routing.ts, request.ts

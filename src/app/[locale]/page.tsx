@@ -1,19 +1,30 @@
-import "./portfolio.css";
-import { TopBar } from "@/components/TopBar";
 import { Navbar } from "@/components/Navbar";
-import { BentoGrid } from "@/components/BentoGrid";
+import { HeroSection } from "@/components/HeroSection";
+import { SkillsSection } from "@/components/SkillsSection";
+import { WorksSection } from "@/components/WorksSection";
+import { CurrentlyBuildingSection } from "@/components/CurrentlyBuildingSection";
+import { DotGrid } from "@/components/DotGrid";
+import { ProcessSection } from "@/components/ProcessSection";
+import { PricingSection } from "@/components/PricingSection";
+import { CtaSection } from "@/components/CtaSection";
+import { WindingLine } from "@/components/WindingLine";
 import { FloatingContact } from "@/components/FloatingContact";
 import { Footer } from "@/components/Footer";
 
-export default function Plan6Page() {
+export default function HomePage() {
   return (
     <>
-      <TopBar />
       <Navbar />
-      <main className="min-h-screen bg-[#fafaf7] dark:bg-[#111] px-4 sm:px-6 pt-28 pb-16">
-        <div className="max-w-screen-2xl mx-auto">
-          <BentoGrid />
-        </div>
+      <main className="relative min-h-screen bg-[#111]">
+        <WindingLine />
+        <HeroSection />
+        <SkillsSection />
+        <WorksSection />
+        <CurrentlyBuildingSection />
+        <DotGrid />
+        <ProcessSection />
+        <PricingSection />
+        <CtaSection />
       </main>
       <FloatingContact />
       <Footer />

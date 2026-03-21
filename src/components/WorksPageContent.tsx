@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { TopBar } from "@/components/TopBar";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FeaturedWorkCard } from "@/components/FeaturedWorkCard";
@@ -15,9 +14,8 @@ export function WorksPageContent() {
 
   return (
     <>
-      <TopBar />
       <Navbar />
-      <main className="min-h-screen bg-[#fafaf7] dark:bg-[#111] px-4 sm:px-6 pt-28 pb-16">
+      <main className="min-h-screen bg-[#111] px-4 sm:px-6 pt-28 pb-16">
         <div className="max-w-screen-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -25,8 +23,8 @@ export function WorksPageContent() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="mb-8"
         >
-          <h1 className="text-3xl font-bold text-[#111] dark:text-white">{t("title")}</h1>
-          <p className="text-sm text-[#111]/60 dark:text-white/60 mt-1">{t("subtitle")}</p>
+          <h1 className="text-3xl font-bold text-white">{t("title")}</h1>
+          <p className="text-sm text-white/60 mt-1">{t("subtitle")}</p>
         </motion.div>
 
         {/* 3-col grid */}
