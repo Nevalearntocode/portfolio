@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import type { Transition } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Link, usePathname } from "@/i18n/navigation";
 
@@ -35,10 +34,23 @@ function useActiveUsers() {
   return count;
 }
 
+function useScrolledPastHero() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.7);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return scrolled;
+}
+
 export function Navbar() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const activeUsers = useActiveUsers();
+  const scrolled = useScrolledPastHero();
 
   const isHome = pathname === "/";
   const isWorks = pathname === "/works";
@@ -54,7 +66,11 @@ export function Navbar() {
       <motion.nav
         {...motionProps}
         whileHover="hover"
-        className="relative flex items-center gap-5 px-5 py-2.5 rounded-full bg-white/70 dark:bg-[#111]/80 backdrop-blur-md border border-black/8 dark:border-white/8 shadow-sm overflow-hidden"
+        className="relative flex items-center gap-5 px-5 py-2.5 rounded-full backdrop-blur-md border shadow-sm overflow-hidden transition-colors duration-300"
+        style={{
+          backgroundColor: scrolled ? "rgba(17,17,17,0.88)" : "rgba(17,17,17,0.35)",
+          borderColor: scrolled ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.06)",
+        }}
       >
         {/* Pill shimmer */}
         <motion.div
@@ -76,8 +92,8 @@ export function Navbar() {
             href="/"
             className={`text-sm transition-colors ${
               isHome
-                ? "text-[#111] dark:text-white font-semibold"
-                : "text-[#111]/60 dark:text-white/60 hover:text-[#111] dark:hover:text-white"
+                ? "text-white font-semibold"
+                : "text-white/60 hover:text-white"
             }`}
           >
             {t("home")}
@@ -91,8 +107,8 @@ export function Navbar() {
             href="/works"
             className={`text-sm transition-colors ${
               isWorks
-                ? "text-[#111] dark:text-white font-semibold"
-                : "text-[#111]/60 dark:text-white/60 hover:text-[#111] dark:hover:text-white"
+                ? "text-white font-semibold"
+                : "text-white/60 hover:text-white"
             }`}
           >
             {t("works")}
@@ -101,21 +117,10 @@ export function Navbar() {
         </span>
 
         <span className="relative z-10">
-          <ThemeToggle />
-        </span>
-        <span className="relative z-10">
           <LanguageSwitcher />
         </span>
       </motion.nav>
 
-      <motion.div {...motionProps}>
-        <Link
-          href="/about"
-          className="flex items-center px-4 py-2.5 rounded-full bg-[#111] dark:bg-white text-white dark:text-[#111] text-sm font-medium shadow-sm backdrop-blur-md hover:opacity-90 transition-opacity"
-        >
-          {t("about")}
-        </Link>
-      </motion.div>
     </div>
   );
 }

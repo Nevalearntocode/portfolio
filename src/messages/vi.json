@@ -20,7 +20,7 @@
   },
   "hero": {
     "badge": "Lập Trình Web",
-    "title": "Chào, mình là {name}",
+    "title": "Chào, mình là\n{name}",
     "subtitle": "Mình làm website cho doanh nghiệp hoặc cá nhân, chỉ cần bạn có ý tưởng, mọi chuyện đều dễ nói",
     "description": "Giao diện chuyên nghiệp hoặc sáng tạo, tính năng đầy đủ, chỉ cần bạn biết mình muốn gì.",
     "cta_works": "Xem dự án",
@@ -82,40 +82,10 @@
       },
       {
         "id": "4",
-        "businessType": "Tiệm Bánh",
-        "businessName": "Sweet Origins",
-        "description": "Demo website đặt bánh theo yêu cầu, portfolio, và lịch lấy hàng.",
-        "tag": "Bán lẻ"
-      },
-      {
-        "id": "5",
-        "businessType": "Rửa Xe & Chăm Sóc Xe",
-        "businessName": "Shine & Drive",
-        "description": "Demo website gói dịch vụ, gallery trước/sau, và đặt lịch online.",
-        "tag": "Đặt lịch"
-      }
-    ]
-  },
-  "testimonials": {
-    "badge": "Đánh giá",
-    "items": [
-      {
-        "id": "1",
-        "name": "Maria Santos",
-        "business": "Bloom & Co.",
-        "quote": "Đơn hàng online tăng gấp đôi trong tháng đầu. Khách nói đặt dễ lắm."
-      },
-      {
-        "id": "2",
-        "name": "James Park",
-        "business": "FixIt Fast",
-        "quote": "Hệ thống theo dõi đơn sửa giúp tụi mình không còn phải nhắn qua nhắn lại nữa. Tiết kiệm thời gian hẳn."
-      },
-      {
-        "id": "3",
-        "name": "Aisha Nguyen",
-        "business": "The Cut Studio",
-        "quote": "Trước đặt lịch là cả mớ hỗn độn. Giờ nó chạy tự động, khách vắng mặt cũng gần như bằng không."
+        "businessType": "Sắp ra mắt",
+        "businessName": "Sắp ra mắt",
+        "description": "Một template mới đang được phát triển.",
+        "tag": "Sắp ra mắt"
       }
     ]
   },
