@@ -21,8 +21,8 @@
   "hero": {
     "badge": "Web Development",
     "title": "Hi, I'm {name}",
-    "subtitle": "I design websites that make a real impression.",
-    "description": "Clean layouts, thoughtful features, and nothing you don't need.",
+    "subtitle": "I build websites for businesses and individuals - just bring an idea, we'll handle everything else.",
+    "description": "Professional or creative design, all the features you need - just tell me what you want.",
     "cta_works": "View projects",
     "cta_contact": "Contact now"
   },
@@ -83,39 +83,9 @@
       {
         "id": "4",
         "businessType": "Bakery",
-        "businessName": "Sweet Origins",
-        "description": "A demo site showing custom cake orders, portfolio showcase, and pickup scheduling.",
-        "tag": "Retail"
-      },
-      {
-        "id": "5",
-        "businessType": "Auto Detailing",
-        "businessName": "Shine & Drive",
-        "description": "A demo site showing service packages, before/after gallery, and online booking.",
-        "tag": "Booking"
-      }
-    ]
-  },
-  "testimonials": {
-    "badge": "Reviews",
-    "items": [
-      {
-        "id": "1",
-        "name": "Maria Santos",
-        "business": "Bloom & Co.",
-        "quote": "Online orders doubled in the first month. Customers love how easy it is to order."
-      },
-      {
-        "id": "2",
-        "name": "James Park",
-        "business": "FixIt Fast",
-        "quote": "The repair tracking system saved us from endless back-and-forth messages. Truly efficient."
-      },
-      {
-        "id": "3",
-        "name": "Aisha Nguyen",
-        "business": "The Cut Studio",
-        "quote": "Booking used to be a mess. Now it runs itself, and our no-show rate dropped to nearly zero."
+        "businessName": "Coming Soon",
+        "description": "A new template is in the works.",
+        "tag": "Coming Soon"
       }
     ]
   },
