@@ -14,10 +14,10 @@ const cardVariants = {
 
 const containerVariants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.06, delayChildren: 0.05 } },
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
 };
 
-function WorkCard({ work }: { work: (typeof works)[0] }) {
+function WorkCard({ work, offset }: { work: (typeof works)[0]; offset?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [hovering, setHovering] = useState(false);
 
@@ -36,85 +36,57 @@ function WorkCard({ work }: { work: (typeof works)[0] }) {
     }
   };
 
-  if (work.comingSoon) {
-    return (
-      <motion.div
-        variants={cardVariants}
-        className="relative rounded-2xl overflow-hidden border border-white/8 aspect-video bg-white/3 flex items-center justify-center"
-      >
-        <div className="absolute inset-0">
-          <Image
-            src={work.thumbnail}
-            alt={work.title}
-            fill
-            className="object-cover opacity-20 blur-sm grayscale"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            unoptimized
-          />
-        </div>
-        <div className="relative z-10 flex flex-col items-center gap-2">
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white/10 text-white/60 border border-white/15">
-            Coming Soon
-          </span>
-          <p className="text-sm text-white/40">{work.tag}</p>
-        </div>
-      </motion.div>
-    );
-  }
-
   return (
-    <motion.a
+    <motion.div
       variants={cardVariants}
-      href={work.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="group relative rounded-2xl overflow-hidden border border-white/8 aspect-video bg-[#1a1a1a] block"
-      style={{ transform: "translateZ(0)" }}
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.2, ease: "easeOut" }}
+      className={offset ? "md:mt-24" : ""}
     >
-      {/* Thumbnail */}
-      <Image
-        src={work.thumbnail}
-        alt={work.title}
-        fill
-        className={`object-cover transition-opacity duration-300 ${hovering && work.video ? "opacity-0" : "opacity-100"}`}
-        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-      />
-
-      {/* Video */}
-      {work.video && (
-        <video
-          ref={videoRef}
-          src={work.video}
-          muted
-          loop
-          playsInline
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? "opacity-100" : "opacity-0"}`}
+      <motion.a
+        href={work.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="group relative rounded-xl overflow-hidden aspect-[16/10] bg-[#1f1f1f] block cursor-pointer"
+        style={{ transform: "translateZ(0)" }}
+      >
+        {/* Thumbnail */}
+        <Image
+          src={work.thumbnail}
+          alt={work.title}
+          fill
+          className={`object-cover transition-all duration-700 ${hovering && work.video ? "opacity-0" : "opacity-80 group-hover:opacity-100 group-hover:scale-105"}`}
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
-      )}
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        {/* Video */}
+        {work.video && (
+          <video
+            ref={videoRef}
+            src={work.video}
+            muted
+            loop
+            playsInline
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? "opacity-100" : "opacity-0"}`}
+          />
+        )}
 
-      {/* Footer */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 flex items-end justify-between">
+        {/* Hover overlay with arrow */}
+        <div className={`absolute inset-0 bg-[#7b39fc]/20 flex items-center justify-center transition-opacity duration-500 ${hovering ? "opacity-100" : "opacity-0"}`}>
+          <span className="text-white text-4xl">↗</span>
+        </div>
+      </motion.a>
+
+      <div className="mt-6 flex justify-between items-start">
         <div>
-          <span className={`text-xs font-medium px-2.5 py-1 rounded-full border transition-colors duration-200 ${hovering ? "bg-[#a3b899]/30 border-[#a3b899]/50 text-[#a3b899]" : "bg-white/10 border-white/20 text-white/70"}`}>
-            {work.tag}
-          </span>
-          <p className="text-sm font-semibold text-white mt-2 leading-tight">{work.title}</p>
+          <h3 className="text-xl font-semibold text-white">{work.title}</h3>
+          <p className="text-[#ccc3d9] text-sm mt-1 font-light">{work.tag}</p>
         </div>
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-          <span className="text-xs text-white/60">Visit →</span>
-        </div>
+        <span className="text-xs text-[#d0bcff] uppercase tracking-widest border border-[#7b39fc]/20 px-3 py-1 rounded-full">
+          {new Date().getFullYear()}
+        </span>
       </div>
-
-      {/* Shadow lift */}
-      <div className="absolute inset-0 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0)] group-hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-shadow duration-300 pointer-events-none" />
-    </motion.a>
+    </motion.div>
   );
 }
 
@@ -122,8 +94,8 @@ export function WorksSection() {
   const t = useTranslations("works");
 
   return (
-    <section id="works" className="w-full py-24 px-6 sm:px-10">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-10">
+    <section id="works" className="w-full py-24 px-6 sm:px-10 bg-[#0e0e0e]">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,15 +104,17 @@ export function WorksSection() {
           className="flex items-end justify-between"
         >
           <div>
-            <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-3">
+            <p className="text-xs font-semibold text-[#ccc3d9]/50 uppercase tracking-widest mb-3">
               {t("badge")}
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">{t("title")}</h2>
-            <p className="text-sm text-white/50 mt-2">{t("hint")}</p>
+            <p className="font-['Instrument_Serif'] italic text-xl text-[#ccc3d9] mt-1" style={{ fontStyle: "italic" }}>
+              Crafted for impact.
+            </p>
           </div>
           <Link
             href="/works"
-            className="text-sm text-white/50 hover:text-white transition-colors hidden sm:block"
+            className="text-sm text-[#ccc3d9]/60 hover:text-white transition-colors hidden sm:block"
           >
             See all →
           </Link>
@@ -151,10 +125,10 @@ export function WorksSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-1 md:grid-cols-2 gap-12"
         >
-          {works.map((work) => (
-            <WorkCard key={work.id} work={work} />
+          {works.map((work, i) => (
+            <WorkCard key={work.id} work={work} offset={i % 2 === 1} />
           ))}
         </motion.div>
       </div>

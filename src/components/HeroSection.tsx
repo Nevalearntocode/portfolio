@@ -1,17 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations, useLocale } from "next-intl";
-import { owner } from "@/data/owner";
 import { useMessengerUrl } from "@/hooks/use-mobile";
 
 export function HeroSection() {
-  const t = useTranslations("hero");
-  const locale = useLocale();
   const messengerUrl = useMessengerUrl();
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden flex items-center sm:items-end">
+    <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center bg-black">
       {/* Video background */}
       <video
         src="/hero.mp4"
@@ -19,72 +15,59 @@ export function HeroSection() {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover scale-[1.2] origin-bottom brightness-40"
       />
 
-      {/* Gradient overlay — lighter to let video breathe */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
+      {/* Blurred pill behind content */}
+      <div className="absolute z-[1] w-[801px] h-[384px] bg-black rounded-full blur-[77.5px] opacity-80 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 pointer-events-none" />
 
-      {/* Content — centered on mobile, bottom-aligned on desktop */}
-      <div className={`relative z-10 w-full max-w-screen-xl mx-auto px-6 sm:px-10 pt-6 sm:pt-0 pb-16 ${locale === "en" ? "sm:pb-36" : "sm:pb-20"}`}>
-        <motion.div
-          initial={{ opacity: 0, y: 32 }}
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center text-center px-6 pt-24 max-w-4xl mx-auto">
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="flex flex-col gap-4 max-w-2xl"
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+          className="text-5xl sm:text-[76px] leading-[1.1] font-bold text-white tracking-tight mb-4"
         >
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight whitespace-pre-line"
-          >
-            {t("title", { name: owner.name })}
-          </motion.h1>
+          Modern websites.{" "}
+          <span className="font-['Instrument_Serif'] italic text-[#d0bcff] not-italic" style={{ fontStyle: "italic" }}>
+            Built to convert.
+          </span>
+        </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="text-lg sm:text-xl text-white/80 font-medium"
-          >
-            {t("subtitle")}
-          </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.25 }}
+          className="text-lg text-[#ccc3d9] max-w-xl mb-10"
+        >
+          I design and build fast, beautiful websites for local businesses — from landing pages to full storefronts. Ready in days, not months.
+        </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-            className="text-base text-white/60 max-w-md"
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+          className="flex items-center gap-5"
+        >
+          <a
+            href={messengerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-7 py-3.5 rounded-full bg-[#7b39fc] text-white text-sm font-semibold hover:scale-[0.97] transition-transform shadow-lg shadow-[#7b39fc]/20"
           >
-            {t("description")}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.45 }}
-            className="flex items-center gap-3 mt-2"
+            Get Started
+          </a>
+          <a
+            href="#works"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("works")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-7 py-3.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-white text-sm font-medium hover:bg-white/10 transition-colors"
           >
-            <a
-              href="#works"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById("works")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="px-6 py-3 rounded-full bg-white text-[#111] text-sm font-semibold hover:bg-white/90 transition-colors"
-            >
-              {t("cta_works")}
-            </a>
-            <a
-              href={messengerUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full border border-white/30 text-white text-sm font-medium hover:bg-white/10 transition-colors"
-            >
-              {t("cta_contact")}
-            </a>
-          </motion.div>
+            Browse Templates
+          </a>
         </motion.div>
       </div>
     </section>

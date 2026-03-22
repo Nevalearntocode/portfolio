@@ -50,7 +50,7 @@ export function DotGrid() {
           width: 3px;
           height: 3px;
           border-radius: 50%;
-          background: rgba(255,255,255,0.35);
+          background: rgba(123,57,252,0.35);
           will-change: transform;
           left: ${x}px;
           top: ${y}px;

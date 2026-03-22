@@ -48,3 +48,21 @@ next-env.d.ts
 
 # recording temp dir
 /public/works/.tmp-rec/
+stripe-15pct.png
+stripe-30pct.png
+stripe-40pct.png
+stripe-65pct.png
+stripe-80pct.png
+stripe-90pct.png
+stripe-at-top.png
+stripe-curvy.png
+stripe-full.png
+stripe-horizontal.png
+live-stripe.png
+main-page.txt
+plans/revamp-plan/aura_noir/DESIGN.md
+plans/revamp-plan/homepage_final_revamp/code.html
+plans/revamp-plan/homepage_final_revamp/screen.png
+plans/revamp-plan/works_gallery_revamp/code.html
+plans/revamp-plan/works_gallery_revamp/screen.png
+public/stripe-preview.html

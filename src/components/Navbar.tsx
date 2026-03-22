@@ -68,8 +68,9 @@ export function Navbar() {
         whileHover="hover"
         className="relative flex items-center gap-5 px-5 py-2.5 rounded-full backdrop-blur-md border shadow-sm overflow-hidden transition-colors duration-300"
         style={{
-          backgroundColor: scrolled ? "rgba(17,17,17,0.88)" : "rgba(17,17,17,0.35)",
-          borderColor: scrolled ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.06)",
+          backgroundColor: scrolled ? "rgba(14,14,14,0.92)" : "rgba(255,255,255,0.05)",
+          borderColor: scrolled ? "rgba(255,255,255,0.10)" : "rgba(255,255,255,0.06)",
+          boxShadow: "0 0 50px rgba(123,57,252,0.1)",
         }}
       >
         {/* Pill shimmer */}
@@ -83,7 +84,7 @@ export function Navbar() {
         />
 
         {activeUsers >= 2 && (
-          <span className="relative z-10 w-2 h-2 rounded-full bg-[#a3b899] shrink-0 animate-pulse" />
+          <span className="relative z-10 w-2 h-2 rounded-full bg-[#7b39fc] shrink-0 animate-pulse" />
         )}
 
         {/* Home link */}
@@ -98,7 +99,7 @@ export function Navbar() {
           >
             {t("home")}
           </Link>
-          {isHome && <span className="w-1 h-1 rounded-full bg-[#a3b899]" />}
+          {isHome && <span className="w-1 h-1 rounded-full bg-[#7b39fc]" />}
         </span>
 
         {/* Works link */}
@@ -113,7 +114,7 @@ export function Navbar() {
           >
             {t("works")}
           </Link>
-          {isWorks && <span className="w-1 h-1 rounded-full bg-[#a3b899]" />}
+          {isWorks && <span className="w-1 h-1 rounded-full bg-[#7b39fc]" />}
         </span>
 
         <span className="relative z-10">

@@ -1,6 +1,6 @@
 {
   "nav": {
-    "home": "Home",
+    "home": "Trang chủ",
     "works": "Dự án",
     "about": "Fun stuffs"
   },
@@ -114,8 +114,8 @@
     "tagline": "Let's make something meaningful together."
   },
   "cta": {
-    "title": "Có ý tưởng và đang\n cần một website?",
-    "button": "Nói chuyện thôi →"
+    "title": "Cùng tạo ra thứ gì đó thật sự đáng.",
+    "button": "Nói chuyện thôi"
   },
   "contact": {
     "badge": "Liên hệ",
@@ -127,14 +127,16 @@
   },
   "worksPage": {
     "title": "Dự Án",
-    "subtitle": "Website mình đã làm cho các tiệm, quán ở Việt Nam"
+    "subtitle": "Các dự án đã thực hiện",
+    "cta_heading": "Có dự án muốn triển khai?",
+    "cta_link": "Let's build something beautiful together."
   },
   "workingOn": {
     "badge": "Đang làm",
     "title": "Dự án hiện tại",
     "demo": "Xem demo →",
     "openSlot": {
-      "label": "Còn 1 slot trống",
+      "label": "Nhận thêm khách",
       "sub": "Đang nhận dự án mới"
     },
     "phase": {
@@ -142,6 +144,57 @@
       "integration": "Tích hợp",
       "review": "Duyệt",
       "finishing": "Hoàn thiện"
+    }
+  },
+  "testimonials": {
+    "heading": "Họ nói gì",
+    "subtext": "Cảm nhận từ những khách hàng đã đồng hành.",
+    "items": [
+      {
+        "quote": "Mình không ngờ website lại được chăm chút kỹ đến vậy. Tải nhanh, nhìn đẹp, đúng ý mình muốn.",
+        "name": "Đình Toàn",
+        "role": "Chủ tiệm, Thiệp Cưới Đình Toàn"
+      },
+      {
+        "quote": "Làm việc rất chuyên nghiệp. Khách đặt bàn tăng rõ từ tuần đầu ra mắt.",
+        "name": "DUSK",
+        "role": "F&B, An Giang"
+      },
+      {
+        "quote": "Đúng chất tiệm mình muốn. Chỉ trao đổi một lần là hiểu ngay.",
+        "name": "Barber District",
+        "role": "Tiệm tóc nam"
+      }
+    ]
+  },
+  "pricingCalc": {
+    "badge": "Báo Giá",
+    "heading": "Ước tính chi phí dự án",
+    "subtext": "Kéo thanh trượt và chọn những gì bạn cần, giá sẽ cập nhật ngay.",
+    "pages_label": "Số trang",
+    "page_singular": "trang",
+    "page_plural": "trang",
+    "one_time_addons": "Tính năng thêm",
+    "monthly_services": "Dịch vụ hàng tháng",
+    "estimated_total": "Tổng ước tính",
+    "one_time_cost": "Chi phí phát triển (một lần)",
+    "cta": "Bắt đầu ngay",
+    "monthly_recurring": "Phí hàng tháng",
+    "monthly_hint": "Chọn dịch vụ hàng tháng để xem chi phí định kỳ",
+    "footnote": "Giá trên chỉ là ước tính. Báo giá chính thức sẽ xác nhận sau khi tư vấn. Chưa bao gồm domain (~$15/năm) và hosting.",
+    "addons": {
+      "seo_label": "Tối ưu SEO",
+      "seo_sub": "Meta tags, schema markup, sitemap",
+      "content_label": "Viết nội dung",
+      "content_sub": "Nội dung cho từng trang",
+      "gbp_label": "Thiết lập Google Business",
+      "gbp_sub": "Tạo và tối ưu hồ sơ doanh nghiệp",
+      "reviews_label": "Quản lý đánh giá",
+      "reviews_sub": "Theo dõi và phản hồi đánh giá Google / Facebook",
+      "social_label": "Quản lý mạng xã hội",
+      "social_sub": "Đăng bài Facebook (2 lần/tuần)",
+      "maintenance_label": "Bảo trì hàng tháng",
+      "maintenance_sub": "Cập nhật, sao lưu, theo dõi uptime"
     }
   },
   "pricing": {
