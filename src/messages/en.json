@@ -102,8 +102,8 @@
     "tagline": "Let's make something meaningful together."
   },
   "cta": {
-    "title": "Let's build something\nworth visiting.",
-    "button": "Let's talk →"
+    "title": "Let's make something meaningful together.",
+    "button": "Let's talk"
   },
   "contact": {
     "badge": "Contact",
@@ -115,7 +115,9 @@
   },
   "worksPage": {
     "title": "Our Work",
-    "subtitle": "Websites built for local businesses across Vietnam"
+    "subtitle": "Websites built for local businesses across Vietnam",
+    "cta_heading": "Ready to start your project?",
+    "cta_link": "Let's build something beautiful together"
   },
   "workingOn": {
     "badge": "Active",
@@ -130,6 +132,57 @@
       "integration": "Integration",
       "review": "Review",
       "finishing": "Finishing"
+    }
+  },
+  "testimonials": {
+    "heading": "Praise",
+    "subtext": "Notes from partners in excellence.",
+    "items": [
+      {
+        "quote": "The level of detail brought to technical SEO and minimalist design is unmatched. Our site loads in under a second and looks stunning.",
+        "name": "Dinh Toan",
+        "role": "Owner, Thiep Cuoi Dinh Toan"
+      },
+      {
+        "quote": "An absolute professional. We saw a significant increase in table reservations within the first weeks of launching our new site.",
+        "name": "DUSK",
+        "role": "F&B, An Giang"
+      },
+      {
+        "quote": "Elegant, fast, and exactly our vibe. He understood our vision for the barbershop from the very first consult.",
+        "name": "Barber District",
+        "role": "Men's Barbershop"
+      }
+    ]
+  },
+  "pricingCalc": {
+    "badge": "Pricing",
+    "heading": "Estimate your project",
+    "subtext": "Adjust the slider and tick what you need - prices update instantly.",
+    "pages_label": "Number of pages",
+    "page_singular": "page",
+    "page_plural": "pages",
+    "one_time_addons": "One-time add-ons",
+    "monthly_services": "Monthly services",
+    "estimated_total": "Estimated Total",
+    "one_time_cost": "One-time development cost",
+    "cta": "Get Started Now",
+    "monthly_recurring": "Monthly recurring",
+    "monthly_hint": "Select a monthly service to see recurring cost",
+    "footnote": "Prices are estimates. Final quote confirmed after consultation. Domain (~$15/yr) and hosting not included.",
+    "addons": {
+      "seo_label": "On-page SEO",
+      "seo_sub": "Meta tags, schema markup, sitemap",
+      "content_label": "Content Writing",
+      "content_sub": "Copywriting for every page",
+      "gbp_label": "Google Business Profile Setup",
+      "gbp_sub": "Listing creation & full optimisation",
+      "reviews_label": "Review Management",
+      "reviews_sub": "Monitor & respond to Google / FB reviews",
+      "social_label": "Social Media Management",
+      "social_sub": "Facebook content & posting (2x/week)",
+      "maintenance_label": "Monthly Maintenance",
+      "maintenance_sub": "Updates, backups, uptime monitoring"
     }
   },
   "pricing": {
