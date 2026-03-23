@@ -48,4 +48,22 @@ export const works: WorkMeta[] = [
     url: "https://scaffolds.hmtam110501.workers.dev/food-shop",
     video: `${CDN}/food-shop.webm`,
   },
+  {
+    id: "5",
+    title: "Vật Tư An Giang",
+    description: "Cửa hàng vật liệu xây dựng - bảng giá cập nhật hàng ngày, tính chi phí theo xe tải toàn tỉnh",
+    tag: "Vật tư",
+    thumbnail: `${CDN}/construction-shop.jpg`,
+    url: "https://scaffolds.hmtam110501.workers.dev/construction-shop",
+    video: `${CDN}/construction-shop.webm`,
+  },
+  {
+    id: "6",
+    title: "The Curated Sanctuary",
+    description: "Showroom nội thất cao cấp - sản phẩm thủ công từ vật liệu tự nhiên, đặt lịch tham quan online",
+    tag: "Nội thất",
+    thumbnail: `${CDN}/interior-shop.jpg`,
+    url: "https://scaffolds.hmtam110501.workers.dev/interior-shop",
+    video: `${CDN}/interior-shop.webm`,
+  },
 ]
