@@ -41,7 +41,7 @@ export function HeroSection() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.25 }}
           className="text-lg text-[#ccc3d9] max-w-xl mb-10"
         >
-          I design and build fast, beautiful websites for local businesses — from landing pages to full storefronts. Ready in days, not months.
+          I design and build fast, beautiful websites for local businesses - from landing pages to full storefronts. Ready in days, not months.
         </motion.p>
 
         <motion.div

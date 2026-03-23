@@ -39,16 +39,16 @@
   "skills": {
     "badge": "What I do",
     "title": "What goes into your site",
-    "capabilities": {
-      "booking": "Book appointments",
-      "shop": "Online shop",
-      "mobile": "Mobile friendly",
-      "seo": "Google optimized",
-      "content": "Manage your content",
-      "designs": "Custom designs",
-      "multilingual": "Multilingual support",
-      "gallery": "Photo gallery"
-    }
+    "capabilities": [
+      { "title": "Online Shop", "desc": "Product listings, cart, and checkout - ready to take orders from day one." },
+      { "title": "Booking System", "desc": "Let customers pick a date and time without back-and-forth messages." },
+      { "title": "Google Optimized", "desc": "Built clean so search engines can find and rank your site." },
+      { "title": "Manage Your Content", "desc": "Update text, images, and products yourself - no developer needed." },
+      { "title": "Mobile First", "desc": "Looks sharp on every screen, from phone to desktop." },
+      { "title": "Custom Design", "desc": "No templates. Built around your brand, your colors, your feel." },
+      { "title": "Multilingual", "desc": "Reach more customers by serving them in their own language." },
+      { "title": "Photo Gallery", "desc": "Showcase your work, menu, or products with a fast image gallery." }
+    ]
   },
   "works": {
     "badge": "Demo Projects",
@@ -131,7 +131,8 @@
       "design": "Design",
       "integration": "Integration",
       "review": "Review",
-      "finishing": "Finishing"
+      "finishing": "Finishing",
+      "completed": "Completed"
     }
   },
   "testimonials": {
@@ -162,6 +163,7 @@
     "pages_label": "Number of pages",
     "page_singular": "page",
     "page_plural": "pages",
+    "per_page": "/page",
     "one_time_addons": "One-time add-ons",
     "monthly_services": "Monthly services",
     "estimated_total": "Estimated Total",
@@ -169,7 +171,7 @@
     "cta": "Get Started Now",
     "monthly_recurring": "Monthly recurring",
     "monthly_hint": "Select a monthly service to see recurring cost",
-    "footnote": "Prices are estimates. Final quote confirmed after consultation. Domain (~$15/yr) and hosting not included.",
+    "footnote": "Prices are estimates. Final quote confirmed after consultation. Domain (~300.000₫/yr) and hosting not included.",
     "addons": {
       "seo_label": "On-page SEO",
       "seo_sub": "Meta tags, schema markup, sitemap",
@@ -228,6 +230,24 @@
           "Custom integrations & dashboard",
           "Priority support + ongoing updates"
         ]
+      }
+    ]
+  },
+  "approach": {
+    "heading1": "Crafting the digital ",
+    "heading_italic": "standard",
+    "body": "I don't just build websites - I engineer brand-aligned digital experiences that prioritize speed, conversion, and editorial precision. Every project is a bespoke challenge.",
+    "panel_quote": "Design is Strategy.",
+    "features": [
+      {
+        "icon": "⚡",
+        "title": "Performance First",
+        "desc": "Lightweight codebases designed to load instantly and rank above competitors in every SEO metric."
+      },
+      {
+        "icon": "✦",
+        "title": "Editorial Precision",
+        "desc": "Pixel-perfect attention to typography, spacing, and rhythm to ensure your brand's voice is heard clearly."
       }
     ]
   }
