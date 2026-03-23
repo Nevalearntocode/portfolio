@@ -2,50 +2,28 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import {
-  Calendar,
-  ShoppingBag,
-  Smartphone,
-  Search,
-  LayoutDashboard,
-  Palette,
-  Languages,
-  Images,
-} from "lucide-react";
 
-const capabilityConfig = [
-  { icon: Calendar, key: "booking" },
-  { icon: ShoppingBag, key: "shop" },
-  { icon: Smartphone, key: "mobile" },
-  { icon: Search, key: "seo" },
-  { icon: LayoutDashboard, key: "content" },
-  { icon: Palette, key: "designs" },
-  { icon: Languages, key: "multilingual" },
-  { icon: Images, key: "gallery" },
-];
+type Capability = { title: string; desc: string };
 
-const containerVariants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.04, delayChildren: 0.1 } },
-};
-
-const pillVariants = {
-  hidden: { opacity: 0, scale: 0.9, y: 8 },
-  show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" as const } },
-};
+const STAGGER = 0.1;
 
 export function SkillsSection() {
   const t = useTranslations("skills");
+  const capabilities = t.raw("capabilities") as Capability[];
+  const half = Math.ceil(capabilities.length / 2);
+  const left  = capabilities.slice(0, half);
+  const right = capabilities.slice(half);
+  const rows  = left.length;
 
   return (
-    <section className="w-full py-24 px-6 sm:px-10 bg-[#0e0e0e]">
-      <div className="max-w-screen-xl mx-auto flex flex-col items-center gap-12">
+    <section className="w-full pt-24 pb-0 px-6 sm:px-10 bg-[#0e0e0e]">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-12">
+
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center"
         >
           <p className="text-xs font-semibold text-[#ccc3d9]/50 uppercase tracking-widest mb-3">
             {t("badge")}
@@ -55,26 +33,95 @@ export function SkillsSection() {
           </h2>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-80px" }}
-          className="flex flex-wrap justify-center gap-3 max-w-3xl"
-        >
-          {capabilityConfig.map((cap) => (
+        {/* Desktop: timeline
+            grid: [dot 12px] [left card] [center line 24px] [right card] [dot 12px]
+        */}
+        <div className="hidden sm:flex flex-col relative">
+          {/* Single continuous center line */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-white/8 pointer-events-none" />
+
+          {Array.from({ length: rows }).map((_, r) => {
+            const l  = left[r];
+            const ri = right[r];
+
+            return (
+              <div key={r} className="grid grid-cols-[12px_1fr_24px_1fr_12px] items-start gap-x-3">
+
+                {/* Left dot */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.3, delay: r * 2 * STAGGER }}
+                  className="flex justify-center pt-3"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#7b39fc]/70 ring-2 ring-[#0e0e0e] shrink-0" />
+                </motion.div>
+
+                {/* Left card */}
+                <motion.div
+                  initial={{ opacity: 0, x: -28 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.45, delay: r * 2 * STAGGER, ease: "easeOut" }}
+                  className="pb-3"
+                >
+                  <div className="px-4 py-2.5 rounded-xl bg-[#161616] border border-white/5">
+                    <span className="text-sm font-medium text-white">{l.title}</span>
+                  </div>
+                </motion.div>
+
+                {/* Center column spacer */}
+                <div />
+
+                {/* Right card */}
+                {ri && (
+                  <motion.div
+                    initial={{ opacity: 0, x: 28 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.45, delay: (r * 2 + 1) * STAGGER, ease: "easeOut" }}
+                    className="pb-3"
+                  >
+                    <div className="px-4 py-2.5 rounded-xl bg-[#161616] border border-white/5">
+                      <span className="text-sm font-medium text-white">{ri.title}</span>
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Right dot */}
+                {ri && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.3, delay: (r * 2 + 1) * STAGGER }}
+                    className="flex justify-center pt-3"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-[#7b39fc]/70 ring-2 ring-[#0e0e0e] shrink-0" />
+                  </motion.div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Mobile: pill grid */}
+        <div className="sm:hidden grid grid-cols-2 gap-2">
+          {capabilities.map((cap, i) => (
             <motion.div
-              key={cap.key}
-              variants={pillVariants}
-              className="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#1f1f1f] border border-white/5 hover:bg-[#2a2a2a] transition-colors"
+              key={i}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.35, delay: i * 0.05, ease: "easeOut" }}
+              className="px-4 py-3 rounded-xl bg-[#161616] border border-white/5"
             >
-              <cap.icon className="w-4 h-4 text-[#d0bcff] shrink-0" />
-              <span className="text-sm font-medium text-[#ccc3d9]">
-                {t(`capabilities.${cap.key}`)}
-              </span>
+              <span className="text-sm font-medium text-white">{cap.title}</span>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
+
       </div>
     </section>
   );

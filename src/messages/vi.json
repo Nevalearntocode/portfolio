@@ -20,11 +20,11 @@
   },
   "hero": {
     "badge": "Lập Trình Web",
-    "title": "Chào, mình là\n{name}",
-    "subtitle": "Mình làm website cho doanh nghiệp hoặc cá nhân, chỉ cần bạn có ý tưởng, mọi chuyện đều dễ nói",
-    "description": "Giao diện chuyên nghiệp hoặc sáng tạo, tính năng đầy đủ, chỉ cần bạn biết mình muốn gì.",
+    "title": "Xin chào, tôi là\n{name}",
+    "subtitle": "Thiết kế và phát triển website cho doanh nghiệp - từ landing page đến cửa hàng trực tuyến đầy đủ tính năng.",
+    "description": "Giao diện chuyên nghiệp, tốc độ tối ưu, bàn giao trong vài ngày.",
     "cta_works": "Xem dự án",
-    "cta_contact": "Liên hệ ngay"
+    "cta_contact": "Liên hệ tư vấn"
   },
   "about": {
     "badge": "Về mình",
@@ -37,18 +37,18 @@
     "subtext": "Sẵn sàng ngay · Hoàn thiện trong 2–3 tuần"
   },
   "skills": {
-    "badge": "Bạn muốn gì?",
-    "title": "Những tính năng đa dụng và phổ biến",
-    "capabilities": {
-      "booking": "Đặt lịch hẹn",
-      "shop": "Cửa hàng online",
-      "mobile": "Ưu tiên màn hình điện thoại",
-      "seo": "Tối ưu Google tìm kiếm",
-      "content": "Tự quản lý nội dung",
-      "designs": "Thiết kế riêng",
-      "multilingual": "Đa ngôn ngữ",
-      "gallery": "Thư viện ảnh"
-    }
+    "badge": "Tính năng",
+    "title": "Tính năng phù hợp với mọi loại hình kinh doanh",
+    "capabilities": [
+      { "title": "Cửa hàng trực tuyến", "desc": "Danh sách sản phẩm, giỏ hàng, thanh toán - sẵn sàng nhận đơn ngay từ ngày đầu." },
+      { "title": "Đặt lịch hẹn", "desc": "Khách hàng tự chọn thời gian, không cần liên hệ qua lại." },
+      { "title": "Tối ưu tìm kiếm", "desc": "Cấu trúc chuẩn SEO giúp website xếp hạng cao trên Google." },
+      { "title": "Tự quản lý nội dung", "desc": "Cập nhật bài viết, sản phẩm, hình ảnh mà không cần nhờ lập trình viên." },
+      { "title": "Tối ưu di động", "desc": "Hiển thị chuẩn trên mọi thiết bị - điện thoại, máy tính bảng, máy tính." },
+      { "title": "Thiết kế theo thương hiệu", "desc": "Không dùng template có sẵn. Giao diện được xây dựng riêng cho từng doanh nghiệp." },
+      { "title": "Đa ngôn ngữ", "desc": "Hỗ trợ nhiều ngôn ngữ để tiếp cận khách hàng rộng hơn." },
+      { "title": "Thư viện hình ảnh", "desc": "Trình bày sản phẩm, dịch vụ hoặc danh mục công trình một cách trực quan." }
+    ]
   },
   "works": {
     "badge": "Demo Dự Án",
@@ -99,27 +99,27 @@
       },
       {
         "n": "02",
-        "title": "Làm việc",
-        "desc": "Mình thiết kế và xây dựng. Bạn xem và duyệt từng bước."
+        "title": "Phát triển",
+        "desc": "Thiết kế và lập trình theo yêu cầu. Khách hàng xem và duyệt từng bước."
       },
       {
         "n": "03",
         "title": "Ra mắt",
-        "desc": "Website lên sóng. Mình sẽ quản lý hosting, domain, etc."
+        "desc": "Website đi vào hoạt động. Hỗ trợ cài đặt hosting, domain và bàn giao toàn bộ."
       }
     ]
   },
   "footer": {
     "rights": "All rights reserved.",
-    "tagline": "Let's make something meaningful together."
+    "tagline": "Hiện đang nhận dự án mới."
   },
   "cta": {
-    "title": "Cùng tạo ra thứ gì đó thật sự đáng.",
-    "button": "Nói chuyện thôi"
+    "title": "Sẵn sàng xây dựng website của bạn?",
+    "button": "Liên hệ tư vấn"
   },
   "contact": {
     "badge": "Liên hệ",
-    "title": "Nhắn mình nha",
+    "title": "Liên hệ",
     "email_label": "Email",
     "social_label": "Mạng xã hội",
     "phone_label": "Điện thoại",
@@ -129,7 +129,7 @@
     "title": "Dự Án",
     "subtitle": "Các dự án đã thực hiện",
     "cta_heading": "Có dự án muốn triển khai?",
-    "cta_link": "Let's build something beautiful together."
+    "cta_link": "Liên hệ để nhận tư vấn và báo giá."
   },
   "workingOn": {
     "badge": "Đang làm",
@@ -143,7 +143,8 @@
       "design": "Thiết kế",
       "integration": "Tích hợp",
       "review": "Duyệt",
-      "finishing": "Hoàn thiện"
+      "finishing": "Hoàn thiện",
+      "completed": "Hoàn thành"
     }
   },
   "testimonials": {
@@ -174,6 +175,7 @@
     "pages_label": "Số trang",
     "page_singular": "trang",
     "page_plural": "trang",
+    "per_page": "/trang",
     "one_time_addons": "Tính năng thêm",
     "monthly_services": "Dịch vụ hàng tháng",
     "estimated_total": "Tổng ước tính",
@@ -181,7 +183,7 @@
     "cta": "Bắt đầu ngay",
     "monthly_recurring": "Phí hàng tháng",
     "monthly_hint": "Chọn dịch vụ hàng tháng để xem chi phí định kỳ",
-    "footnote": "Giá trên chỉ là ước tính. Báo giá chính thức sẽ xác nhận sau khi tư vấn. Chưa bao gồm domain (~$15/năm) và hosting.",
+    "footnote": "Giá trên chỉ là ước tính. Báo giá chính thức sẽ xác nhận sau khi tư vấn. Chưa bao gồm domain (~300.000₫/năm) và hosting.",
     "addons": {
       "seo_label": "Tối ưu SEO",
       "seo_sub": "Meta tags, schema markup, sitemap",
@@ -240,6 +242,24 @@
           "Tích hợp tùy chỉnh & dashboard",
           "Hỗ trợ ưu tiên + cập nhật liên tục"
         ]
+      }
+    ]
+  },
+  "approach": {
+    "heading1": "Tiêu chuẩn kỹ thuật, ",
+    "heading_italic": "kết quả thực tế",
+    "body": "Website tốt không chỉ đẹp về giao diện - nó phải tải nhanh, thân thiện với công cụ tìm kiếm, và dẫn dắt được khách hàng đến hành động mong muốn. Mỗi dự án được xây dựng với mục tiêu kinh doanh cụ thể.",
+    "panel_quote": "Giao diện tốt là nền tảng kinh doanh tốt.",
+    "features": [
+      {
+        "icon": "⚡",
+        "title": "Tốc độ & SEO",
+        "desc": "Codebase tối ưu, tải trang dưới 2 giây, cấu trúc chuẩn SEO - website xếp hạng cao hơn và giữ chân người dùng lâu hơn."
+      },
+      {
+        "icon": "✦",
+        "title": "Thiết kế có chủ đích",
+        "desc": "Từng yếu tố giao diện đều phục vụ một mục tiêu rõ ràng - xây dựng uy tín thương hiệu và tăng tỉ lệ chuyển đổi."
       }
     ]
   }

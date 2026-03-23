@@ -1,26 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
-const features = [
-  {
-    icon: "⚡",
-    title: "Performance First",
-    desc: "Lightweight codebases designed to load instantly and rank above competitors in every SEO metric.",
-  },
-  {
-    icon: "✦",
-    title: "Editorial Precision",
-    desc: "Pixel-perfect attention to typography, spacing, and rhythm to ensure your brand's voice is heard clearly.",
-  },
-];
+type Feature = { icon: string; title: string; desc: string };
 
 export function ApproachSection() {
+  const t = useTranslations("approach");
+  const features = t.raw("features") as Feature[];
+
   return (
     <section className="w-full py-32 px-6 sm:px-10 bg-[#0e0e0e]">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
 
-        {/* Left: text */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,14 +20,14 @@ export function ApproachSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
-            {"Crafting the digital "}
+            {t("heading1")}
             <span className="font-['Instrument_Serif'] italic text-[#d0bcff]" style={{ fontStyle: "italic" }}>
-              standard
+              {t("heading_italic")}
             </span>
             {"."}
           </h2>
           <p className="text-[#ccc3d9] text-lg leading-relaxed mb-12">
-            {"I don't just build websites; I engineer brand-aligned digital experiences that prioritize speed, conversion, and editorial precision. Every project is a bespoke challenge."}
+            {t("body")}
           </p>
 
           <div className="flex flex-col gap-8">
@@ -53,7 +45,6 @@ export function ApproachSection() {
           </div>
         </motion.div>
 
-        {/* Right: editorial image panel */}
         <motion.div
           initial={{ opacity: 0, x: 32 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -66,7 +57,7 @@ export function ApproachSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
             <div className="relative p-10 select-none">
               <div className="text-5xl font-['Instrument_Serif'] italic text-white/15" style={{ fontStyle: "italic" }}>
-                Design is Strategy.
+                {t("panel_quote")}
               </div>
             </div>
           </div>

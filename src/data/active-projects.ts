@@ -10,7 +10,7 @@ export type ActiveProject = {
     tiktok?: string
   }
   projectType: string
-  phase: "design" | "integration" | "review" | "finishing"
+  phase: "design" | "integration" | "review" | "finishing" | "completed"
   demoUrl?: string
   thumbnail: string
 }
@@ -18,7 +18,7 @@ export type ActiveProject = {
 export const activeProjects: ActiveProject[] = [
   {
     id: "1",
-    clientName: "Cam Giang Shop",
+    clientName: "Cẩm Giang Shop",
     clientCategory: "Đặc sản khô",
     credibility: "700k+ followers trên các nền tảng",
     clientSocials: {
@@ -27,13 +27,13 @@ export const activeProjects: ActiveProject[] = [
       tiktok: "https://www.tiktok.com/@cam_giang_nguyen_97",
     },
     projectType: "Cửa hàng online",
-    phase: "integration",
+    phase: "completed",
     demoUrl: "https://cam-giang-shop.vercel.app",
     thumbnail: "/about-room/tools/cam-giang-thumb.jpg",
   },
   {
     id: "2",
-    clientName: "Trần Lại Mobile",
+    clientName: "Trần Lai Mobile",
     clientCategory: "Cửa hàng điện thoại",
     credibility: "Hơn 10 năm kinh nghiệm tại địa phương",
     clientSocials: {

@@ -7,20 +7,21 @@ import { Slider } from "@/components/ui/slider";
 import { useMessengerUrl } from "@/hooks/use-mobile";
 
 // ── Pricing config ─────────────────────────────────────────────
-const PER_PAGE = 150;
+const BASE_PRICE = 300_000;
+const PER_PAGE   = 150_000;
 
 const ONE_TIME_ADDON_IDS = ["seo", "content", "gbp"] as const;
 const ONE_TIME_ADDON_RATES: Record<string, { perPage: number; flat: number }> = {
-  seo:     { perPage: 40,  flat: 0   },
-  content: { perPage: 50,  flat: 0   },
-  gbp:     { perPage: 0,   flat: 149 },
+  seo:     { perPage: 100_000, flat: 0         },
+  content: { perPage: 150_000, flat: 0         },
+  gbp:     { perPage: 0,       flat: 500_000   },
 };
 
 const MONTHLY_ADDON_IDS = ["reviews", "social", "maintenance"] as const;
 const MONTHLY_ADDON_RATES: Record<string, { monthly: number }> = {
-  reviews:     { monthly: 49  },
-  social:      { monthly: 99  },
-  maintenance: { monthly: 29  },
+  reviews:     { monthly: 200_000 },
+  social:      { monthly: 500_000 },
+  maintenance: { monthly: 150_000 },
 };
 
 type OneTimeId  = (typeof ONE_TIME_ADDON_IDS)[number];
@@ -28,7 +29,7 @@ type MonthlyId  = (typeof MONTHLY_ADDON_IDS)[number];
 
 // ── helpers ────────────────────────────────────────────────────
 function fmt(n: number) {
-  return "$" + n.toLocaleString();
+  return n.toLocaleString("vi-VN") + "₫";
 }
 
 // ── sub-components ─────────────────────────────────────────────
@@ -113,7 +114,7 @@ export function PricingSection() {
   }
 
   // ── totals ────────────────────────────────────────────────────
-  const websiteCost = pages * PER_PAGE;
+  const websiteCost = BASE_PRICE + (pages - 1) * PER_PAGE;
 
   const oneTimeCost = oneTimeAddons.reduce((acc, addon) => {
     if (!oneTime.has(addon.id)) return acc;
@@ -182,7 +183,7 @@ export function PricingSection() {
               />
               <div className="flex justify-between text-xs text-white/25">
                 <span>1</span>
-                <span>{fmt(PER_PAGE)}/page</span>
+                <span>{fmt(PER_PAGE)}{t("per_page")}</span>
                 <span>20</span>
               </div>
             </div>
@@ -205,7 +206,7 @@ export function PricingSection() {
                     price={
                       addon.flat
                         ? fmt(addon.flat)
-                        : `+${fmt(addon.perPage)}/page`
+                        : `+${fmt(addon.perPage)}${t("per_page")}`
                     }
                   />
                 ))}

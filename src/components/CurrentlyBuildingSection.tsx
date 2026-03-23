@@ -7,13 +7,14 @@ import { Facebook, Instagram } from "lucide-react";
 import { activeProjects, type ActiveProject } from "@/data/active-projects";
 import { useMessengerUrl } from "@/hooks/use-mobile";
 
-const PHASES: ActiveProject["phase"][] = ["design", "integration", "review", "finishing"];
+const PHASES: ActiveProject["phase"][] = ["design", "integration", "review", "finishing", "completed"];
 
 const PHASE_PROGRESS: Record<ActiveProject["phase"], number> = {
   design: 15,
   integration: 42,
   review: 68,
   finishing: 88,
+  completed: 100,
 };
 
 function ZaloIcon({ className }: { className?: string }) {
