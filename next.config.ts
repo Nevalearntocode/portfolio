@@ -7,6 +7,7 @@ export default withNextIntl({
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "picsum.photos" },
+      { protocol: "https", hostname: "daornpw364e0n.cloudfront.net" },
     ],
   },
 });

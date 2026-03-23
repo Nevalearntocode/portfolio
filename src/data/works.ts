@@ -9,41 +9,43 @@ export type WorkMeta = {
   comingSoon?: boolean
 }
 
+const CDN = process.env.NEXT_PUBLIC_CDN_URL + "/portfolio/works"
+
 export const works: WorkMeta[] = [
   {
     id: "1",
     title: "TechStore",
     description: "Cửa hàng công nghệ - điện thoại, laptop, phụ kiện - flash sale, đặt hàng online",
     tag: "Tech",
-    thumbnail: "/works/tech-shop.jpg",
+    thumbnail: `${CDN}/tech-shop.jpg`,
     url: "https://scaffolds.hmtam110501.workers.dev/tech-shop",
-    video: "/works/tech-shop.webm",
+    video: `${CDN}/tech-shop.webm`,
   },
   {
     id: "2",
     title: "Thiệp Cưới Đình Toàn",
     description: "Cửa hàng thiệp cưới & thiệp chúc cao cấp - xem thiệp 3D, đặt theo yêu cầu qua Zalo",
     tag: "Thiệp cưới",
-    thumbnail: "/works/card-shop.jpg",
+    thumbnail: `${CDN}/card-shop.jpg`,
     url: "https://scaffolds.hmtam110501.workers.dev/card-shop",
-    video: "/works/card-shop.webm",
+    video: `${CDN}/card-shop.webm`,
   },
   {
     id: "3",
     title: "Barber District",
     description: "Barbershop cao cấp dành cho phái mạnh - đặt lịch, hồ sơ thợ, thư viện phong cách",
     tag: "Barber",
-    thumbnail: "/works/hair-salon-men.jpg",
+    thumbnail: `${CDN}/hair-salon-men.jpg`,
     url: "https://scaffolds.hmtam110501.workers.dev/hair-salon-men",
-    video: "/works/hair-salon-men.webm",
+    video: `${CDN}/hair-salon-men.webm`,
   },
   {
     id: "4",
     title: "DUSK",
     description: "Tiệm nước đặc biệt phong cách tối giản - thực đơn thức uống cao cấp và đặt hàng online",
     tag: "F&B",
-    thumbnail: "/works/food-shop.jpg",
+    thumbnail: `${CDN}/food-shop.jpg`,
     url: "https://scaffolds.hmtam110501.workers.dev/food-shop",
-    video: "/works/food-shop.webm",
+    video: `${CDN}/food-shop.webm`,
   },
 ]
