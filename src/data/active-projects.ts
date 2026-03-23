@@ -28,7 +28,7 @@ export const activeProjects: ActiveProject[] = [
     },
     projectType: "Cửa hàng online",
     phase: "completed",
-    demoUrl: "https://cam-giang-shop.vercel.app",
+    demoUrl: "https://camgiangshop.com/",
     thumbnail: "/about-room/tools/cam-giang-thumb.jpg",
   },
   {
