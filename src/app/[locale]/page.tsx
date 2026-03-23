@@ -18,8 +18,8 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <main className="relative min-h-screen bg-[#0e0e0e]">
-        <WindingLine />
+      <main className="relative min-h-screen bg-[#0e0e0e] max-w-8xl mx-auto">
+        {/* <WindingLine /> */}
         <HeroSection />
         <SkillsSection />
         <WorksSection />
