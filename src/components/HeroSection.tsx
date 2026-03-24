@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useMessengerUrl } from "@/hooks/use-mobile";
 
 export function HeroSection() {
+  const t = useTranslations("hero");
   const messengerUrl = useMessengerUrl();
 
   return (
@@ -29,9 +31,10 @@ export function HeroSection() {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
           className="text-5xl sm:text-[76px] leading-[1.1] font-bold text-white tracking-tight mb-4"
         >
-          Modern websites.{" "}
+          {t("heading1")}
+          <br />
           <span className="font-['Instrument_Serif'] italic text-[#d0bcff] not-italic" style={{ fontStyle: "italic" }}>
-            Built to convert.
+            {t("heading_italic")}
           </span>
         </motion.h1>
 
@@ -41,7 +44,7 @@ export function HeroSection() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.25 }}
           className="text-lg text-[#ccc3d9] max-w-xl mb-10"
         >
-          I design and build fast, beautiful websites for local businesses - from landing pages to full storefronts. Ready in days, not months.
+          {t("body")}
         </motion.p>
 
         <motion.div
@@ -56,7 +59,7 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="px-7 py-3.5 rounded-full bg-[#7b39fc] text-white text-sm font-semibold hover:scale-[0.97] transition-transform shadow-lg shadow-[#7b39fc]/20"
           >
-            Get Started
+            {t("cta_primary")}
           </a>
           <a
             href="#works"
@@ -66,7 +69,7 @@ export function HeroSection() {
             }}
             className="px-7 py-3.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-white text-sm font-medium hover:bg-white/10 transition-colors"
           >
-            Browse Templates
+            {t("cta_secondary")}
           </a>
         </motion.div>
       </div>

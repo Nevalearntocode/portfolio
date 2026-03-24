@@ -1,13 +1,34 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { BoidsCanvas } from "@/components/BoidsCanvas";
 
 type Feature = { icon: string; title: string; desc: string };
 
 export function ApproachSection() {
   const t = useTranslations("approach");
   const features = t.raw("features") as Feature[];
+  // Display values — update live so the thumb and label move while dragging
+  const DEFAULTS = { sep: 0.05, ali: 0.05, coh: 0.005, vr: 60 };
+  const [sep, setSep] = useState(DEFAULTS.sep);
+  const [ali, setAli] = useState(DEFAULTS.ali);
+  const [coh, setCoh] = useState(DEFAULTS.coh);
+  const [vr,  setVr]  = useState(DEFAULTS.vr);
+  const [sepW, setSepW] = useState(DEFAULTS.sep);
+  const [aliW, setAliW] = useState(DEFAULTS.ali);
+  const [cohW, setCohW] = useState(DEFAULTS.coh);
+  const [vrW,  setVrW]  = useState(DEFAULTS.vr);
+  const [sliderKey, setSliderKey] = useState(0);
+
+  function resetSliders() {
+    setSep(DEFAULTS.sep); setSepW(DEFAULTS.sep);
+    setAli(DEFAULTS.ali); setAliW(DEFAULTS.ali);
+    setCoh(DEFAULTS.coh); setCohW(DEFAULTS.coh);
+    setVr(DEFAULTS.vr);   setVrW(DEFAULTS.vr);
+    setSliderKey(k => k + 1);
+  }
 
   return (
     <section className="w-full py-32 px-6 sm:px-10 bg-[#0e0e0e]">
@@ -54,13 +75,49 @@ export function ApproachSection() {
         >
           <div className="absolute -inset-4 bg-[#7b39fc]/15 blur-[100px] rounded-full pointer-events-none" />
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 glass-panel flex items-end">
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-            <div className="relative p-10 select-none">
+            <BoidsCanvas separation={sepW} alignment={aliW} cohesion={cohW} visualRange={vrW} />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none" />
+            <div className="relative z-10 p-10 select-none pointer-events-none">
               <div className="text-5xl font-['Instrument_Serif'] italic text-white/15" style={{ fontStyle: "italic" }}>
                 {t("panel_quote")}
               </div>
             </div>
           </div>
+          {/* Sliders — 4 in one row */}
+          <div className="mt-5 flex items-center justify-between mb-3">
+            <span className="text-[#ccc3d9] text-xs">Flocking behaviour</span>
+            <button
+              onClick={resetSliders}
+              className="text-xs text-[#7b39fc] hover:text-[#a06aff] transition-colors"
+            >
+              Reset
+            </button>
+          </div>
+          <div key={sliderKey} className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { label: "Separation",    value: sep, set: setSep, commit: setSepW, min: 0.01, max: 0.1,  step: 0.001,  fmt: (v: number) => v.toFixed(3) },
+              { label: "Alignment",     value: ali, set: setAli, commit: setAliW, min: 0, max: 0.1,  step: 0.001,  fmt: (v: number) => v.toFixed(3) },
+              { label: "Cohesion",      value: coh, set: setCoh, commit: setCohW, min: 0, max: 0.01, step: 0.0001, fmt: (v: number) => v.toFixed(4) },
+              { label: "Visual Range",  value: vr,  set: setVr,  commit: setVrW,  min: 0, max: 150,  step: 1,      fmt: (v: number) => v.toFixed(0) },
+            ].map(({ label, value, set, commit, min, max, step, fmt }) => (
+              <div key={label} className="flex flex-col gap-2">
+                <div className="flex justify-between items-baseline">
+                  <span className="text-[#ccc3d9] text-xs">{label}</span>
+                  <span className="text-white/60 text-xs tabular-nums">{fmt(value)}</span>
+                </div>
+                <input
+                  type="range"
+                  min={min} max={max} step={step}
+                  defaultValue={value}
+                  onChange={(e) => set(parseFloat(e.target.value))}
+                  onPointerUp={(e) => commit(parseFloat(e.currentTarget.value))}
+                  className="w-full h-1 appearance-none rounded-full cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:-mt-1 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#7b39fc] [&::-moz-range-thumb]:w-3 [&::-moz-range-thumb]:h-3 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#7b39fc] [&::-moz-range-thumb]:border-0"
+                  style={{ background: `linear-gradient(to right, #7b39fc ${((value - min) / (max - min)) * 100}%, rgba(255,255,255,0.1) ${((value - min) / (max - min)) * 100}%)` }}
+                />
+              </div>
+            ))}
+          </div>
+
         </motion.div>
 
       </div>

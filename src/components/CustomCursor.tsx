@@ -5,12 +5,16 @@ import { useEffect, useRef, useState } from "react";
 export function CustomCursor() {
   const outerRef = useRef<HTMLDivElement>(null);
   const [hovering, setHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const pos = useRef({ x: -100, y: -100 });
   const rafRef = useRef<number>(0);
 
   useEffect(() => {
-    // Only on desktop
-    if (window.matchMedia("(hover: none)").matches) return;
+    setIsMobile(window.matchMedia("(hover: none)").matches);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
 
     const onMove = (e: MouseEvent) => {
       pos.current = { x: e.clientX, y: e.clientY };
@@ -39,7 +43,9 @@ export function CustomCursor() {
       window.removeEventListener("mouseover", onOver);
       cancelAnimationFrame(rafRef.current);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <div

@@ -13,7 +13,6 @@ import { CtaSection } from "@/components/CtaSection";
 import { WindingLine } from "@/components/WindingLine";
 import { FloatingContact } from "@/components/FloatingContact";
 import { Footer } from "@/components/Footer";
-
 export default function HomePage() {
   return (
     <>
