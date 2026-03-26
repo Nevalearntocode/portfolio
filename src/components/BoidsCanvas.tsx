@@ -59,7 +59,7 @@ export function BoidsCanvas({
     });
     ro.observe(canvas);
 
-    // Mouse flee
+    // Mouse / touch flee
     const mouse = { x: -9999, y: -9999 };
     const onMouseMove = (e: MouseEvent) => {
       const r = canvas.getBoundingClientRect();
@@ -67,8 +67,18 @@ export function BoidsCanvas({
       mouse.y = e.clientY - r.top;
     };
     const onMouseLeave = () => { mouse.x = -9999; mouse.y = -9999; };
+    const onTouchMove = (e: TouchEvent) => {
+      const r = canvas.getBoundingClientRect();
+      const t = e.touches[0];
+      mouse.x = t.clientX - r.left;
+      mouse.y = t.clientY - r.top;
+    };
+    const onTouchEnd = () => { mouse.x = -9999; mouse.y = -9999; };
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mouseleave", onMouseLeave);
+    canvas.addEventListener("touchmove", onTouchMove, { passive: true });
+    canvas.addEventListener("touchstart", onTouchMove as unknown as EventListener, { passive: true });
+    canvas.addEventListener("touchend", onTouchEnd);
 
     function update() {
       for (const b of boids) {
@@ -179,6 +189,9 @@ export function BoidsCanvas({
       cancelAnimationFrame(raf);
       canvas.removeEventListener("mousemove", onMouseMove);
       canvas.removeEventListener("mouseleave", onMouseLeave);
+      canvas.removeEventListener("touchmove", onTouchMove);
+      canvas.removeEventListener("touchstart", onTouchMove as unknown as EventListener);
+      canvas.removeEventListener("touchend", onTouchEnd);
       ro.disconnect();
     };
   }, []);

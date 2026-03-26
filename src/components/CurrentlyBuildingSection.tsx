@@ -3,11 +3,20 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, PenLine, Code2, Eye, Sparkles, CheckCircle2, type LucideIcon } from "lucide-react";
 import { activeProjects, type ActiveProject } from "@/data/active-projects";
 import { useMessengerUrl } from "@/hooks/use-mobile";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const PHASES: ActiveProject["phase"][] = ["design", "integration", "review", "finishing", "completed"];
+
+const PHASE_ICONS: Record<ActiveProject["phase"], LucideIcon> = {
+  design: PenLine,
+  integration: Code2,
+  review: Eye,
+  finishing: Sparkles,
+  completed: CheckCircle2,
+};
 
 const PHASE_PROGRESS: Record<ActiveProject["phase"], number> = {
   design: 15,
@@ -96,13 +105,36 @@ function ProjectCard({ project }: { project: ActiveProject }) {
               style={{ width: `${progress}%` }}
             />
           </div>
-          <div className="flex justify-between text-[9px] text-[#4a4456] uppercase tracking-widest font-bold">
-            {PHASES.map((phase) => (
-              <span key={phase} className={project.phase === phase ? "text-[#d0bcff]" : ""}>
-                {t(`phase.${phase}`)}
-              </span>
-            ))}
-          </div>
+          <TooltipProvider delayDuration={100}>
+            <div className="flex justify-between">
+              {PHASES.map((phase) => {
+                const Icon = PHASE_ICONS[phase];
+                const isActive = project.phase === phase;
+                const isPast = PHASES.indexOf(phase) < PHASES.indexOf(project.phase);
+                return (
+                  <Tooltip key={phase}>
+                    <TooltipTrigger asChild>
+                      <button className="p-0.5 rounded focus:outline-none">
+                        <Icon
+                          size={13}
+                          className={
+                            isActive
+                              ? "text-[#d0bcff]"
+                              : isPast
+                              ? "text-[#7b39fc]/50"
+                              : "text-[#4a4456]"
+                          }
+                        />
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="text-[10px] px-2 py-1">
+                      {t(`phase.${phase}`)}
+                    </TooltipContent>
+                  </Tooltip>
+                );
+              })}
+            </div>
+          </TooltipProvider>
         </div>
 
         {project.demoUrl && (

@@ -4,14 +4,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 
 > You are permitted to append entries to the ## Learned section of this file. No other section may be modified.
 
-## Commands
-
-```bash
-npm run dev       # start dev server
-npm run build     # production build
-npm run lint      # eslint
-```
-
 ## Architecture
 
 **This is a personal portfolio site** — not a multi-page app with shared state. Pages are mostly independent. The Works section links *out* to separately deployed scaffold projects; nothing is embedded here.

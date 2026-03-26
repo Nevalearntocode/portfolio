@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { BoidsCanvas } from "@/components/BoidsCanvas";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 type Feature = { icon: string; title: string; desc: string };
 
@@ -21,6 +22,19 @@ export function ApproachSection() {
   const [cohW, setCohW] = useState(DEFAULTS.coh);
   const [vrW,  setVrW]  = useState(DEFAULTS.vr);
   const [sliderKey, setSliderKey] = useState(0);
+  const isMobile = useIsMobile();
+  const [showTapHint, setShowTapHint] = useState(true);
+  const [ripple, setRipple] = useState<{ x: number; y: number; id: number } | null>(null);
+
+  const handleCardTouch = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
+    const t = e.touches[0];
+    const r = e.currentTarget.getBoundingClientRect();
+    const x = t.clientX - r.left;
+    const y = t.clientY - r.top;
+    setShowTapHint(false);
+    setRipple({ x, y, id: Date.now() });
+    setTimeout(() => setRipple(null), 600);
+  }, []);
 
   function resetSliders() {
     setSep(DEFAULTS.sep); setSepW(DEFAULTS.sep);
@@ -74,9 +88,51 @@ export function ApproachSection() {
           className="relative"
         >
           <div className="absolute -inset-4 bg-[#7b39fc]/15 blur-[100px] rounded-full pointer-events-none" />
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 glass-panel flex items-end">
+          <div
+            className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 glass-panel flex items-end"
+            onTouchStart={handleCardTouch}
+          >
             <BoidsCanvas separation={sepW} alignment={aliW} cohesion={cohW} visualRange={vrW} />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none" />
+
+            {/* Tap hint — mobile only, disappears after first touch */}
+            <AnimatePresence>
+              {isMobile && showTapHint && (
+                <motion.div
+                  key="tap-hint"
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.85 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0 flex items-center justify-center pointer-events-none z-20"
+                >
+                  <motion.div
+                    animate={{ scale: [1, 1.08, 1] }}
+                    transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+                    className="flex flex-col items-center gap-2"
+                  >
+                    <span className="text-3xl select-none">👆</span>
+                    <span className="text-xs font-bold text-white/60 uppercase tracking-widest">Tap me</span>
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Ripple on tap */}
+            <AnimatePresence>
+              {ripple && (
+                <motion.div
+                  key={ripple.id}
+                  initial={{ scale: 0, opacity: 0.5 }}
+                  animate={{ scale: 6, opacity: 0 }}
+                  exit={{}}
+                  transition={{ duration: 0.55, ease: "easeOut" }}
+                  className="absolute w-16 h-16 rounded-full border border-[#7b39fc] pointer-events-none z-20"
+                  style={{ left: ripple.x - 32, top: ripple.y - 32 }}
+                />
+              )}
+            </AnimatePresence>
+
             <div className="relative z-10 p-10 select-none pointer-events-none">
               <div className="text-5xl font-['Instrument_Serif'] italic text-white/15" style={{ fontStyle: "italic" }}>
                 {t("panel_quote")}
