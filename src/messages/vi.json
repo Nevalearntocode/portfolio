@@ -2,7 +2,8 @@
   "nav": {
     "home": "Trang chủ",
     "works": "Dự án",
-    "about": "Fun stuffs"
+    "about": "Về mình",
+    "contact": "Liên hệ"
   },
   "metadata": {
     "home": {
@@ -10,8 +11,12 @@
       "description": "Thiết kế và xây dựng website đẹp, gọn, và đáng nhớ."
     },
     "about": {
-      "title": "Fun stuffs",
-      "description": "Chủ yếu là về giải trí. Ai cùng chung sở thích thì có thể tám."
+      "title": "Về Minh Tâm",
+      "description": "Lập trình viên web tại An Giang. Xây dựng website chuyên nghiệp cho doanh nghiệp địa phương."
+    },
+    "contact": {
+      "title": "Liên Hệ — Minh Tâm",
+      "description": "Liên hệ qua email, điện thoại, Zalo hoặc Messenger."
     },
     "works": {
       "title": "Dự Án — Minh Tâm",
@@ -130,11 +135,47 @@
     "phone_label": "Điện thoại",
     "copied": "Đã copy!"
   },
+  "aboutPage": {
+    "badge": "Về mình",
+    "role": "Lập trình viên web",
+    "location": "An Giang, Việt Nam",
+    "bio": "Xây dựng website cho doanh nghiệp - từ landing page đơn giản đến hệ thống bán hàng đầy đủ tính năng. Làm việc trực tiếp tại An Giang hoặc từ xa.",
+    "stack_label": "Công nghệ",
+    "availability": "Đang nhận dự án mới",
+    "cta": "Liên hệ",
+    "perspective_heading": "Theo cách chúng tôi nhìn nhận.",
+    "perspective_badge": "Về ngành",
+    "platform_q1": "Có bao giờ bạn nghĩ đến việc tự sở hữu một nền tảng bán hàng?",
+    "platform_q2": "Và so với TikTok hay Shopee, nó có thể mang lại lợi ích như thế nào?",
+    "platform_p1": "Nền tảng của riêng có nghĩa là khách hàng đến với bạn trực tiếp - không qua trung gian, không mất phí. Toàn bộ doanh thu là của bạn. Và quan trọng hơn, mối quan hệ với khách hàng cũng thuộc về bạn, không phải nền tảng.",
+    "platform_p2": "So sánh với TikTok hay Shopee: phí từ 15 đến 25% trên mỗi đơn, trang bán hàng trông giống hàng nghìn người bán khác, và khách hàng có thể thấy đối thủ của bạn ngay bên cạnh sản phẩm.",
+    "platform_p3": "Vẫn nên duy trì các kênh đó - đó là nơi khách hàng tìm thấy bạn. Nhưng song song đó, hãy xây dựng một kênh bán hàng mà bạn thực sự làm chủ.",
+    "custom_hook1": "Thử tưởng tượng một website lý tưởng cho doanh nghiệp của bạn.",
+    "custom_hook2": "Nó trông như thế nào, khách hàng thao tác ra sao, nó có thể làm được gì.",
+    "custom_p1": "Đa số các đơn vị thiết kế hiện nay sử dụng WordPress hoặc template có sẵn. Nghĩa là họ chọn một giao diện đã được làm sẵn, điền thông tin của bạn vào, rồi bàn giao. Nhanh - nhưng bố cục, luồng thao tác, tính năng đều được quyết định từ trước, cho một doanh nghiệp khác. Những gì bạn vừa hình dung thường không có trong đó.",
+    "custom_p2": "Chúng tôi xây dựng từ đầu, theo đúng những gì doanh nghiệp của bạn cần. Không có cấu trúc có sẵn nào cần phải làm vừa. Bạn hình dung được, chúng tôi xây dựng được."
+  },
+  "contactPage": {
+    "badge": "Liên hệ",
+    "title": "Liên hệ",
+    "subtitle": "Chọn kênh phù hợp nhất với bạn.",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "zalo": "Zalo",
+    "messenger": "Messenger / Facebook",
+    "copy_hint": "Nhấn để sao chép",
+    "copied": "Đã sao chép!"
+  },
   "worksPage": {
     "title": "Dự Án",
     "subtitle": "Các dự án đã thực hiện",
     "cta_heading": "Có dự án muốn triển khai?",
-    "cta_link": "Liên hệ để nhận tư vấn và báo giá."
+    "cta_link": "Liên hệ để nhận tư vấn và báo giá.",
+    "client_section": "Khách hàng thực tế",
+    "templates_section": "Template mẫu theo ngành",
+    "cam_giang_category": "Đặc sản khô · An Giang",
+    "cam_giang_stat": "followers trên các nền tảng",
+    "cam_giang_body": "Phí TikTok chiếm 25% mỗi đơn hàng. Đơn qua Facebook phải nhắn tin từng cái - dễ bỏ sót, không có cấu trúc. Chúng tôi xây dựng cho họ một kênh bán hàng riêng: danh mục sản phẩm, modal đặt hàng một bước không cần giỏ hàng, và CMS để tự quản lý sản phẩm, khuyến mãi và đơn hàng."
   },
   "workingOn": {
     "badge": "Đang làm",
@@ -176,19 +217,19 @@
   "pricingCalc": {
     "badge": "Báo Giá",
     "heading": "Ước tính chi phí dự án",
-    "subtext": "Kéo thanh trượt và chọn những gì bạn cần, giá sẽ cập nhật ngay.",
+    "subtext": "Chọn số trang và tính năng cần thiết - thời gian hoàn thành sẽ cập nhật ngay.",
     "pages_label": "Số trang",
     "page_singular": "trang",
     "page_plural": "trang",
     "per_page": "/trang",
     "one_time_addons": "Tính năng thêm",
     "monthly_services": "Dịch vụ hàng tháng",
-    "estimated_total": "Tổng ước tính",
-    "one_time_cost": "Chi phí phát triển (một lần)",
-    "cta": "Bắt đầu ngay",
-    "monthly_recurring": "Phí hàng tháng",
-    "monthly_hint": "Chọn dịch vụ hàng tháng để xem chi phí định kỳ",
-    "footnote": "Giá trên chỉ là ước tính. Báo giá chính thức sẽ xác nhận sau khi tư vấn. Chưa bao gồm domain (~300.000₫/năm) và hosting.",
+    "cta": "Nhận báo giá",
+    "delivery_label": "Thời gian ước tính",
+    "delivery_unit": "ngày làm việc",
+    "summary_label": "Lựa chọn của bạn",
+    "summary_hint": "Chọn các tùy chọn bên trái để xây dựng yêu cầu.",
+    "footnote": "Báo giá chính thức xác nhận sau buổi tư vấn ngắn.",
     "addons": {
       "seo_label": "Tối ưu SEO",
       "seo_sub": "Meta tags, schema markup, sitemap",
@@ -250,22 +291,32 @@
       }
     ]
   },
+  "servicesPage": {
+    "badge": "Dịch vụ",
+    "index_title": "Xây dựng theo ngành.",
+    "index_subtitle": "Mỗi loại hình kinh doanh có nhu cầu khác nhau. Mỗi website được thiết kế theo đúng nhu cầu đó.",
+    "live_badge": "Khách hàng thực tế",
+    "stat_days": "ngày",
+    "stat_pages": "trang",
+    "stat_demo": "có sẵn",
+    "live_label": "Website thực",
+    "demo_label": "Demo",
+    "features_label": "Tính năng bao gồm",
+    "preview_label": "Xem trước",
+    "visit_live": "Xem website thực",
+    "view_demo": "Xem demo",
+    "cta_heading": "Sẵn sàng bắt đầu?",
+    "cta_button": "Nhận báo giá"
+  },
   "approach": {
-    "heading1": "Tiêu chuẩn kỹ thuật, ",
-    "heading_italic": "kết quả thực tế",
-    "body": "Website tốt không chỉ đẹp về giao diện - nó phải tải nhanh, thân thiện với công cụ tìm kiếm, và dẫn dắt được khách hàng đến hành động mong muốn. Mỗi dự án được xây dựng với mục tiêu kinh doanh cụ thể.",
-    "panel_quote": "Giao diện tốt là nền tảng kinh doanh tốt.",
-    "features": [
-      {
-        "icon": "⚡",
-        "title": "Tốc độ & SEO",
-        "desc": "Codebase tối ưu, tải trang dưới 2 giây, cấu trúc chuẩn SEO - website xếp hạng cao hơn và giữ chân người dùng lâu hơn."
-      },
-      {
-        "icon": "✦",
-        "title": "Thiết kế có chủ đích",
-        "desc": "Từng yếu tố giao diện đều phục vụ một mục tiêu rõ ràng - xây dựng uy tín thương hiệu và tăng tỉ lệ chuyển đổi."
-      }
-    ]
+    "heading": "Theo cách chúng tôi nhìn nhận.",
+    "badge": "Tại sao chúng tôi xây dựng khác biệt",
+    "platform_q1": "Có bao giờ bạn nghĩ đến việc tự sở hữu một nền tảng bán hàng?",
+    "platform_q2": "Và so với TikTok hay Shopee, nó có thể mang lại lợi ích như thế nào?",
+    "platform_body": "Phí nền tảng từ 15 đến 25% là chi phí bạn trả để tiếp cận khách hàng của chính mình. Với 10 triệu doanh thu, con số đó có thể lên đến 2.5 triệu mỗi tháng. Website của riêng bạn giữ lại toàn bộ - khách hàng đến trực tiếp, không qua trung gian.",
+    "custom_hook1": "Thử tưởng tượng một website lý tưởng cho doanh nghiệp của bạn.",
+    "custom_hook2": "Nó trông như thế nào, khách hàng thao tác ra sao, nó có thể làm được gì.",
+    "custom_body": "Đa số các đơn vị thiết kế sử dụng WordPress hoặc template có sẵn - nhanh, nhưng được xây dựng cho doanh nghiệp nói chung, không phải của bạn. Chúng tôi xây dựng từ đầu theo đúng nhu cầu thực tế. Bạn hình dung được, chúng tôi xây dựng được.",
+    "panel_quote": "Giao diện tốt là nền tảng kinh doanh tốt."
   }
 }

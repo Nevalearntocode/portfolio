@@ -2,7 +2,8 @@
   "nav": {
     "home": "Home",
     "works": "Projects",
-    "about": "About"
+    "about": "About",
+    "contact": "Contact"
   },
   "metadata": {
     "home": {
@@ -10,8 +11,12 @@
       "description": "Websites designed and built for anyone who needs one."
     },
     "about": {
-      "title": "About — The Room",
-      "description": "A personal archive of games, creators, food, and tools I care about."
+      "title": "About — Minh Tâm",
+      "description": "Web developer based in An Giang, Vietnam. Building fast, clean websites for local businesses."
+    },
+    "contact": {
+      "title": "Contact — Minh Tâm",
+      "description": "Get in touch via email, phone, Zalo, or Messenger."
     },
     "works": {
       "title": "Works — Minh Tâm",
@@ -118,11 +123,47 @@
     "phone_label": "Phone",
     "copied": "Copied!"
   },
+  "aboutPage": {
+    "badge": "About",
+    "role": "Web Developer",
+    "location": "An Giang, Vietnam",
+    "bio": "I build fast, clean websites for local businesses - from simple landing pages to full storefronts with ordering and CMS. Based in An Giang, available in-person or remote.",
+    "stack_label": "Stack",
+    "availability": "Available for new projects",
+    "cta": "Get in touch",
+    "perspective_heading": "The way we see it.",
+    "perspective_badge": "On the industry",
+    "platform_q1": "Ever wonder why platforms like TikTok or Shopee take 15 to 25% of every sale you make?",
+    "platform_q2": "Ever think about how much more you'd keep with a platform of your own?",
+    "platform_p1": "That fee is the price of using their audience. On 10 million in sales, you're handing back up to 2.5 million - every month, before any other cost.",
+    "platform_p2": "Your own site flips that. Customers come to you directly. You keep every sale. No algorithm cutting your reach, no competitor listed next to your product.",
+    "platform_p3": "Platforms are still worth using - they're where people find you. The move is to build something alongside them that you actually own.",
+    "custom_hook1": "Take a moment and picture your ideal website.",
+    "custom_hook2": "How it looks, how customers move through it, what it lets them do.",
+    "custom_p1": "Most agencies today build with WordPress or pre-made templates. That means they pick a design that already exists, put your name and photos in, and hand it over. It's fast - but the structure, the flow, the features were decided by someone else, for a different business. Whatever you just pictured probably isn't in there.",
+    "custom_p2": "We build every site from scratch, around what your business actually needs. No pre-made structure to work around. If you can picture it, we can build it."
+  },
+  "contactPage": {
+    "badge": "Contact",
+    "title": "Get in touch",
+    "subtitle": "Pick whatever channel works best for you.",
+    "email": "Email",
+    "phone": "Phone",
+    "zalo": "Zalo",
+    "messenger": "Messenger / Facebook",
+    "copy_hint": "Click to copy",
+    "copied": "Copied!"
+  },
   "worksPage": {
     "title": "Our Work",
     "subtitle": "Websites built for local businesses across Vietnam",
     "cta_heading": "Ready to start your project?",
-    "cta_link": "Let's build something beautiful together"
+    "cta_link": "Let's build something beautiful together",
+    "client_section": "Client Work",
+    "templates_section": "Templates",
+    "cam_giang_category": "Dried specialty foods · An Giang",
+    "cam_giang_stat": "followers across platforms",
+    "cam_giang_body": "Platform fees were eating 25% of every TikTok sale. Facebook orders came in through Messenger one message at a time - no structure, easy to miss. We built them an owned platform: a product catalog, a one-step order modal that skips the cart entirely, and a CMS to manage products, discounts, and orders themselves."
   },
   "workingOn": {
     "badge": "Active",
@@ -164,19 +205,19 @@
   "pricingCalc": {
     "badge": "Pricing",
     "heading": "Estimate your project",
-    "subtext": "Adjust the slider and tick what you need - prices update instantly.",
+    "subtext": "Adjust the slider and tick what you need - delivery estimate updates instantly.",
     "pages_label": "Number of pages",
     "page_singular": "page",
     "page_plural": "pages",
     "per_page": "/page",
     "one_time_addons": "One-time add-ons",
     "monthly_services": "Monthly services",
-    "estimated_total": "Estimated Total",
-    "one_time_cost": "One-time development cost",
-    "cta": "Get Started Now",
-    "monthly_recurring": "Monthly recurring",
-    "monthly_hint": "Select a monthly service to see recurring cost",
-    "footnote": "Prices are estimates. Final quote confirmed after consultation. Domain (~300.000₫/yr) and hosting not included.",
+    "cta": "Get a quote",
+    "delivery_label": "Estimated delivery",
+    "delivery_unit": "working days",
+    "summary_label": "Your selection",
+    "summary_hint": "Tick options on the left to build your scope.",
+    "footnote": "Final quote confirmed after a short consultation.",
     "addons": {
       "seo_label": "On-page SEO",
       "seo_sub": "Meta tags, schema markup, sitemap",
@@ -238,22 +279,32 @@
       }
     ]
   },
+  "servicesPage": {
+    "badge": "Services",
+    "index_title": "Built for your industry.",
+    "index_subtitle": "Every business type has different needs. Each site is designed around yours.",
+    "live_badge": "Live client",
+    "stat_days": "days",
+    "stat_pages": "pages",
+    "stat_demo": "available",
+    "live_label": "Live site",
+    "demo_label": "Demo",
+    "features_label": "What's included",
+    "preview_label": "Preview",
+    "visit_live": "Visit live site",
+    "view_demo": "View demo",
+    "cta_heading": "Ready to get started?",
+    "cta_button": "Get a quote"
+  },
   "approach": {
-    "heading1": "Crafting the digital ",
-    "heading_italic": "standard",
-    "body": "I don't just build websites - I engineer brand-aligned digital experiences that prioritize speed, conversion, and editorial precision. Every project is a bespoke challenge.",
-    "panel_quote": "Design is Strategy.",
-    "features": [
-      {
-        "icon": "⚡",
-        "title": "Performance First",
-        "desc": "Lightweight codebases designed to load instantly and rank above competitors in every SEO metric."
-      },
-      {
-        "icon": "✦",
-        "title": "Editorial Precision",
-        "desc": "Pixel-perfect attention to typography, spacing, and rhythm to ensure your brand's voice is heard clearly."
-      }
-    ]
+    "heading": "The way we see it.",
+    "badge": "Why we build differently",
+    "platform_q1": "Ever wonder why platforms like TikTok or Shopee take 15 to 25% of every sale you make?",
+    "platform_q2": "Ever think about how much more you'd keep with a platform of your own?",
+    "platform_body": "That fee is the price of using their audience. On 10 million in sales, you're handing back up to 2.5 million every month. Your own site keeps every sale - and customers come back directly, no platform required.",
+    "custom_hook1": "Take a moment and picture your ideal website.",
+    "custom_hook2": "How it looks, how customers move through it, what it lets them do.",
+    "custom_body": "Most agencies build with WordPress or pre-made templates - fast, but designed for businesses in general, not yours. We build from scratch around what your business actually needs. If you can picture it, we can build it.",
+    "panel_quote": "Design is Strategy."
   }
 }

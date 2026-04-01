@@ -55,7 +55,7 @@ function WorkCard({ work, offset }: { work: (typeof works)[0]; offset?: boolean 
           src={work.thumbnail}
           alt={work.title}
           fill
-          className={`object-cover transition-all duration-700 ${hovering && work.video ? "opacity-0" : "opacity-80 group-hover:opacity-100 group-hover:scale-105"}`}
+          className={`object-cover transition-opacity duration-700 ${hovering && work.video ? "opacity-0" : "opacity-80 group-hover:opacity-100"}`}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
 

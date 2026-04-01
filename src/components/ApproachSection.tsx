@@ -6,12 +6,9 @@ import { useTranslations } from "next-intl";
 import { BoidsCanvas } from "@/components/BoidsCanvas";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-type Feature = { icon: string; title: string; desc: string };
-
 export function ApproachSection() {
   const t = useTranslations("approach");
-  const features = t.raw("features") as Feature[];
-  // Display values — update live so the thumb and label move while dragging
+
   const DEFAULTS = { sep: 0.05, ali: 0.05, coh: 0.005, vr: 60 };
   const [sep, setSep] = useState(DEFAULTS.sep);
   const [ali, setAli] = useState(DEFAULTS.ali);
@@ -27,12 +24,10 @@ export function ApproachSection() {
   const [ripple, setRipple] = useState<{ x: number; y: number; id: number } | null>(null);
 
   const handleCardTouch = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
-    const t = e.touches[0];
+    const touch = e.touches[0];
     const r = e.currentTarget.getBoundingClientRect();
-    const x = t.clientX - r.left;
-    const y = t.clientY - r.top;
     setShowTapHint(false);
-    setRipple({ x, y, id: Date.now() });
+    setRipple({ x: touch.clientX - r.left, y: touch.clientY - r.top, id: Date.now() });
     setTimeout(() => setRipple(null), 600);
   }, []);
 
@@ -48,38 +43,58 @@ export function ApproachSection() {
     <section className="w-full py-32 px-6 sm:px-10 bg-[#0e0e0e]">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
 
+        {/* Left — two arguments */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col gap-14"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
-            {t("heading1")}
-            <span className="font-['Instrument_Serif'] italic text-[#d0bcff]" style={{ fontStyle: "italic" }}>
-              {t("heading_italic")}
+          <div className="flex flex-col gap-3">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white">
+              {t("heading")}
+            </h2>
+            <span className="text-xs uppercase tracking-widest text-white/30">
+              {t("badge")}
             </span>
-            {"."}
-          </h2>
-          <p className="text-[#ccc3d9] text-lg leading-relaxed mb-12">
-            {t("body")}
-          </p>
+          </div>
 
-          <div className="flex flex-col gap-8">
-            {features.map((f) => (
-              <div key={f.title} className="flex gap-5">
-                <div className="w-11 h-11 rounded-full bg-[#7b39fc]/10 border border-[#7b39fc]/20 flex items-center justify-center shrink-0 text-lg">
-                  {f.icon}
-                </div>
-                <div>
-                  <h4 className="text-white font-bold mb-1">{f.title}</h4>
-                  <p className="text-[#ccc3d9] text-sm leading-relaxed">{f.desc}</p>
-                </div>
-              </div>
-            ))}
+          {/* Argument 1 - Platform */}
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1">
+              <p className="text-2xl sm:text-3xl font-semibold text-white leading-snug">
+                {t("platform_q1")}
+              </p>
+              <p className="text-2xl sm:text-3xl font-semibold text-white/40 leading-snug">
+                {t("platform_q2")}
+              </p>
+            </div>
+            <p className="text-[#ccc3d9] text-base leading-relaxed">
+              {t("platform_body")}
+            </p>
+          </div>
+
+          {/* Divider */}
+          <div className="w-full h-px bg-white/[0.06]" />
+
+          {/* Argument 2 - Custom */}
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1">
+              <p className="text-2xl sm:text-3xl font-semibold text-white leading-snug">
+                {t("custom_hook1")}
+              </p>
+              <p className="text-2xl sm:text-3xl font-semibold text-white/40 leading-snug">
+                {t("custom_hook2")}
+              </p>
+            </div>
+            <p className="text-[#ccc3d9] text-base leading-relaxed">
+              {t("custom_body")}
+            </p>
           </div>
         </motion.div>
 
+        {/* Right — boids */}
         <motion.div
           initial={{ opacity: 0, x: 32 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -95,7 +110,6 @@ export function ApproachSection() {
             <BoidsCanvas separation={sepW} alignment={aliW} cohesion={cohW} visualRange={vrW} />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none" />
 
-            {/* Tap hint — mobile only, disappears after first touch */}
             <AnimatePresence>
               {isMobile && showTapHint && (
                 <motion.div
@@ -118,7 +132,12 @@ export function ApproachSection() {
               )}
             </AnimatePresence>
 
-            {/* Ripple on tap */}
+            <div className="relative z-10 p-10 select-none pointer-events-none">
+              <div className="text-5xl font-['Instrument_Serif'] italic text-white/15" style={{ fontStyle: "italic" }}>
+                {t("panel_quote")}
+              </div>
+            </div>
+
             <AnimatePresence>
               {ripple && (
                 <motion.div
@@ -132,14 +151,9 @@ export function ApproachSection() {
                 />
               )}
             </AnimatePresence>
-
-            <div className="relative z-10 p-10 select-none pointer-events-none">
-              <div className="text-5xl font-['Instrument_Serif'] italic text-white/15" style={{ fontStyle: "italic" }}>
-                {t("panel_quote")}
-              </div>
-            </div>
           </div>
-          {/* Sliders — 4 in one row */}
+
+          {/* Sliders */}
           <div className="mt-5 flex items-center justify-between mb-3">
             <span className="text-[#ccc3d9] text-xs">Flocking behaviour</span>
             <button
@@ -151,10 +165,10 @@ export function ApproachSection() {
           </div>
           <div key={sliderKey} className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: "Separation",    value: sep, set: setSep, commit: setSepW, min: 0.01, max: 0.1,  step: 0.001,  fmt: (v: number) => v.toFixed(3) },
-              { label: "Alignment",     value: ali, set: setAli, commit: setAliW, min: 0, max: 0.1,  step: 0.001,  fmt: (v: number) => v.toFixed(3) },
-              { label: "Cohesion",      value: coh, set: setCoh, commit: setCohW, min: 0, max: 0.01, step: 0.0001, fmt: (v: number) => v.toFixed(4) },
-              { label: "Visual Range",  value: vr,  set: setVr,  commit: setVrW,  min: 0, max: 150,  step: 1,      fmt: (v: number) => v.toFixed(0) },
+              { label: "Separation",   value: sep, set: setSep, commit: setSepW, min: 0.01, max: 0.1,  step: 0.001,  fmt: (v: number) => v.toFixed(3) },
+              { label: "Alignment",    value: ali, set: setAli, commit: setAliW, min: 0,    max: 0.1,  step: 0.001,  fmt: (v: number) => v.toFixed(3) },
+              { label: "Cohesion",     value: coh, set: setCoh, commit: setCohW, min: 0,    max: 0.01, step: 0.0001, fmt: (v: number) => v.toFixed(4) },
+              { label: "Visual Range", value: vr,  set: setVr,  commit: setVrW,  min: 0,    max: 150,  step: 1,      fmt: (v: number) => v.toFixed(0) },
             ].map(({ label, value, set, commit, min, max, step, fmt }) => (
               <div key={label} className="flex flex-col gap-2">
                 <div className="flex justify-between items-baseline">
@@ -173,7 +187,6 @@ export function ApproachSection() {
               </div>
             ))}
           </div>
-
         </motion.div>
 
       </div>
