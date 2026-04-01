@@ -46,14 +46,18 @@ function useScrolledPastHero() {
   return scrolled;
 }
 
+const NAV_LINKS = [
+  { href: "/", key: "home" },
+  { href: "/works", key: "works" },
+  { href: "/about", key: "about" },
+  { href: "/contact", key: "contact" },
+] as const;
+
 export function Navbar() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const activeUsers = useActiveUsers();
   const scrolled = useScrolledPastHero();
-
-  const isHome = pathname === "/";
-  const isWorks = pathname === "/works";
 
   const motionProps = {
     initial: { y: -30, opacity: 0 },
@@ -87,41 +91,27 @@ export function Navbar() {
           <span className="relative z-10 w-2 h-2 rounded-full bg-[#7b39fc] shrink-0 animate-pulse" />
         )}
 
-        {/* Home link */}
-        <span className="relative z-10 flex items-center gap-1.5">
-          <Link
-            href="/"
-            className={`text-sm transition-colors ${
-              isHome
-                ? "text-white font-semibold"
-                : "text-white/60 hover:text-white"
-            }`}
-          >
-            {t("home")}
-          </Link>
-          {isHome && <span className="w-1 h-1 rounded-full bg-[#7b39fc]" />}
-        </span>
-
-        {/* Works link */}
-        <span className="relative z-10 flex items-center gap-1.5">
-          <Link
-            href="/works"
-            className={`text-sm transition-colors ${
-              isWorks
-                ? "text-white font-semibold"
-                : "text-white/60 hover:text-white"
-            }`}
-          >
-            {t("works")}
-          </Link>
-          {isWorks && <span className="w-1 h-1 rounded-full bg-[#7b39fc]" />}
-        </span>
+        {NAV_LINKS.map(({ href, key }) => {
+          const isActive = pathname === href;
+          return (
+            <span key={href} className="relative z-10 flex items-center gap-1.5">
+              <Link
+                href={href}
+                className={`text-sm transition-colors ${
+                  isActive ? "text-white font-semibold" : "text-white/60 hover:text-white"
+                }`}
+              >
+                {t(key)}
+              </Link>
+              {isActive && <span className="w-1 h-1 rounded-full bg-[#7b39fc]" />}
+            </span>
+          );
+        })}
 
         <span className="relative z-10">
           <LanguageSwitcher />
         </span>
       </motion.nav>
-
     </div>
   );
 }
