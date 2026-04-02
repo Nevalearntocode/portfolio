@@ -16,7 +16,7 @@ export function SkillsSection() {
   const rows  = left.length;
 
   return (
-    <section className="w-full pt-24 pb-0 px-6 sm:px-10 bg-[#0e0e0e]">
+    <section className="w-full pt-24 pb-0 px-6 sm:px-10">
       <div className="max-w-screen-xl mx-auto flex flex-col gap-12">
 
         <motion.div
