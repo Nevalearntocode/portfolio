@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useMessengerUrl } from "@/hooks/use-mobile";
+import { useRouter } from "@/i18n/navigation";
 
 const lineVariants = {
   hidden: { y: "110%" },
@@ -52,6 +53,7 @@ const METRICS = [
 export function HeroSection() {
   const t = useTranslations("hero");
   const messengerUrl = useMessengerUrl();
+  const router = useRouter();
 
   const headlineLines = [t("heading1"), t("heading_italic")];
 
@@ -212,7 +214,8 @@ export function HeroSection() {
       </div>
 
       {/* Main layout: content + right panel */}
-      <div className="absolute inset-0 flex">
+      <div className="absolute inset-0 flex justify-center">
+        <div className="w-full max-w-screen-xl flex">
         {/* Left content */}
         <div
           className="flex-1 flex flex-col justify-center"
@@ -396,6 +399,7 @@ export function HeroSection() {
             </motion.div>
           ))}
         </div>
+        </div>
       </div>
 
       {/* Sequence number */}
@@ -432,7 +436,7 @@ export function HeroSection() {
             key={item}
             onClick={() => {
               if (item === "Overview") window.scrollTo({ top: 0, behavior: "smooth" });
-              else if (item === "Contact") window.location.href = "contact";
+              else if (item === "Contact") router.push("/contact");
               else document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
             }}
             style={{
