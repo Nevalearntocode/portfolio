@@ -110,7 +110,7 @@ export function PricingSection() {
   const deliveryDays = estimateDays(pages, oneTime);
 
   return (
-    <section className="w-full py-24 px-6 sm:px-10 bg-[#131313]">
+    <section id="pricing" className="w-full py-24 px-6 sm:px-10 bg-[#131313]">
       <div className="max-w-screen-xl mx-auto flex flex-col gap-12">
 
         {/* header */}
