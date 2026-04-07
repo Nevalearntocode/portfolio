@@ -7,20 +7,20 @@
   },
   "metadata": {
     "home": {
-      "title": "Minh Tâm — Web Developer",
+      "title": "Minh Tâm - Web Developer",
       "description": "Websites designed and built for anyone who needs one."
     },
     "about": {
-      "title": "About — Minh Tâm",
+      "title": "About - Minh Tâm",
       "description": "Web developer based in An Giang, Vietnam. Building fast, clean websites for local businesses."
     },
     "contact": {
-      "title": "Contact — Minh Tâm",
+      "title": "Contact - Minh Tâm",
       "description": "Get in touch via email, phone, Zalo, or Messenger."
     },
     "works": {
-      "title": "Works — Minh Tâm",
-      "description": "Demo websites built for local businesses — flower shops, salons, bakeries, and more."
+      "title": "Works - Minh Tâm",
+      "description": "Demo websites built for local businesses - flower shops, salons, bakeries, and more."
     }
   },
   "hero": {
@@ -42,7 +42,7 @@
   "about": {
     "badge": "About",
     "title": "Who I am",
-    "p1": "I design and build websites — for personal presence, business growth, or whatever you're building.",
+    "p1": "I design and build websites - for personal presence, business growth, or whatever you're building.",
     "footer": "In-person available · An Giang based"
   },
   "availability": {
@@ -53,20 +53,44 @@
     "badge": "What I do",
     "title": "What goes into your site",
     "capabilities": [
-      { "title": "Online Shop", "desc": "Product listings, cart, and checkout - ready to take orders from day one." },
-      { "title": "Booking System", "desc": "Let customers pick a date and time without back-and-forth messages." },
-      { "title": "Google Optimized", "desc": "Built clean so search engines can find and rank your site." },
-      { "title": "Manage Your Content", "desc": "Update text, images, and products yourself - no developer needed." },
-      { "title": "Mobile First", "desc": "Looks sharp on every screen, from phone to desktop." },
-      { "title": "Custom Design", "desc": "No templates. Built around your brand, your colors, your feel." },
-      { "title": "Multilingual", "desc": "Reach more customers by serving them in their own language." },
-      { "title": "Photo Gallery", "desc": "Showcase your work, menu, or products with a fast image gallery." }
+      {
+        "title": "Online Shop",
+        "desc": "Product listings, cart, and checkout - ready to take orders from day one."
+      },
+      {
+        "title": "Booking System",
+        "desc": "Let customers pick a date and time without back-and-forth messages."
+      },
+      {
+        "title": "Google Optimized",
+        "desc": "Built clean so search engines can find and rank your site."
+      },
+      {
+        "title": "Manage Your Content",
+        "desc": "Update text, images, and products yourself - no developer needed."
+      },
+      {
+        "title": "Mobile First",
+        "desc": "Looks sharp on every screen, from phone to desktop."
+      },
+      {
+        "title": "Custom Design",
+        "desc": "No templates. Built around your brand, your colors, your feel."
+      },
+      {
+        "title": "Multilingual",
+        "desc": "Reach more customers by serving them in their own language."
+      },
+      {
+        "title": "Photo Gallery",
+        "desc": "Showcase your work, menu, or products with a fast image gallery."
+      }
     ]
   },
   "works": {
     "badge": "Demo Projects",
     "title": "What I can build for you",
-    "hint": "Demo sites — click for a preview",
+    "hint": "Demo sites - click for a preview",
     "dialog": {
       "visit": "Visit live →",
       "close": "Close"
@@ -76,21 +100,21 @@
         "id": "1",
         "businessType": "Wedding Cards",
         "businessName": "Thiệp Cưới Đình Toàn",
-        "description": "Premium wedding & greeting card shop — 3D card viewer, custom orders via Zalo.",
+        "description": "Premium wedding & greeting card shop - 3D card viewer, custom orders via Zalo.",
         "tag": "Wedding Cards"
       },
       {
         "id": "2",
         "businessType": "F&B",
         "businessName": "DUSK",
-        "description": "Minimalist specialty drinks shop — premium drink menu and online ordering.",
+        "description": "Minimalist specialty drinks shop - premium drink menu and online ordering.",
         "tag": "F&B"
       },
       {
         "id": "3",
         "businessType": "Barbershop",
         "businessName": "Barber District",
-        "description": "Premium men's barbershop — online booking, barber profiles, and style gallery.",
+        "description": "Premium men's barbershop - online booking, barber profiles, and style gallery.",
         "tag": "Barber"
       },
       {
@@ -105,9 +129,21 @@
   "process": {
     "badge": "How it works",
     "steps": [
-      { "n": "01", "title": "Consult", "desc": "Tell me about your business. I'll map out exactly what you need." },
-      { "n": "02", "title": "Build", "desc": "I design and develop your site. You review and approve each step." },
-      { "n": "03", "title": "Launch", "desc": "Your site goes live. I handle hosting, domain, and setup." }
+      {
+        "n": "01",
+        "title": "Consult",
+        "desc": "Tell me about your business. I'll map out exactly what you need."
+      },
+      {
+        "n": "02",
+        "title": "Build",
+        "desc": "I design and develop your site. You review and approve each step."
+      },
+      {
+        "n": "03",
+        "title": "Launch",
+        "desc": "Your site goes live. I handle hosting, domain, and setup."
+      }
     ]
   },
   "footer": {
@@ -275,7 +311,7 @@
         "features": [
           "Everything in Growth",
           "User login, cart & checkout",
-          "Full CMS — products, orders, bookings",
+          "Full CMS - products, orders, bookings",
           "Custom integrations & dashboard",
           "Priority support + ongoing updates"
         ]

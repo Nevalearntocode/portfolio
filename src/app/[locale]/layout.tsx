@@ -22,12 +22,16 @@ const dmMono = DM_Mono({
   weight: ["400", "500"],
 });
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://minhtam.tech'
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://minhtam.tech";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata.home" });
-  const pageUrl = locale === 'en' ? BASE : `${BASE}/vi`
+  const pageUrl = locale === "en" ? BASE : `${BASE}/vi`;
 
   return {
     metadataBase: new URL(BASE),
@@ -41,16 +45,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t("title"),
       description: t("description"),
       url: pageUrl,
-      siteName: 'Minh Tâm',
-      locale: locale === 'vi' ? 'vi_VN' : 'en_US',
-      type: 'website',
-      images: [{ url: '/og-image.png', width: 1366, height: 728 }],
+      siteName: "Minh Tâm",
+      locale: locale === "vi" ? "vi_VN" : "en_US",
+      type: "website",
+      images: [{ url: "/og-image.png", width: 1366, height: 728 }],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ['/og-image.png'],
+      images: ["/og-image.png"],
     },
   };
 }
@@ -70,7 +74,12 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${dmSans.variable} ${dmMono.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          forcedTheme="dark"
+          disableTransitionOnChange
+        >
           <NextIntlClientProvider messages={messages}>
             <CustomCursor />
             {children}

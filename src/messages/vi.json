@@ -7,7 +7,7 @@
   },
   "metadata": {
     "home": {
-      "title": "Minh Tâm — Lập Trình Web",
+      "title": "Minh Tâm - Lập Trình Web",
       "description": "Thiết kế và xây dựng website đẹp, gọn, và đáng nhớ."
     },
     "about": {
@@ -15,11 +15,11 @@
       "description": "Lập trình viên web tại An Giang. Xây dựng website chuyên nghiệp cho doanh nghiệp địa phương."
     },
     "contact": {
-      "title": "Liên Hệ — Minh Tâm",
+      "title": "Liên Hệ - Minh Tâm",
       "description": "Liên hệ qua email, điện thoại, Zalo hoặc Messenger."
     },
     "works": {
-      "title": "Dự Án — Minh Tâm",
+      "title": "Dự Án - Minh Tâm",
       "description": "Website demo cho các tiệm kinh doanh - tiệm hoa, tiệm tóc, tiệm bánh, và nhiều hơn nữa."
     }
   },
@@ -53,20 +53,44 @@
     "badge": "Tính năng",
     "title": "Tính năng phù hợp với mọi loại hình kinh doanh",
     "capabilities": [
-      { "title": "Cửa hàng trực tuyến", "desc": "Danh sách sản phẩm, giỏ hàng, thanh toán - sẵn sàng nhận đơn ngay từ ngày đầu." },
-      { "title": "Đặt lịch hẹn", "desc": "Khách hàng tự chọn thời gian, không cần liên hệ qua lại." },
-      { "title": "Tối ưu tìm kiếm", "desc": "Cấu trúc chuẩn SEO giúp website xếp hạng cao trên Google." },
-      { "title": "Tự quản lý nội dung", "desc": "Cập nhật bài viết, sản phẩm, hình ảnh mà không cần nhờ lập trình viên." },
-      { "title": "Tối ưu di động", "desc": "Hiển thị chuẩn trên mọi thiết bị - điện thoại, máy tính bảng, máy tính." },
-      { "title": "Thiết kế theo thương hiệu", "desc": "Không dùng template có sẵn. Giao diện được xây dựng riêng cho từng doanh nghiệp." },
-      { "title": "Đa ngôn ngữ", "desc": "Hỗ trợ nhiều ngôn ngữ để tiếp cận khách hàng rộng hơn." },
-      { "title": "Thư viện hình ảnh", "desc": "Trình bày sản phẩm, dịch vụ hoặc danh mục công trình một cách trực quan." }
+      {
+        "title": "Cửa hàng trực tuyến",
+        "desc": "Danh sách sản phẩm, giỏ hàng, thanh toán - sẵn sàng nhận đơn ngay từ ngày đầu."
+      },
+      {
+        "title": "Đặt lịch hẹn",
+        "desc": "Khách hàng tự chọn thời gian, không cần liên hệ qua lại."
+      },
+      {
+        "title": "Tối ưu tìm kiếm",
+        "desc": "Cấu trúc chuẩn SEO giúp website xếp hạng cao trên Google."
+      },
+      {
+        "title": "Tự quản lý nội dung",
+        "desc": "Cập nhật bài viết, sản phẩm, hình ảnh mà không cần nhờ lập trình viên."
+      },
+      {
+        "title": "Tối ưu di động",
+        "desc": "Hiển thị chuẩn trên mọi thiết bị - điện thoại, máy tính bảng, máy tính."
+      },
+      {
+        "title": "Thiết kế theo thương hiệu",
+        "desc": "Không dùng template có sẵn. Giao diện được xây dựng riêng cho từng doanh nghiệp."
+      },
+      {
+        "title": "Đa ngôn ngữ",
+        "desc": "Hỗ trợ nhiều ngôn ngữ để tiếp cận khách hàng rộng hơn."
+      },
+      {
+        "title": "Thư viện hình ảnh",
+        "desc": "Trình bày sản phẩm, dịch vụ hoặc danh mục công trình một cách trực quan."
+      }
     ]
   },
   "works": {
     "badge": "Demo Dự Án",
     "title": "Nhìn xem thử một vài thiết kế.",
-    "hint": "Website demo — bấm để xem thử",
+    "hint": "Website demo - bấm để xem thử",
     "dialog": {
       "visit": "Xem live →",
       "close": "Đóng"
@@ -76,21 +100,21 @@
         "id": "1",
         "businessType": "Thiệp Cưới",
         "businessName": "Thiệp Cưới Đình Toàn",
-        "description": "Cửa hàng thiệp cưới & thiệp chúc cao cấp — xem thiệp 3D, đặt theo yêu cầu qua Zalo.",
+        "description": "Cửa hàng thiệp cưới & thiệp chúc cao cấp - xem thiệp 3D, đặt theo yêu cầu qua Zalo.",
         "tag": "Thiệp cưới"
       },
       {
         "id": "2",
         "businessType": "F&B",
         "businessName": "DUSK",
-        "description": "Tiệm nước đặc biệt phong cách tối giản — thực đơn thức uống cao cấp và đặt hàng online.",
+        "description": "Tiệm nước đặc biệt phong cách tối giản - thực đơn thức uống cao cấp và đặt hàng online.",
         "tag": "F&B"
       },
       {
         "id": "3",
         "businessType": "Barbershop",
         "businessName": "Barber District",
-        "description": "Barbershop cao cấp dành cho phái mạnh — đặt lịch, hồ sơ thợ, thư viện phong cách.",
+        "description": "Barbershop cao cấp dành cho phái mạnh - đặt lịch, hồ sơ thợ, thư viện phong cách.",
         "tag": "Barber"
       },
       {
@@ -287,7 +311,7 @@
         "features": [
           "Tất cả trong gói Phát Triển",
           "Đăng nhập, giỏ hàng & thanh toán",
-          "CMS đầy đủ — sản phẩm, đơn hàng, đặt lịch",
+          "CMS đầy đủ - sản phẩm, đơn hàng, đặt lịch",
           "Tích hợp tùy chỉnh & dashboard",
           "Hỗ trợ ưu tiên + cập nhật liên tục"
         ]
