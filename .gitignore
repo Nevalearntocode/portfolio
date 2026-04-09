@@ -68,3 +68,7 @@ plans/revamp-plan/works_gallery_revamp/screen.png
 public/stripe-preview.html
 content-strategy.md
 .playwright-clis
+
+# learning session images (local only, not committed)
+/learning-sessions/*
+!/learning-sessions/.gitkeep

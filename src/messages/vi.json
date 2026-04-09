@@ -3,7 +3,8 @@
     "home": "Trang chủ",
     "works": "Dự án",
     "about": "Về mình",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "learning": "Học tập"
   },
   "metadata": {
     "home": {
@@ -21,6 +22,10 @@
     "works": {
       "title": "Dự Án - Minh Tâm",
       "description": "Website demo cho các tiệm kinh doanh - tiệm hoa, tiệm tóc, tiệm bánh, và nhiều hơn nữa."
+    },
+    "learningAws": {
+      "title": "Hành Trình AWS Cloud Practitioner - Minh Tâm",
+      "description": "Nhật ký học AWS Cloud Practitioner theo từng buổi - chủ đề, điểm chính, và bài kiểm tra."
     }
   },
   "hero": {
@@ -334,6 +339,38 @@
     "view_demo": "Xem demo",
     "cta_heading": "Sẵn sàng bắt đầu?",
     "cta_button": "Nhận báo giá"
+  },
+  "learningTeaser": {
+    "badge": "Đang Học",
+    "title": "AWS Cloud Practitioner",
+    "subtitle": "Xây dựng nền tảng cloud từng buổi một.",
+    "no_sessions": "Buổi đầu tiên sắp ra mắt.",
+    "last_session": "Buổi học gần nhất:",
+    "sessions_count": "{count} buổi đã ghi lại",
+    "cta": "Đọc hành trình"
+  },
+  "learningAws": {
+    "badge": "Hành Trình Học Tập",
+    "title": "AWS Cloud Practitioner",
+    "subtitle": "Nhật ký học tập công khai.",
+    "course_source": "YouTube · Khóa học 14 tiếng",
+    "started": "Bắt đầu",
+    "sessions_logged": "{count} buổi đã ghi lại",
+    "no_sessions_title": "Chưa có buổi học nào.",
+    "no_sessions_body": "Quay lại sau nhé - buổi học đầu tiên sắp được cập nhật.",
+    "day_label": "Ngày",
+    "topics_label": "Nội dung",
+    "takeaways_label": "Điểm chính",
+    "quiz_label": "Bài kiểm tra",
+    "quiz_mode_review": "Kết quả của tôi",
+    "quiz_mode_take": "Tự làm thử",
+    "quiz_your_answer": "Câu trả lời của tôi",
+    "quiz_correct": "Đáp án đúng",
+    "quiz_submit": "Nộp bài",
+    "quiz_reveal": "Xem kết quả",
+    "quiz_result_correct": "Đúng",
+    "quiz_result_wrong": "Sai",
+    "quiz_score": "Đúng {correct}/{total} câu"
   },
   "approach": {
     "heading": "Tôi nghĩ là.",

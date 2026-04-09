@@ -4,6 +4,7 @@ import { WorksSection } from "@/components/WorksSection";
 import { BrandingWall } from "@/components/BrandingWall";
 import { ApproachSection } from "@/components/ApproachSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { LearningTeaserSection } from "@/components/LearningTeaserSection";
 import { DotGrid } from "@/components/DotGrid";
 import { ProcessSection } from "@/components/ProcessSection";
 import { PricingSection } from "@/components/PricingSection";
@@ -55,6 +56,7 @@ export default function HomePage() {
         <BrandingWall />
         <ApproachSection />
         {/* <TestimonialsSection /> */}
+        <LearningTeaserSection />
         <DotGrid />
         <ProcessSection />
         <PricingSection />
