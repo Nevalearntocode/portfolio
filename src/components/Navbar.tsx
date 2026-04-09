@@ -49,6 +49,7 @@ function useScrolledPastHero() {
 const NAV_LINKS = [
   { href: "/", key: "home" },
   { href: "/works", key: "works" },
+  { href: "/learning/aws", key: "learning" },
   { href: "/about", key: "about" },
   { href: "/contact", key: "contact" },
 ] as const;

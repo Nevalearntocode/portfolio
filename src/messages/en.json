@@ -3,7 +3,8 @@
     "home": "Home",
     "works": "Projects",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "learning": "Learning"
   },
   "metadata": {
     "home": {
@@ -21,6 +22,10 @@
     "works": {
       "title": "Works - Minh Tâm",
       "description": "Demo websites built for local businesses - flower shops, salons, bakeries, and more."
+    },
+    "learningAws": {
+      "title": "AWS Cloud Practitioner Journey - Minh Tâm",
+      "description": "A daily log of what I'm learning in the AWS Cloud Practitioner course - topics, key takeaways, and quizzes."
     }
   },
   "hero": {
@@ -334,6 +339,38 @@
     "view_demo": "View demo",
     "cta_heading": "Ready to get started?",
     "cta_button": "Get a quote"
+  },
+  "learningTeaser": {
+    "badge": "Currently Learning",
+    "title": "AWS Cloud Practitioner",
+    "subtitle": "Building cloud fundamentals, one session at a time.",
+    "no_sessions": "First session coming soon.",
+    "last_session": "Last session:",
+    "sessions_count": "{count} sessions logged",
+    "cta": "Read the journey"
+  },
+  "learningAws": {
+    "badge": "Learning Journey",
+    "title": "AWS Cloud Practitioner",
+    "subtitle": "A public study log.",
+    "course_source": "YouTube · 14h course",
+    "started": "Started",
+    "sessions_logged": "{count} sessions logged",
+    "no_sessions_title": "No sessions yet.",
+    "no_sessions_body": "Check back soon - the first log entry is on its way.",
+    "day_label": "Day",
+    "topics_label": "Covered",
+    "takeaways_label": "Key takeaways",
+    "quiz_label": "Quiz",
+    "quiz_mode_review": "How I did",
+    "quiz_mode_take": "Take it yourself",
+    "quiz_your_answer": "Your answer",
+    "quiz_correct": "Correct",
+    "quiz_submit": "Submit answers",
+    "quiz_reveal": "See results",
+    "quiz_result_correct": "Correct",
+    "quiz_result_wrong": "Wrong",
+    "quiz_score": "{correct}/{total} correct"
   },
   "approach": {
     "heading": "The way I see it.",
