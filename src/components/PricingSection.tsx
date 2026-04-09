@@ -66,24 +66,94 @@ function Checkbox({
   );
 }
 
+type Package = {
+  id: string;
+  name: string;
+  price: string;
+  recommended?: boolean;
+  features: string[];
+};
+
+function TierCard({
+  pkg,
+  index,
+  cta,
+  recommended,
+  messengerUrl,
+}: {
+  pkg: Package;
+  index: number;
+  cta: string;
+  recommended: string;
+  messengerUrl: string;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.08 }}
+      className={`relative flex flex-col gap-6 rounded-2xl p-8 bg-[#161616] ${
+        pkg.recommended
+          ? "border border-[rgba(123,57,252,0.35)]"
+          : "border border-white/5"
+      }`}
+    >
+      {pkg.recommended && (
+        <span className="absolute top-5 right-5 font-mono text-[10px] uppercase tracking-widest text-[#7b39fc] border border-[rgba(123,57,252,0.3)] px-2 py-0.5">
+          {recommended}
+        </span>
+      )}
+
+      <div>
+        <p className="text-xs font-semibold text-[#ccc3d9]/50 uppercase tracking-widest mb-2">
+          {pkg.name}
+        </p>
+        <p className="text-2xl font-bold text-white">{pkg.price}</p>
+      </div>
+
+      <ul className="flex flex-col gap-3 flex-1">
+        {pkg.features.map((feat) => (
+          <li key={feat} className="flex items-start gap-3 text-sm text-[#ccc3d9]">
+            <span className="text-[#7b39fc] mt-0.5 shrink-0 select-none">•</span>
+            {feat}
+          </li>
+        ))}
+      </ul>
+
+      <a
+        href={messengerUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm text-[#ccc3d9]/60 hover:text-[#d0bcff] transition-colors"
+      >
+        {cta}
+      </a>
+    </motion.div>
+  );
+}
+
 export function PricingSection() {
-  const t = useTranslations("pricingCalc");
+  const tCalc = useTranslations("pricingCalc");
+  const tTiers = useTranslations("pricing");
   const messengerUrl = useMessengerUrl();
 
   const [pages,   setPages]   = useState(5);
   const [oneTime, setOneTime] = useState<Set<OneTimeId>>(new Set());
   const [monthly, setMonthly] = useState<Set<MonthlyId>>(new Set());
 
+  const packages = tTiers.raw("packages") as Package[];
+
   const oneTimeAddons = ONE_TIME_ADDON_IDS.map(id => ({
     id,
-    label: t(`addons.${id}_label`),
-    sub:   t(`addons.${id}_sub`),
+    label: tCalc(`addons.${id}_label`),
+    sub:   tCalc(`addons.${id}_sub`),
   }));
 
   const monthlyAddons = MONTHLY_ADDON_IDS.map(id => ({
     id,
-    label: t(`addons.${id}_label`),
-    sub:   t(`addons.${id}_sub`),
+    label: tCalc(`addons.${id}_label`),
+    sub:   tCalc(`addons.${id}_sub`),
   }));
 
   function toggleOneTime(id: OneTimeId) {
@@ -111,9 +181,9 @@ export function PricingSection() {
 
   return (
     <section id="pricing" className="w-full py-24 px-6 sm:px-10 bg-[#131313]">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-12">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-16">
 
-        {/* header */}
+        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -121,22 +191,42 @@ export function PricingSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-xs font-semibold text-[#ccc3d9]/50 uppercase tracking-widest mb-3">
-            {t("badge")}
+            {tTiers("badge")}
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
-            {t("heading")}
+            {tTiers("title")}
           </h2>
-          <p className="mt-2 text-sm text-[#ccc3d9] max-w-md">
-            {t("subtext")}
-          </p>
         </motion.div>
+
+        {/* 3-tier cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {packages.map((pkg, i) => (
+            <TierCard
+              key={pkg.id}
+              pkg={pkg}
+              index={i}
+              cta={tTiers("cta")}
+              recommended={tTiers("recommended")}
+              messengerUrl={messengerUrl}
+            />
+          ))}
+        </div>
+
+        {/* Divider — "Or build your own quote" */}
+        <div className="flex items-center gap-6">
+          <div className="h-px flex-1 bg-white/5" />
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/20 whitespace-nowrap">
+            {tCalc("heading")}
+          </span>
+          <div className="h-px flex-1 bg-white/5" />
+        </div>
 
         {/* calculator grid */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.55, ease: "easeOut", delay: 0.1 }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
           className="grid grid-cols-1 lg:grid-cols-12 gap-8"
         >
 
@@ -147,10 +237,10 @@ export function PricingSection() {
             <div className="flex flex-col gap-4">
               <div className="flex items-baseline justify-between">
                 <h3 className="text-sm font-semibold text-[#ccc3d9] uppercase tracking-widest">
-                  {t("pages_label")}
+                  {tCalc("pages_label")}
                 </h3>
                 <span className="bg-[#7b39fc]/20 text-[#d0bcff] px-3 py-1 rounded-full text-sm font-bold">
-                  {pages} {pages !== 1 ? t("page_plural") : t("page_singular")}
+                  {pages} {pages !== 1 ? tCalc("page_plural") : tCalc("page_singular")}
                 </span>
               </div>
               <Slider
@@ -172,7 +262,7 @@ export function PricingSection() {
             {/* one-time add-ons */}
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold text-white/60 uppercase tracking-widest">
-                {t("one_time_addons")}
+                {tCalc("one_time_addons")}
               </h3>
               <div className="flex flex-col gap-3">
                 {oneTimeAddons.map(addon => (
@@ -192,7 +282,7 @@ export function PricingSection() {
             {/* monthly services */}
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold text-white/60 uppercase tracking-widest">
-                {t("monthly_services")}
+                {tCalc("monthly_services")}
               </h3>
               <div className="flex flex-col gap-3">
                 {monthlyAddons.map(addon => (
@@ -216,18 +306,18 @@ export function PricingSection() {
               {/* Estimated delivery */}
               <div>
                 <p className="text-xs font-semibold text-white/30 uppercase tracking-widest mb-2">
-                  {t("delivery_label")}
+                  {tCalc("delivery_label")}
                 </p>
                 <p className="text-5xl font-bold text-white tracking-tight">
                   {deliveryDays}
                 </p>
-                <p className="text-sm text-white/40 mt-1">{t("delivery_unit")}</p>
+                <p className="text-sm text-white/40 mt-1">{tCalc("delivery_unit")}</p>
               </div>
 
               <div className="h-px bg-white/[0.06]" />
 
               <p className="text-xs font-semibold text-white/30 uppercase tracking-widest">
-                {t("summary_label")}
+                {tCalc("summary_label")}
               </p>
 
               {/* selection list */}
@@ -235,7 +325,7 @@ export function PricingSection() {
                 <div className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#7b39fc] shrink-0" />
                   <span className="text-sm text-white/70">
-                    {pages} {pages !== 1 ? t("page_plural") : t("page_singular")}
+                    {pages} {pages !== 1 ? tCalc("page_plural") : tCalc("page_singular")}
                   </span>
                 </div>
                 {selectedAddons.map(addon => (
@@ -245,13 +335,13 @@ export function PricingSection() {
                   </div>
                 ))}
                 {selectedAddons.length === 0 && (
-                  <p className="text-sm text-white/20 mt-1">{t("summary_hint")}</p>
+                  <p className="text-sm text-white/20 mt-1">{tCalc("summary_hint")}</p>
                 )}
               </div>
 
               <div className="h-px bg-white/[0.06]" />
 
-              <p className="text-xs text-white/25">{t("footnote")}</p>
+              <p className="text-xs text-white/25">{tCalc("footnote")}</p>
 
               <a
                 href={messengerUrl}
@@ -259,7 +349,7 @@ export function PricingSection() {
                 rel="noopener noreferrer"
                 className="block text-center text-sm font-bold py-4 rounded-full bg-[#7b39fc] text-white hover:bg-[#9b59ff] transition-colors shadow-lg shadow-[#7b39fc]/20"
               >
-                {t("cta")}
+                {tCalc("cta")}
               </a>
             </div>
           </div>

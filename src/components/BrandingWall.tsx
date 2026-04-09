@@ -55,7 +55,7 @@ export function BrandingWall() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
           <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12">
-            <p className="text-3xl md:text-4xl font-['Instrument_Serif'] italic text-white/30 group-hover:text-white/70 transition-colors" style={{ fontStyle: "italic" }}>
+            <p className="text-3xl md:text-4xl font-serif italic text-white/30 group-hover:text-white/70 transition-colors">
               The Archive
             </p>
           </div>

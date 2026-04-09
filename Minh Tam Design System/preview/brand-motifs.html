@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Brand — Motifs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--surface-lowest);}
+  .card{padding:18px 22px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .box{aspect-ratio:5/3;position:relative;overflow:hidden;border-radius:12px;background:var(--surface-lowest);border:0.5px solid var(--hairline-06);}
+  .rail{position:absolute;top:0;left:0;width:2px;height:100%;background:var(--brand);}
+  .cornerTL{position:absolute;top:10px;left:14px;width:14px;height:14px;border-top:1px solid var(--brand);border-left:1px solid var(--brand);}
+  .cornerBR{position:absolute;bottom:10px;right:10px;width:14px;height:14px;border-bottom:1px solid rgba(123,57,252,0.3);border-right:1px solid rgba(123,57,252,0.3);}
+  .watermark{position:absolute;right:20px;bottom:10px;font-family:var(--font-mono);font-weight:700;font-size:68px;color:rgba(123,57,252,0.06);line-height:1;letter-spacing:-0.06em;}
+  .scatter{position:absolute;font-family:var(--font-mono);font-size:9px;color:rgba(123,57,252,0.55);letter-spacing:0.06em;}
+  .lbl{position:absolute;left:14px;bottom:8px;font-family:var(--font-mono);font-size:9px;letter-spacing:0.18em;color:var(--fg3);text-transform:uppercase;}
+</style></head><body><div class="card">
+  <div class="box">
+    <div class="rail"></div>
+    <div class="cornerTL"></div>
+    <div class="cornerBR"></div>
+    <div class="watermark">v1</div>
+    <div class="lbl">Accent rail · corners · watermark</div>
+  </div>
+  <div class="box" style="background-image:linear-gradient(rgba(123,57,252,0.09) 1px, transparent 1px),linear-gradient(90deg, rgba(123,57,252,0.09) 1px, transparent 1px);background-size:40px 40px;">
+    <div class="scatter" style="top:16%;left:40%">0xf3a1</div>
+    <div class="scatter" style="top:34%;left:66%">lat: 1.2ms</div>
+    <div class="scatter" style="top:52%;left:30%">node_14</div>
+    <div class="scatter" style="top:70%;left:58%">req: 200</div>
+    <div class="lbl">Grid · scatter text fragments</div>
+  </div>
+</div></body></html>

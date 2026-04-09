@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Spacing — Grid Backgrounds</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--surface-lowest);}
+  .card{padding:16px 22px;}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .box{height:110px;border-radius:10px;position:relative;overflow:hidden;border:0.5px solid var(--hairline-06);}
+  .glow::after{content:"";position:absolute;width:60%;height:70%;top:-10%;left:-10%;background:radial-gradient(ellipse at center, rgba(123,57,252,0.25) 0%, transparent 70%);}
+  .lbl{position:absolute;left:10px;bottom:8px;font-family:var(--font-mono);font-size:9px;letter-spacing:0.18em;color:var(--fg3);text-transform:uppercase;}
+</style></head><body><div class="card">
+  <div class="row">
+    <div class="box glow" style="background-image:linear-gradient(rgba(123,57,252,0.09) 1px, transparent 1px),linear-gradient(90deg, rgba(123,57,252,0.09) 1px, transparent 1px);background-size:40px 40px;">
+      <div class="lbl">grid-40 · hero</div>
+    </div>
+    <div class="box" style="background-image:radial-gradient(rgba(123,57,252,0.15) 1px, transparent 1px);background-size:32px 32px;">
+      <div class="lbl">dotgrid-32 · process</div>
+    </div>
+  </div>
+</div></body></html>

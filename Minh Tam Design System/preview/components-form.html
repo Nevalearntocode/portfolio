@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Components — Form Controls</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--surface-lowest);}
+  .card{padding:20px 24px;font-family:var(--font-sans);color:var(--fg1);display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .group{display:flex;flex-direction:column;gap:10px;}
+  .lbl{font-family:var(--font-sans);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--fg2);}
+  /* slider */
+  .slider{width:100%;height:4px;background:var(--hairline-10);border-radius:999px;position:relative;}
+  .slider .fill{position:absolute;left:0;top:0;bottom:0;width:45%;background:var(--brand);border-radius:999px;}
+  .slider .thumb{position:absolute;left:45%;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--brand);}
+  .ticks{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:9px;color:var(--fg4);}
+  /* checkbox */
+  .opt{display:flex;gap:10px;align-items:flex-start;}
+  .cb{width:20px;height:20px;border-radius:4px;border:2px solid var(--brand);background:var(--brand);display:flex;align-items:center;justify-content:center;flex:none;margin-top:2px;}
+  .cb.empty{background:transparent;border-color:rgba(255,255,255,0.20);}
+  .opt .txt{font-size:13px;color:rgba(255,255,255,0.80);}
+  .opt .sub{font-size:11px;color:rgba(255,255,255,0.35);margin-top:2px;}
+</style></head><body><div class="card">
+  <div class="group">
+    <div class="lbl">Number of pages</div>
+    <div class="slider"><div class="fill"></div><div class="thumb"></div></div>
+    <div class="ticks"><span>1</span><span>20</span></div>
+  </div>
+  <div class="group">
+    <div class="opt"><div class="cb"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="txt">On-page SEO</div><div class="sub">Meta tags, schema, sitemap</div></div></div>
+    <div class="opt"><div class="cb empty"></div><div><div class="txt">Content Writing</div><div class="sub">Copywriting for every page</div></div></div>
+  </div>
+</div></body></html>

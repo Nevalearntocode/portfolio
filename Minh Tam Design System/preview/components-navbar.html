@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Components — Navbar</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--surface-lowest);}
+  .stage{padding:22px 24px;background:radial-gradient(ellipse at center,rgba(123,57,252,0.08) 0%,transparent 60%),var(--surface-lowest);}
+  .nav{display:inline-flex;align-items:center;gap:22px;padding:10px 22px;border-radius:9999px;backdrop-filter:blur(12px);background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.06);box-shadow:0 0 50px rgba(123,57,252,0.10);}
+  .nav a{font-family:var(--font-sans);font-size:13px;color:rgba(255,255,255,0.60);text-decoration:none;}
+  .nav a.active{color:#fff;font-weight:600;display:flex;align-items:center;gap:6px;}
+  .nav a.active::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--brand);}
+  .nav .pulse{width:8px;height:8px;border-radius:50%;background:var(--brand);animation:pulse-dot 2s infinite;}
+  .lang{font-family:var(--font-mono);font-size:11px;color:var(--fg3);letter-spacing:0.1em;}
+</style></head><body><div class="stage">
+  <nav class="nav">
+    <span class="pulse"></span>
+    <a href="#" class="active">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">Learning</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <span class="lang">EN / VI</span>
+  </nav>
+</div></body></html>

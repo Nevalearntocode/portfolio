@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Spacing — Radii</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--surface-lowest);}
+  .card{padding:22px 24px;font-family:var(--font-sans);color:var(--fg1);}
+  .row{display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap;}
+  .box{width:72px;height:72px;background:var(--surface-container);border:0.5px solid var(--hairline-08);display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .box .lbl{font-family:var(--font-mono);font-size:9px;color:var(--fg3);text-transform:uppercase;letter-spacing:0.1em;}
+  .box .px{font-family:var(--font-mono);font-size:10px;color:var(--fg1);margin-top:3px;}
+  .pill{height:36px;padding:0 18px;display:flex;align-items:center;background:var(--brand);color:#0e0e0e;border-radius:9999px;font-family:var(--font-sans);font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;}
+  .note{margin-top:12px;font-family:var(--font-mono);font-size:9px;letter-spacing:0.18em;color:var(--fg4);text-transform:uppercase;}
+</style></head><body><div class="card">
+  <div class="row">
+    <div class="box" style="border-radius:6px"><span class="lbl">sm</span><span class="px">6px</span></div>
+    <div class="box" style="border-radius:10px"><span class="lbl">md</span><span class="px">10px</span></div>
+    <div class="box" style="border-radius:14px"><span class="lbl">xl</span><span class="px">14px</span></div>
+    <div class="box" style="border-radius:18px"><span class="lbl">2xl</span><span class="px">18px</span></div>
+    <div class="pill">PILL — CTA</div>
+  </div>
+  <div class="note">sm/md for surfaces · xl for cards · pill for CTAs</div>
+</div></body></html>

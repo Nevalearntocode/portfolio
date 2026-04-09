@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Colors — Primary</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--surface-lowest);}
+  .card{padding:20px 22px;font-family:var(--font-sans);color:var(--fg1);}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .sw{border-radius:var(--radius-xl);padding:16px 18px;position:relative;overflow:hidden;min-height:92px;display:flex;flex-direction:column;justify-content:space-between;}
+  .sw .name{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;}
+  .sw .hex{font-family:var(--font-mono);font-size:13px;letter-spacing:0.04em;}
+  .sw .tag{font-size:11px;opacity:.7;}
+  .sw.violet{background:var(--brand);color:#0e0e0e;box-shadow:0 0 60px var(--brand-a20);}
+  .sw.violet-soft{background:var(--brand-soft);color:#1b1b1b;}
+  .sw.fg1{background:var(--fg1);color:#1b1b1b;}
+  .sw.muted{background:var(--fg-muted);color:#f0e6ff;}
+</style></head><body><div class="card">
+  <div class="row">
+    <div class="sw violet"><span class="name">Brand / Violet</span><div><div class="hex">#7b39fc</div><div class="tag">Primary accent — all emphasis</div></div></div>
+    <div class="sw violet-soft"><span class="name">Brand / Soft</span><div><div class="hex">#d0bcff</div><div class="tag">Lavender hover, link hover</div></div></div>
+    <div class="sw fg1"><span class="name">Foreground / fg1</span><div><div class="hex">#f0e6ff</div><div class="tag">Headline fg — warm off-white</div></div></div>
+    <div class="sw muted"><span class="name">Foreground / fg-muted</span><div><div class="hex">#4a4456</div><div class="tag">Footer meta, outline variant</div></div></div>
+  </div>
+</div></body></html>

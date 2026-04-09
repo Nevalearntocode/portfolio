@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Mono } from "next/font/google";
+import { DM_Sans, DM_Mono, Instrument_Serif } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
@@ -20,6 +20,13 @@ const dmMono = DM_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
   weight: ["400", "500"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://minhtam.tech";
@@ -73,7 +80,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${dmSans.variable} ${dmMono.variable} antialiased`}>
+      <body className={`${dmSans.variable} ${dmMono.variable} ${instrumentSerif.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

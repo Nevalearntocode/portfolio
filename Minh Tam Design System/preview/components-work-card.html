@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Components — Work Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--surface-lowest);}
+  .card{padding:20px 24px;font-family:var(--font-sans);}
+  .work{width:360px;}
+  .thumb{aspect-ratio:16/10;background:linear-gradient(135deg,#1f1f1f 0%,#2a2a2a 50%,#131313 100%);border-radius:14px;position:relative;overflow:hidden;}
+  .thumb::after{content:"↗";position:absolute;right:14px;top:12px;color:rgba(255,255,255,0.25);font-size:18px;}
+  .thumb .cap{position:absolute;left:18px;bottom:18px;font-family:var(--font-serif);font-style:italic;font-size:22px;color:rgba(255,255,255,0.45);}
+  .meta{margin-top:14px;display:flex;justify-content:space-between;align-items:flex-start;}
+  h3{font-weight:600;color:#fff;font-size:18px;margin:0;}
+  .tag{color:var(--fg2);font-size:13px;margin-top:2px;font-weight:300;}
+  .year{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#d0bcff;border:0.5px solid var(--brand-a20);padding:3px 10px;border-radius:9999px;}
+</style></head><body><div class="card">
+  <div class="work">
+    <div class="thumb"><span class="cap">DUSK</span></div>
+    <div class="meta">
+      <div>
+        <h3>DUSK</h3>
+        <div class="tag">F&B · Specialty drinks</div>
+      </div>
+      <span class="year">2026</span>
+    </div>
+  </div>
+</div></body></html>

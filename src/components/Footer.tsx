@@ -12,7 +12,7 @@ export function Footer() {
     <footer className="w-full bg-[#0e0e0e] px-8 sm:px-12 pt-6 pb-10 border-t border-white/5">
       <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
-          <span className="font-['Instrument_Serif'] italic text-white text-lg" style={{ fontStyle: "italic" }}>
+          <span className="font-serif italic text-white text-lg">
             {owner.name}
           </span>
           <p className="text-xs text-[#4a4456] mt-1 font-light tracking-wide">

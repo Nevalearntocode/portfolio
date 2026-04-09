@@ -54,9 +54,9 @@ export function CustomCursor() {
       style={{ willChange: "transform" }}
     >
       <div
-        className={`rounded-full border-2 border-white/60 transition-all duration-150 ${
+        className={`rounded-full border-2 border-[#7b39fc] transition-all duration-150 ${
           hovering
-            ? "w-5 h-5 border-white/90 animate-cursor-hover"
+            ? "w-5 h-5 animate-cursor-hover"
             : "w-7 h-7"
         }`}
         style={hovering ? { animation: "cursor-hover 0.9s ease-in-out infinite" } : {}}

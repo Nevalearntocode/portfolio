@@ -133,7 +133,7 @@ export function ApproachSection() {
             </AnimatePresence>
 
             <div className="relative z-10 p-10 select-none pointer-events-none">
-              <div className="text-5xl font-['Instrument_Serif'] italic text-white/15" style={{ fontStyle: "italic" }}>
+              <div className="text-5xl font-serif italic text-white/15">
                 {t("panel_quote")}
               </div>
             </div>

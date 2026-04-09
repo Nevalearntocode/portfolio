@@ -108,7 +108,7 @@ export function WorksSection() {
               {t("badge")}
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">{t("title")}</h2>
-            <p className="font-['Instrument_Serif'] italic text-xl text-[#ccc3d9] mt-1" style={{ fontStyle: "italic" }}>
+            <p className="font-serif italic text-xl text-[#ccc3d9] mt-1">
               Crafted for impact.
             </p>
           </div>

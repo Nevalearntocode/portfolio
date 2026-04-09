@@ -1,0 +1,287 @@
+/* ============================================================
+   Minh Tam Design System — colors_and_type.css
+   Dark-only. Violet accent. DM Sans + DM Mono + Instrument Serif.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  /* ---------- FONTS ---------- */
+  --font-sans:  'DM Sans', system-ui, -apple-system, Segoe UI, sans-serif;
+  --font-mono:  'DM Mono', ui-monospace, 'Courier New', monospace;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+
+  /* ---------- BRAND ---------- */
+  --brand:              #7b39fc;   /* Aura Violet — primary accent */
+  --brand-hover:        #9b59ff;
+  --brand-soft:         #d0bcff;   /* on-primary-container / lavender hover */
+
+  /* ---------- SURFACE (Aura Noir scale, dark-only) ---------- */
+  --surface-lowest:             #0e0e0e;  /* page base */
+  --surface-low:                #131313;
+  --surface:                    #1b1b1b;
+  --surface-container:          #1f1f1f;
+  --surface-container-high:     #2a2a2a;
+  --surface-container-highest:  #353535;
+
+  /* ---------- FOREGROUND ---------- */
+  --fg1: #f0e6ff;   /* primary heading fg (warm off-white) */
+  --fg2: #ccc3d9;   /* body fg / on-surface-variant */
+  --fg3: rgba(238, 234, 248, 0.45);  /* secondary meta */
+  --fg4: rgba(238, 234, 248, 0.28);  /* tertiary / metrics labels */
+  --fg-muted: #4a4456;  /* outline-variant, footer copy */
+
+  /* ---------- VIOLET ALPHA RAMP (brand tints) ---------- */
+  --brand-a04:  rgba(123, 57, 252, 0.04);  /* watermark ghost */
+  --brand-a08:  rgba(123, 57, 252, 0.08);  /* chip bg */
+  --brand-a09:  rgba(123, 57, 252, 0.09);  /* grid lines */
+  --brand-a10:  rgba(123, 57, 252, 0.10);  /* divider */
+  --brand-a11:  rgba(123, 57, 252, 0.11);  /* ambient glow */
+  --brand-a15:  rgba(123, 57, 252, 0.15);  /* dot grid */
+  --brand-a20:  rgba(123, 57, 252, 0.20);  /* cta glow shadow */
+  --brand-a30:  rgba(123, 57, 252, 0.30);  /* border muted */
+  --brand-a35:  rgba(123, 57, 252, 0.35);  /* border emphasis */
+
+  /* ---------- NEUTRAL ALPHA (hairlines) ---------- */
+  --hairline-05: rgba(255, 255, 255, 0.05);
+  --hairline-06: rgba(255, 255, 255, 0.06);
+  --hairline-08: rgba(255, 255, 255, 0.08);
+  --hairline-10: rgba(255, 255, 255, 0.10);
+  --hairline-15: rgba(255, 255, 255, 0.15);
+
+  /* ---------- RADII ---------- */
+  --radius:     0.625rem;   /* 10px base */
+  --radius-sm:  0.375rem;   /* 60%  - tiny */
+  --radius-md:  0.5rem;     /* 80%  */
+  --radius-lg:  0.625rem;   /* 100% */
+  --radius-xl:  0.875rem;   /* 140% - small card */
+  --radius-2xl: 1.125rem;   /* 180% - content card */
+  --radius-3xl: 1.375rem;   /* 220% */
+  --radius-4xl: 1.625rem;   /* 260% */
+  --radius-pill: 9999px;
+
+  /* ---------- SPACING (tailwind-scale, used in layouts) ---------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  --container-max: 1280px;  /* max-w-screen-xl */
+  --section-pad-y: 96px;    /* py-24 default */
+  --section-pad-y-lg: 128px;/* py-32 for hero / cta */
+
+  /* ---------- SHADOWS (rare — violet glow only) ---------- */
+  --shadow-cta:    0 8px 24px var(--brand-a20);
+  --shadow-nav:    0 0 50px rgba(123, 57, 252, 0.10);
+
+  /* ---------- BACKGROUNDS (signature patterns) ---------- */
+  --bg-grid-40: linear-gradient(var(--brand-a09) 1px, transparent 1px),
+                linear-gradient(90deg, var(--brand-a09) 1px, transparent 1px);
+  --bg-grid-40-size: 40px 40px;
+
+  --bg-dotgrid-32: radial-gradient(var(--brand-a15) 1px, transparent 1px);
+  --bg-dotgrid-32-size: 32px 32px;
+
+  --bg-fade-bottom: linear-gradient(to bottom, transparent, var(--surface-lowest));
+
+  /* ---------- MOTION ---------- */
+  --ease-brand: cubic-bezier(0.16, 1, 0.3, 1);  /* heavy decelerated ease-out */
+  --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --dur-reveal: 950ms;     /* headline clip-reveal */
+  --dur-section: 600ms;    /* section fade-in */
+  --dur-fast: 300ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   ============================================================ */
+
+html, body {
+  font-family: var(--font-sans);
+  background: var(--surface-lowest);
+  color: var(--fg1);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.h1, h1.display {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(36px, 5.5vw, 62px);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--fg1);
+  margin: 0;
+}
+
+.h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0;
+}
+
+.h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.h-italic, .subhead-italic {
+  /* Instrument Serif italic subhead — sits under H1/H2 */
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(18px, 1.6vw, 22px);
+  color: var(--fg2);
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(204, 195, 217, 0.5);
+  margin: 0 0 12px;
+}
+
+.eyebrow-mono {
+  /* used for sequence numbers, bottom nav, metric labels */
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+  color: var(--fg4);
+}
+
+.p, p.body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--fg2);
+}
+
+.p-small {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--fg2);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.mono-scatter {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--brand);
+}
+
+.metric-val {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--fg1);
+  letter-spacing: -0.02em;
+}
+
+.metric-unit {
+  color: var(--brand);
+  font-size: 18px;
+}
+
+.metric-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--fg4);
+  margin-top: 5px;
+}
+
+/* Question-stack — the brand's signature argument opener.
+   Two lines; first full fg, second 40% fg. */
+.q-stack-1 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.25;
+  color: #fff;
+}
+.q-stack-2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.40);
+}
+
+/* Word-mark — Instrument Serif italic, used in footer */
+.wordmark {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 0;
+}
+
+/* ============================================================
+   UTILITY LAYERS
+   ============================================================ */
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.bg-grid {
+  background-image: var(--bg-grid-40);
+  background-size: var(--bg-grid-40-size);
+}
+.bg-dotgrid {
+  background-image: var(--bg-dotgrid-32);
+  background-size: var(--bg-dotgrid-32-size);
+}
+.bottom-fade::after {
+  content: "";
+  position: absolute; inset: auto 0 0 0;
+  height: 30%;
+  background: var(--bg-fade-bottom);
+  pointer-events: none;
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+
+@keyframes clip-reveal {
+  from { transform: translateY(110%); }
+  to   { transform: translateY(0); }
+}

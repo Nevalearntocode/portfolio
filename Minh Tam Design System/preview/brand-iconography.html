@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Brand — Iconography</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--surface-lowest);}
+  .card{padding:20px 24px;font-family:var(--font-sans);color:var(--fg1);}
+  .row{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:10px;}
+  .ico{width:22px;height:22px;color:var(--fg2);}
+  .ico:hover{color:var(--brand-soft);}
+  .arr{font-size:18px;color:var(--brand);}
+  .emoji{font-size:20px;}
+  .lbl{font-family:var(--font-mono);font-size:9px;letter-spacing:0.18em;color:var(--fg4);text-transform:uppercase;margin-top:8px;}
+</style>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head><body><div class="card">
+  <div class="row">
+    <i data-lucide="arrow-right" class="ico"></i>
+    <i data-lucide="external-link" class="ico"></i>
+    <i data-lucide="menu" class="ico"></i>
+    <i data-lucide="x" class="ico"></i>
+    <i data-lucide="chevron-right" class="ico"></i>
+    <i data-lucide="mail" class="ico"></i>
+    <i data-lucide="phone" class="ico"></i>
+    <span class="arr">↗</span>
+    <span class="arr">→</span>
+    <span class="arr" style="color:var(--fg-muted)">·</span>
+  </div>
+  <div class="lbl">Lucide (w-5 h-5) · text arrows ↗ → · no emoji in UI</div>
+<script>lucide.createIcons();</script>
+</div></body></html>

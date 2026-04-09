@@ -42,7 +42,7 @@ export function ProcessSection() {
             {t("badge")}
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white">The Process</h2>
-          <p className="font-['Instrument_Serif'] italic text-xl text-[#ccc3d9] mt-2" style={{ fontStyle: "italic" }}>
+          <p className="font-serif italic text-xl text-[#ccc3d9] mt-2">
             How we build excellence.
           </p>
         </motion.div>

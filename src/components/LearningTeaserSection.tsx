@@ -43,10 +43,7 @@ export function LearningTeaserSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
             {t("title")}
           </h2>
-          <p
-            className="font-['Instrument_Serif'] italic text-xl text-[#ccc3d9]"
-            style={{ fontStyle: "italic" }}
-          >
+          <p className="font-serif italic text-xl text-[#ccc3d9]">
             {t("subtitle")}
           </p>
         </motion.div>
